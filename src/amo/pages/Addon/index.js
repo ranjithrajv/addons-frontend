@@ -46,7 +46,7 @@ import {
 } from 'core/constants';
 import { withInstallHelpers } from 'core/installAddon';
 import { isTheme, nl2br, sanitizeHTML, sanitizeUserHTML } from 'core/utils';
-import { getErrorMessage } from 'core/utils/addons';
+import { getAddonJsonLinkedData, getErrorMessage } from 'core/utils/addons';
 import { getClientCompatibility as _getClientCompatibility } from 'core/utils/compatibility';
 import { getAddonIconUrl, getPreviewImage } from 'core/imageUtils';
 import translate from 'core/i18n/translate';
@@ -489,6 +489,16 @@ export class AddonBase extends React.Component {
     return tags;
   }
 
+  renderJsonLinkedData() {
+    const { addon } = this.props;
+
+    return (
+      <script type="application/ld+json">
+        {JSON.stringify(getAddonJsonLinkedData({ addon }))}
+      </script>
+    );
+  }
+
   render() {
     const {
       addon,
@@ -611,6 +621,7 @@ export class AddonBase extends React.Component {
             <link rel="canonical" href={addon.url} />
             <meta name="description" content={this.getPageDescription()} />
             {this.renderMetaOpenGraph()}
+            {this.renderJsonLinkedData()}
           </Helmet>
         )}
 
