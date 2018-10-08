@@ -24,7 +24,7 @@ import {
 import {
   fetchAddon,
   createInternalAddon,
-  loadAddons,
+  loadAddonResults,
 } from 'core/reducers/addons';
 import ErrorList from 'ui/components/ErrorList';
 import {
@@ -33,7 +33,6 @@ import {
   fakeReview,
 } from 'tests/unit/amo/helpers';
 import {
-  createFetchAddonResult,
   createStubErrorHandler,
   fakeI18n,
   createFakeLocation,
@@ -81,7 +80,7 @@ describe(__filename, () => {
   };
 
   const dispatchAddon = (addon = fakeAddon) => {
-    store.dispatch(loadAddons(createFetchAddonResult(addon).entities));
+    store.dispatch(loadAddonResults({ addons: [addon] }));
   };
 
   const dispatchAddonReviews = ({

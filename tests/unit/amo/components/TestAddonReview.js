@@ -6,7 +6,7 @@ import I18nProvider from 'core/i18n/Provider';
 import { setInternalReview, setReview } from 'amo/actions/reviews';
 import * as reviewsApi from 'amo/api/reviews';
 import * as coreApi from 'core/api';
-import { loadAddons } from 'core/reducers/addons';
+import { loadAddonResults } from 'core/reducers/addons';
 import AddonReview, {
   mapDispatchToProps,
   mapStateToProps,
@@ -20,7 +20,6 @@ import {
 } from 'tests/unit/amo/helpers';
 import {
   createFakeEvent,
-  createFetchAddonResult,
   createStubErrorHandler,
   fakeI18n,
   shallowUntilTarget,
@@ -440,16 +439,18 @@ describe(__filename, () => {
       const apiState = dispatchSignInActions().state.api;
 
       it('fetches and dispatches an add-on', async () => {
-        const { entities } = createFetchAddonResult(fakeAddon);
         mockCoreApi
           .expects('fetchAddon')
           .once()
           .withArgs({ slug: addonSlug, api: apiState })
-          .resolves({ entities });
+          .resolves(fakeAddon);
 
         await actions.refreshAddon({ addonSlug, apiState });
 
-        sinon.assert.calledWith(dispatch, loadAddons(entities));
+        sinon.assert.calledWith(
+          dispatch,
+          loadAddonResults({ addons: [fakeAddon] }),
+        );
         mockCoreApi.verify();
       });
 
