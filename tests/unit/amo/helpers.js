@@ -1,4 +1,3 @@
-import { normalize } from 'normalizr';
 import config from 'config';
 
 import createStore from 'amo/store';
@@ -8,7 +7,7 @@ import {
   setAuthToken,
   setUserAgent,
 } from 'core/actions';
-import { DEFAULT_API_PAGE_SIZE, addon as addonSchema } from 'core/api';
+import { DEFAULT_API_PAGE_SIZE } from 'core/api';
 import {
   ADDON_TYPE_EXTENSION,
   ADDON_TYPE_THEME,
@@ -278,17 +277,10 @@ export function dispatchSearchResults({
 }
 
 export function createAddonsApiResult(results) {
-  // Return a normalized add-ons response just like many utility functions do.
-  // For example: core.api.featured(), core.api.search()...
-  return normalize(
-    {
-      count: results.length,
-      results,
-    },
-    {
-      results: [addonSchema],
-    },
-  );
+  return {
+    count: results.length,
+    results,
+  };
 }
 
 export function createFakeAutocompleteResult({

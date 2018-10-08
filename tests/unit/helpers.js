@@ -7,7 +7,6 @@ import config, { util as configUtil } from 'config';
 import invariant from 'invariant';
 import { shallow } from 'enzyme';
 import Jed from 'jed';
-import { normalize } from 'normalizr';
 import UAParser from 'ua-parser-js';
 import { oneLine } from 'common-tags';
 
@@ -234,21 +233,6 @@ export function apiResponsePage({
     results,
     ...customResponseParams,
   };
-}
-
-export function createFetchAddonResult(addon) {
-  // Simulate how callApi() applies the add-on schema to
-  // the API server response.
-  return normalize(addon, coreApi.addon);
-}
-
-export function createFetchAllAddonsResult(addons) {
-  return normalize(
-    // Simulate an API response that returns an array of addons.
-    { results: addons },
-    // Simulate how callApi() would apply an add-on schema to results.
-    { results: [coreApi.addon] },
-  );
 }
 
 /*
