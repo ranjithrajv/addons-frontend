@@ -69,7 +69,7 @@ describe(__filename, () => {
   });
 
   it('does not fetch categories if already loaded', () => {
-    store.dispatch(categoriesLoad({ result: [fakeCategory] }));
+    store.dispatch(categoriesLoad({ results: [fakeCategory] }));
     const dispatch = sinon.stub();
     render({ addonType: ADDON_TYPE_EXTENSION, dispatch });
 
@@ -79,7 +79,7 @@ describe(__filename, () => {
   });
 
   it('does not fetch categories if an empty set was loaded', () => {
-    store.dispatch(categoriesLoad({ result: [] }));
+    store.dispatch(categoriesLoad({ results: [] }));
     const dispatch = sinon.stub();
     render({ addonType: ADDON_TYPE_EXTENSION, dispatch });
 
@@ -147,7 +147,7 @@ describe(__filename, () => {
 
   it('renders categories if they exist', () => {
     const categoriesResponse = {
-      result: [
+      results: [
         {
           ...fakeCategory,
           application: CLIENT_APP_ANDROID,
@@ -187,7 +187,7 @@ describe(__filename, () => {
 
   it('sorts and renders the sorted categories', () => {
     const categoriesResponse = {
-      result: [
+      results: [
         {
           ...fakeCategory,
           application: CLIENT_APP_ANDROID,
@@ -252,7 +252,7 @@ describe(__filename, () => {
   });
 
   it('renders a no categories found message', () => {
-    const categoriesResponse = { result: [] };
+    const categoriesResponse = { results: [] };
     store.dispatch(categoriesLoad(categoriesResponse));
     const root = render();
 
