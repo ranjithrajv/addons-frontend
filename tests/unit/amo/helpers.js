@@ -265,11 +265,9 @@ export function dispatchSearchResults({
   );
   store.dispatch(
     searchLoad({
-      entities: { addons },
-      result: {
-        count: Object.keys(addons).length,
-        results: Object.keys(addons),
-      },
+      count: Object.keys(addons).length,
+      results: Object.keys(addons),
+      pageSize: DEFAULT_API_PAGE_SIZE,
     }),
   );
 

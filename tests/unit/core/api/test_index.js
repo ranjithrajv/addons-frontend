@@ -571,15 +571,6 @@ describe(__filename, () => {
       mockWindow.verify();
     });
 
-    it('normalizes the response', async () => {
-      mockWindow.expects('fetch').returns(mockResponse());
-      const results = await _fetchAddon({ slug: 'foo' });
-
-      const foo = { slug: 'foo', name: 'Foo!' };
-      expect(results.result).toEqual('foo');
-      expect(results.entities).toEqual({ addons: { foo } });
-    });
-
     it('fails when the add-on is not found', async () => {
       mockWindow.expects('fetch').returns(mockResponse({ ok: false }));
 
@@ -599,10 +590,9 @@ describe(__filename, () => {
         return mockResponse();
       });
 
-      const results = await _fetchAddon({ api: apiState, slug: 'bar' });
-      const foo = { slug: 'foo', name: 'Foo!' };
-      expect(results.result).toEqual('foo');
-      expect(results.entities).toEqual({ addons: { foo } });
+      const addon = await _fetchAddon({ api: apiState, slug: 'bar' });
+
+      expect(addon).toEqual({ slug: 'foo', name: 'Foo!' });
       mockWindow.verify();
     });
   });
