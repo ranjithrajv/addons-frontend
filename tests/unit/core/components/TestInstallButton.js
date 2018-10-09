@@ -24,7 +24,6 @@ import {
 } from 'core/constants';
 import { getAddonIconUrl } from 'core/imageUtils';
 import { createInternalAddon } from 'core/reducers/addons';
-import * as themeInstall from 'core/themeInstall';
 import { getAddonTypeForTracking, getAddonEventCategory } from 'core/tracking';
 import { addQueryParamsToHistory } from 'core/utils';
 import {
@@ -137,9 +136,6 @@ describe(__filename, () => {
     expect(switchComponent).toHaveClassName('InstallButton-switch');
     expect(switchComponent).toHaveProp('addon', addon);
     expect(switchComponent).toHaveProp('installURL', installURL);
-
-    // Make sure it passes all theme properties.
-    expect(switchComponent.props()).toMatchObject(addon.themeData);
   });
 
   it('renders a theme button when mozAddonManager is not available', () => {
@@ -156,7 +152,7 @@ describe(__filename, () => {
     expect(button.children().at(1)).toHaveText('Install Theme');
     expect(button).toHaveProp(
       'data-browsertheme',
-      JSON.stringify(themeInstall.getThemeData(addon)),
+      JSON.stringify(addon.themeData),
     );
   });
 
