@@ -8,7 +8,6 @@ import LandingPage, { LandingPageBase } from 'amo/pages/LandingPage';
 import {
   ADDON_TYPE_EXTENSION,
   ADDON_TYPE_THEME,
-  ADDON_TYPE_THEMES_FILTER,
   SEARCH_SORT_TRENDING,
   SEARCH_SORT_TOP_RATED,
 } from 'core/constants';
@@ -18,6 +17,7 @@ import {
   createAddonsApiResult,
   dispatchClientMetadata,
   fakeAddon,
+  onLocationChanged,
 } from 'tests/unit/amo/helpers';
 import {
   createStubErrorHandler,
@@ -317,66 +317,6 @@ describe(__filename, () => {
     });
   });
 
-  it('renders the themes shelves with the ADDON_TYPE_THEMES_FILTER filter if static theme is enabled', () => {
-    const fakeConfig = getFakeConfig({ enableFeatureStaticThemes: true });
-
-    _getAndLoadLandingAddons({ addonType: ADDON_TYPE_THEME });
-
-    const fakeParams = {
-      visibleAddonType: visibleAddonType(ADDON_TYPE_THEME),
-    };
-    const match = { params: fakeParams };
-
-    const root = render({ match, _config: fakeConfig });
-
-    const addonCards = root.find(LandingAddonsCard);
-
-    expect(addonCards.at(0)).toHaveProp('footerLink');
-    expect(addonCards.at(0).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEMES_FILTER,
-    );
-
-    expect(addonCards.at(1)).toHaveProp('footerLink');
-    expect(addonCards.at(1).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEMES_FILTER,
-    );
-
-    expect(addonCards.at(2)).toHaveProp('footerLink');
-    expect(addonCards.at(2).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEMES_FILTER,
-    );
-  });
-
-  it('renders the themes shelves with the ADDON_TYPE_THEME filter if static theme is disabled', () => {
-    const fakeConfig = getFakeConfig({ enableFeatureStaticThemes: false });
-
-    _getAndLoadLandingAddons({ addonType: ADDON_TYPE_THEME });
-
-    const fakeParams = {
-      visibleAddonType: visibleAddonType(ADDON_TYPE_THEME),
-    };
-    const match = { params: fakeParams };
-
-    const root = render({ match, _config: fakeConfig });
-
-    const addonCards = root.find(LandingAddonsCard);
-
-    expect(addonCards.at(0)).toHaveProp('footerLink');
-    expect(addonCards.at(0).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEME,
-    );
-
-    expect(addonCards.at(1)).toHaveProp('footerLink');
-    expect(addonCards.at(1).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEME,
-    );
-
-    expect(addonCards.at(2)).toHaveProp('footerLink');
-    expect(addonCards.at(2).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEME,
-    );
-  });
-
   it('passes an isTheme prop as true if type is a theme', () => {
     _getAndLoadLandingAddons({ addonType: ADDON_TYPE_THEME });
 
@@ -667,5 +607,21 @@ describe(__filename, () => {
     expect(root.find(LandingAddonsCard)).toHaveLength(2);
     expect(landingShelves.at(0)).toHaveClassName('FeaturedAddons');
     expect(landingShelves.at(1)).toHaveClassName('TrendingAddons');
+  });
+
+  it('renders a canonical link tag', () => {
+    const baseURL = 'https://example.org';
+    const _config = getFakeConfig({ baseURL });
+
+    const pathname = '/some-landing-pathname/';
+    store.dispatch(onLocationChanged({ pathname }));
+
+    const root = render({ _config, store });
+
+    expect(root.find('link[rel="canonical"]')).toHaveLength(1);
+    expect(root.find('link[rel="canonical"]')).toHaveProp(
+      'href',
+      `${baseURL}${pathname}`,
+    );
   });
 });

@@ -3,6 +3,7 @@ import config from 'config';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import Helmet from 'react-helmet';
 
 import { setViewContext } from 'amo/actions/viewContext';
 import CategoryIcon from 'amo/components/CategoryIcon';
@@ -11,11 +12,12 @@ import HomeHeroBanner from 'amo/components/HomeHeroBanner';
 import LandingAddonsCard from 'amo/components/LandingAddonsCard';
 import Link from 'amo/components/Link';
 import { fetchHomeAddons } from 'amo/reducers/home';
+import { getCanonicalURL } from 'amo/utils';
 import {
   ADDON_TYPE_EXTENSION,
   ADDON_TYPE_THEME,
   INSTALL_SOURCE_FEATURED,
-  SEARCH_SORT_TRENDING,
+  SEARCH_SORT_POPULAR,
   VIEW_CONTEXT_HOME,
 } from 'core/constants';
 import { withErrorHandler } from 'core/errorHandler';
@@ -27,8 +29,8 @@ import Icon from 'ui/components/Icon';
 import './styles.scss';
 
 export const FEATURED_COLLECTIONS = [
-  { slug: 'translation-tools', username: 'mozilla' },
   { slug: 'privacy-matters', username: 'mozilla' },
+  { slug: 'parental-controls', username: 'mozilla' },
 ];
 
 export const isFeaturedCollection = (
@@ -46,14 +48,14 @@ export const isFeaturedCollection = (
 export const getFeaturedCollectionsMetadata = (i18n) => {
   return [
     {
-      footerText: i18n.gettext('See more translation tools'),
-      header: i18n.gettext('Translation tools'),
+      footerText: i18n.gettext('See more privacy & security extensions'),
+      header: i18n.gettext('Privacy & security'),
       isTheme: false,
       ...FEATURED_COLLECTIONS[0],
     },
     {
-      footerText: i18n.gettext('See more privacy & security extensions'),
-      header: i18n.gettext('Privacy & security'),
+      footerText: i18n.gettext('See more parental controls'),
+      header: i18n.gettext('Parental controls'),
       isTheme: false,
       ...FEATURED_COLLECTIONS[1],
     },
@@ -63,15 +65,16 @@ export const getFeaturedCollectionsMetadata = (i18n) => {
 export class HomeBase extends React.Component {
   static propTypes = {
     _config: PropTypes.object,
+    collections: PropTypes.array.isRequired,
     dispatch: PropTypes.func.isRequired,
     errorHandler: PropTypes.object.isRequired,
-    collections: PropTypes.array.isRequired,
     featuredExtensions: PropTypes.array.isRequired,
     featuredThemes: PropTypes.array.isRequired,
     i18n: PropTypes.object.isRequired,
     includeFeaturedThemes: PropTypes.bool,
+    locationPathname: PropTypes.string.isRequired,
     resultsLoaded: PropTypes.bool.isRequired,
-    trendingExtensions: PropTypes.array.isRequired,
+    popularExtensions: PropTypes.array.isRequired,
   };
 
   static defaultProps = {
@@ -199,14 +202,16 @@ export class HomeBase extends React.Component {
 
   render() {
     const {
-      errorHandler,
+      _config,
       collections,
+      errorHandler,
       featuredExtensions,
       featuredThemes,
       i18n,
       includeFeaturedThemes,
+      locationPathname,
       resultsLoaded,
-      trendingExtensions,
+      popularExtensions,
     } = this.props;
 
     // translators: The ending ellipsis alludes to a row of icons for each type
@@ -222,6 +227,13 @@ export class HomeBase extends React.Component {
 
     return (
       <div className="Home">
+        <Helmet>
+          <link
+            rel="canonical"
+            href={getCanonicalURL({ locationPathname, _config })}
+          />
+        </Helmet>
+
         <span
           className="visually-hidden do-not-remove"
           // eslint-disable-next-line react/no-danger
@@ -291,15 +303,15 @@ export class HomeBase extends React.Component {
 
         <LandingAddonsCard
           addonInstallSource={INSTALL_SOURCE_FEATURED}
-          addons={trendingExtensions}
-          className="Home-TrendingExtensions"
-          header={i18n.gettext('Trending extensions')}
-          footerText={i18n.gettext('See more trending extensions')}
+          addons={popularExtensions}
+          className="Home-PopularExtensions"
+          header={i18n.gettext('Popular extensions')}
+          footerText={i18n.gettext('See more popular extensions')}
           footerLink={{
             pathname: '/search/',
             query: {
               addonType: ADDON_TYPE_EXTENSION,
-              sort: SEARCH_SORT_TRENDING,
+              sort: SEARCH_SORT_POPULAR,
             },
           }}
           loading={loading}
@@ -333,9 +345,10 @@ export function mapStateToProps(state) {
   return {
     collections: state.home.collections,
     featuredExtensions: state.home.featuredExtensions,
-    resultsLoaded: state.home.resultsLoaded,
     featuredThemes: state.home.featuredThemes,
-    trendingExtensions: state.home.trendingExtensions,
+    locationPathname: state.router.location.pathname,
+    popularExtensions: state.home.popularExtensions,
+    resultsLoaded: state.home.resultsLoaded,
   };
 }
 

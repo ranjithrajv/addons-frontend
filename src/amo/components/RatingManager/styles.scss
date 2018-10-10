@@ -32,8 +32,30 @@
     justify-content: space-between;
   }
 
-  .AddonReviewCard-ratingOnly .AddonReviewCard-allControls {
-    justify-content: center;
+  .AddonReviewCard-ratingOnly {
+    .AddonReviewCard-allControls {
+      justify-content: center;
+    }
+
+    .AddonReviewCard-delete {
+      text-align: center;
+      width: 100%;
+
+      .ConfirmationDialog-buttons {
+        display: block;
+      }
+
+      .ConfirmationDialog-cancel-button,
+      .ConfirmationDialog-confirm-button {
+        font-size: $font-size-puffy-buttons;
+        margin: 0;
+        width: 100%;
+      }
+
+      .ConfirmationDialog-cancel-button {
+        margin-top: 12px;
+      }
+    }
   }
 
   .DismissibleTextForm-delete-submit-buttons,

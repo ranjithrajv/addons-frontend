@@ -48,7 +48,7 @@ import { withInstallHelpers } from 'core/installAddon';
 import { isTheme, nl2br, sanitizeHTML, sanitizeUserHTML } from 'core/utils';
 import { getErrorMessage } from 'core/utils/addons';
 import { getClientCompatibility as _getClientCompatibility } from 'core/utils/compatibility';
-import { getAddonIconUrl } from 'core/imageUtils';
+import { getAddonIconUrl, getPreviewImage } from 'core/imageUtils';
 import translate from 'core/i18n/translate';
 import log from 'core/logger';
 import Button from 'ui/components/Button';
@@ -398,6 +398,97 @@ export class AddonBase extends React.Component {
     );
   }
 
+  getPageDescription() {
+    const { addon, i18n } = this.props;
+
+    return i18n.sprintf(
+      i18n.gettext('Download %(addonName)s for Firefox. %(summary)s'),
+      {
+        addonName: addon.name,
+        summary: addon.summary,
+      },
+    );
+  }
+
+  getPageTitle() {
+    const { addon, i18n, lang } = this.props;
+
+    const i18nValues = {
+      addonName: addon.name,
+      locale: lang,
+    };
+
+    switch (addon.type) {
+      case ADDON_TYPE_DICT:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Dictionary for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+      case ADDON_TYPE_EXTENSION:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Extension for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+      case ADDON_TYPE_LANG:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Language Pack for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+      case ADDON_TYPE_STATIC_THEME:
+      case ADDON_TYPE_THEME:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Theme for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+      case ADDON_TYPE_OPENSEARCH:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Search Tool for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+      default:
+        return i18n.sprintf(
+          // translators: please keep the fox emoji next to "Firefox".
+          i18n.gettext(`%(addonName)s – Get this Add-on for 🦊 Firefox
+            (%(locale)s)`),
+          i18nValues,
+        );
+    }
+  }
+
+  renderMetaOpenGraph() {
+    const { addon, lang } = this.props;
+
+    const tags = [
+      <meta key="og:type" property="og:type" content="website" />,
+      <meta key="og:url" property="og:url" content={addon.url} />,
+      <meta key="og:title" property="og:title" content={this.getPageTitle()} />,
+      <meta
+        key="og:description"
+        property="og:description"
+        content={this.getPageDescription()}
+      />,
+      <meta key="og:locale" property="og:locale" content={lang} />,
+    ];
+
+    const image = getPreviewImage(addon);
+
+    if (image) {
+      tags.push(<meta key="og:image" property="og:image" content={image} />);
+    }
+
+    return tags;
+  }
+
   render() {
     const {
       addon,
@@ -502,9 +593,6 @@ export class AddonBase extends React.Component {
 
     const isFireFox =
       compatibility && compatibility.reason !== INCOMPATIBLE_NOT_FIREFOX;
-    const enableFeatureAddonRecommendations =
-      config.get('enableFeatureAddonRecommendations') &&
-      addonType === ADDON_TYPE_EXTENSION;
     const showInstallButton = addon && isFireFox;
     const showGetFirefoxButton = addon && !isFireFox;
 
@@ -518,8 +606,11 @@ export class AddonBase extends React.Component {
         data-site-identifier={addon ? addon.id : null}
       >
         {addon && (
-          <Helmet>
-            <title>{addon.name}</title>
+          <Helmet titleTemplate={null}>
+            <title>{this.getPageTitle()}</title>
+            <link rel="canonical" href={addon.url} />
+            <meta name="description" content={this.getPageDescription()} />
+            {this.renderMetaOpenGraph()}
           </Helmet>
         )}
 
@@ -627,7 +718,7 @@ export class AddonBase extends React.Component {
 
             {this.renderShowMoreCard()}
 
-            {enableFeatureAddonRecommendations && (
+            {addonType === ADDON_TYPE_EXTENSION && (
               <AddonRecommendations addon={addon} />
             )}
           </div>

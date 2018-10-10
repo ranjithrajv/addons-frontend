@@ -3,9 +3,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: disco\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-25 19:05+0000\n"
-"PO-Revision-Date: 2018-08-26 20:10+0000\n"
-"Last-Translator: Selim Şumlu <selim@sum.lu>\n"
+"POT-Creation-Date: 2018-10-09 21:10+0000\n"
+"PO-Revision-Date: 2018-10-03 19:48+0000\n"
+"Last-Translator: Ali Demirtaş <alidemirtas94@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -27,29 +27,26 @@ msgid "Enabling"
 msgstr "Etkinleştiriliyor"
 
 #: src/core/components/AMInstallButton/index.js:213
-#, fuzzy
 msgid "Downloading"
-msgstr "%(name)s indiriliyor."
+msgstr "İndiriliyor"
 
 #: src/core/components/AMInstallButton/index.js:215
-#, fuzzy
 msgid "Installing"
-msgstr "%(name)s yükleniyor."
+msgstr "Yükleniyor"
 
 #: src/core/components/AMInstallButton/index.js:217
-#, fuzzy
 msgid "Uninstalling"
-msgstr "%(name)s kaldırılıyor."
+msgstr "Kaldırılıyor"
 
 #: src/core/components/AMInstallButton/index.js:221
-#: src/core/components/InstallButton/index.js:265
-#: src/core/components/InstallButton/index.js:311
+#: src/core/components/InstallButton/index.js:236
+#: src/core/components/InstallButton/index.js:282
 msgid "Install Theme"
 msgstr "Temayı yükle"
 
 #: src/core/components/AMInstallButton/index.js:222
-#: src/core/components/InstallButton/index.js:296
-#: src/core/components/InstallButton/index.js:312
+#: src/core/components/InstallButton/index.js:267
+#: src/core/components/InstallButton/index.js:283
 msgid "Add to Firefox"
 msgstr "Firefox’a ekle"
 
@@ -88,9 +85,8 @@ msgstr ""
 "Eklentilerinizi menüdeki Eklentiler öğesine tıklayarak yönetebilirsiniz."
 
 #: src/core/components/InfoDialog/index.js:88
-#, fuzzy
 msgid "OK"
-msgstr "Tamam!"
+msgstr "Tamam"
 
 #: src/core/components/InstallSwitch/index.js:69
 msgid "Downloading %(name)s."
@@ -120,27 +116,27 @@ msgstr "%(name)s kaldırıldı. Yüklemek için tıklayın."
 msgid "Install state for %(name)s is unknown."
 msgstr "%(name)s yükleme durumu bilinmiyor."
 
-#: src/core/utils/addons.js:24
+#: src/core/utils/addons.js:27
 msgid "Installation failed. Please try again."
 msgstr "Yükleme başarısız oldu. Lütfen yeniden deneyin."
 
-#: src/core/utils/addons.js:26
+#: src/core/utils/addons.js:29
 msgid "Download failed. Please check your connection."
 msgstr "İndirme başarısız oldu. Lütfen bağlantınızı kontrol edin."
 
-#: src/core/utils/addons.js:28
+#: src/core/utils/addons.js:31
 msgid "An unexpected error occurred during installation."
 msgstr "Yükleme sırasında beklenmeyen bir hata oluştu."
 
-#: src/core/utils/addons.js:30
+#: src/core/utils/addons.js:33
 msgid "An unexpected error occurred during uninstallation."
 msgstr "Kaldırma sırasında beklenmeyen bir hata oluştu."
 
-#: src/core/utils/addons.js:35
+#: src/core/utils/addons.js:38
 msgid "An unexpected error occurred."
 msgstr "Beklenmeyen bir hata oluştu."
 
-#: src/disco/components/Addon/index.js:84
+#: src/disco/components/Addon/index.js:88
 msgid "Close"
 msgstr "Kapat"
 
@@ -164,16 +160,15 @@ msgstr "Eklentileri Keşfedin"
 msgid "Privacy Policy"
 msgstr "Gizlilik İlkeleri"
 
-#: src/disco/pages/DiscoPane/index.js:136
-#, fuzzy
+#: src/disco/pages/DiscoPane/index.js:131
 msgid "Find more add-ons"
-msgstr "Daha çok eklentiye bakın!"
+msgstr "Daha fazla eklenti bul"
 
-#: src/disco/pages/DiscoPane/index.js:152
+#: src/disco/pages/DiscoPane/index.js:147
 msgid "Personalize Your Firefox"
 msgstr "Firefox’unuzu kişiselleştirin"
 
-#: src/disco/pages/DiscoPane/index.js:154
+#: src/disco/pages/DiscoPane/index.js:149
 msgid ""
 "There are thousands of free add-ons, created by developers all over the "
 "world, that you can install to personalize your Firefox. From fun visual "
@@ -200,7 +195,7 @@ msgstr "Beklenmeyen bir hata oluştu"
 msgid "Reload To Continue"
 msgstr "Devam etmek için sayfayı tazeleyin"
 
-#: src/ui/components/Notice/index.js:130
+#: src/ui/components/Notice/index.js:133
 msgid "Dismiss this notice"
 msgstr "Bu bildirimi kapat"
 

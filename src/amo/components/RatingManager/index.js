@@ -12,6 +12,7 @@ import {
   STARTED_SAVE_RATING,
   createAddonReview,
   setLatestReview,
+  setReview,
   updateAddonReview,
 } from 'amo/actions/reviews';
 import * as reviewsApi from 'amo/api/reviews';
@@ -45,7 +46,7 @@ import type {
 } from 'amo/api/reviews';
 import type { DispatchFunc } from 'core/types/redux';
 import type { ApiState } from 'core/reducers/api';
-import type { AddonType, AddonVersionType } from 'core/types/addons';
+import type { AddonType, ExternalAddonVersionType } from 'core/types/addons';
 import type { I18nType } from 'core/types/i18n';
 
 import './styles.scss';
@@ -63,7 +64,7 @@ type SubmitReviewFunc = (SubmitReviewParams) => Promise<void>;
 type Props = {|
   addon: AddonType,
   onReviewSubmitted?: () => void,
-  version: AddonVersionType,
+  version: ExternalAddonVersionType,
 |};
 
 type DispatchMappedProps = {|
@@ -260,6 +261,12 @@ export class RatingManagerBase extends React.Component<InternalProps, State> {
     );
   }
 
+  isMessageVisible() {
+    const { flashMessage } = this.props;
+
+    return [STARTED_SAVE_RATING, SAVED_RATING].includes(flashMessage);
+  }
+
   renderUserRatingForm() {
     const { addon, i18n, flashMessage, userReview } = this.props;
 
@@ -287,10 +294,7 @@ export class RatingManagerBase extends React.Component<InternalProps, State> {
                 ? 'RatingManager-savedRating-withReview'
                 : null
             }
-            hideMessage={
-              flashMessage !== STARTED_SAVE_RATING &&
-              flashMessage !== SAVED_RATING
-            }
+            hideMessage={!this.isMessageVisible()}
             message={
               flashMessage === STARTED_SAVE_RATING
                 ? i18n.gettext('Saving star rating')
@@ -318,6 +322,7 @@ export class RatingManagerBase extends React.Component<InternalProps, State> {
             flaggable={false}
             review={userReview}
             shortByLine
+            showControls={!this.isMessageVisible()}
             showRating={false}
             smallerWriteReviewButton={false}
             verticalButtons
@@ -411,6 +416,7 @@ export const mapDispatchToProps = (
         };
 
         if (review) {
+          dispatch(setReview(review));
           dispatch(_setLatestReview(review));
         } else {
           log.debug(

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amo\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-25 19:00+0000\n"
-"PO-Revision-Date: 2018-09-25 23:16+0000\n"
+"POT-Creation-Date: 2018-10-09 21:07+0000\n"
+"PO-Revision-Date: 2018-10-10 16:34+0000\n"
 "Last-Translator: Andreas Pettersson <az@kth.se>\n"
 "Language-Team: none\n"
 "Language: sv_SE\n"
@@ -42,6 +42,34 @@ msgstr "Lades till…"
 #: src/amo/components/AddAddonToCollection/index.js:266 src/amo/components/CollectionAddAddon/index.js:173
 msgid "Add to collection"
 msgstr "Lägg till samling"
+
+#: src/amo/components/AddonAdminLinks/index.js:104
+msgid "Content review add-on"
+msgstr "Innehållsgranskning av tillägg"
+
+#: src/amo/components/AddonAdminLinks/index.js:110
+msgid "Review theme"
+msgstr "Granska tema"
+
+#: src/amo/components/AddonAdminLinks/index.js:111
+msgid "Review add-on code"
+msgstr "Granska kod för tillägg"
+
+#: src/amo/components/AddonAdminLinks/index.js:128
+msgid "Admin Links"
+msgstr "Länkar för admin"
+
+#: src/amo/components/AddonAdminLinks/index.js:70
+msgid "Edit add-on"
+msgstr "Redigera tillägg"
+
+#: src/amo/components/AddonAdminLinks/index.js:81
+msgid "Admin add-on status"
+msgstr "Administrera tilläggsstatus"
+
+#: src/amo/components/AddonAdminLinks/index.js:93
+msgid "Admin add-on"
+msgstr "Administrera tillägg"
 
 #: src/amo/components/AddonBadges/index.js:33
 msgid "Featured Extension"
@@ -145,71 +173,71 @@ msgstr "Inga recensioner"
 msgid "Used by"
 msgstr "Används av"
 
-#: src/amo/components/AddonMoreInfo/index.js:127
+#: src/amo/components/AddonMoreInfo/index.js:132
 msgid "%(timeFromNow)s (%(date)s)"
 msgstr "%(timeFromNow)s (%(date)s)"
 
-#: src/amo/components/AddonMoreInfo/index.js:140
+#: src/amo/components/AddonMoreInfo/index.js:145
 msgid "Read the privacy policy for this add-on"
 msgstr "Läs sekretesspolicyn för detta tillägg"
 
-#: src/amo/components/AddonMoreInfo/index.js:148
+#: src/amo/components/AddonMoreInfo/index.js:153
 msgid "Read the license agreement for this add-on"
 msgstr "Läs licensavtalet för detta tillägg"
 
-#: src/amo/components/AddonMoreInfo/index.js:157
+#: src/amo/components/AddonMoreInfo/index.js:162
 msgid "See all versions"
 msgstr "Se alla versioner"
 
-#: src/amo/components/AddonMoreInfo/index.js:182
+#: src/amo/components/AddonMoreInfo/index.js:188
 msgid "Add-on Links"
 msgstr "Länkar för tillägg"
 
-#: src/amo/components/AddonMoreInfo/index.js:194
+#: src/amo/components/AddonMoreInfo/index.js:200
 msgid "Version"
 msgstr "Version"
 
-#: src/amo/components/AddonMoreInfo/index.js:202 src/amo/components/CollectionDetails/index.js:89
+#: src/amo/components/AddonMoreInfo/index.js:208 src/amo/components/CollectionDetails/index.js:89
 msgid "Last updated"
 msgstr "Senast uppdaterad"
 
-#: src/amo/components/AddonMoreInfo/index.js:210
+#: src/amo/components/AddonMoreInfo/index.js:216
 msgid "License"
 msgstr "Licens"
 
-#: src/amo/components/AddonMoreInfo/index.js:218
+#: src/amo/components/AddonMoreInfo/index.js:224
 msgid "Privacy Policy"
 msgstr "Sekretesspolicy"
 
-#: src/amo/components/AddonMoreInfo/index.js:226
+#: src/amo/components/AddonMoreInfo/index.js:232
 msgid "End-User License Agreement"
 msgstr "Licensavtal för slutanvändare"
 
-#: src/amo/components/AddonMoreInfo/index.js:234
+#: src/amo/components/AddonMoreInfo/index.js:240
 msgid "Version History"
 msgstr "Versionshistorik"
 
-#: src/amo/components/AddonMoreInfo/index.js:244
+#: src/amo/components/AddonMoreInfo/index.js:250
 msgid "Usage Statistics"
 msgstr "Användningsstatistik"
 
-#: src/amo/components/AddonMoreInfo/index.js:257
+#: src/amo/components/AddonMoreInfo/index.js:265
 msgid "More information"
 msgstr "Mer information"
 
-#: src/amo/components/AddonMoreInfo/index.js:45 src/amo/pages/UserProfile/index.js:300 src/amo/pages/UserProfileEdit/index.js:596
+#: src/amo/components/AddonMoreInfo/index.js:50 src/amo/pages/UserProfile/index.js:300 src/amo/pages/UserProfileEdit/index.js:596
 msgid "Homepage"
 msgstr "Hemsida"
 
-#: src/amo/components/AddonMoreInfo/index.js:56
+#: src/amo/components/AddonMoreInfo/index.js:61
 msgid "Support Site"
 msgstr "Supportwebbplats"
 
-#: src/amo/components/AddonMoreInfo/index.js:70
+#: src/amo/components/AddonMoreInfo/index.js:75
 msgid "Support Email"
 msgstr "Support e-post"
 
-#: src/amo/components/AddonMoreInfo/index.js:89
+#: src/amo/components/AddonMoreInfo/index.js:94
 msgid "Visit stats dashboard"
 msgstr "Besök statistikpanelen"
 
@@ -237,7 +265,7 @@ msgstr "Berätta för världen om detta tillägg! Vänligen följ våra %(linkSt
 msgid "Tell us about your experience with this extension. Be specific and concise."
 msgstr "Berätta om din erfarenhet av detta tillägg. Var specifik och koncis."
 
-#: src/amo/components/AddonReview/index.js:232 src/amo/components/AddonReviewCard/index.js:448
+#: src/amo/components/AddonReview/index.js:232 src/amo/components/AddonReviewCard/index.js:486
 msgid "Write a review"
 msgstr "Skriv en recension"
 
@@ -245,119 +273,112 @@ msgstr "Skriv en recension"
 msgid "Review text"
 msgstr "Recensionstext"
 
-#: src/amo/components/AddonReview/index.js:265 src/amo/components/AddonReviewManager/index.js:139
+#: src/amo/components/AddonReview/index.js:265 src/amo/components/AddonReviewManager/index.js:103
 msgid "Submit review"
 msgstr "Skicka in recension"
 
-#: src/amo/components/AddonReviewCard/index.js:192
-msgid "Edit my reply"
-msgstr "Redigera mitt svar"
-
 #: src/amo/components/AddonReviewCard/index.js:195
-msgid "Edit my review"
-msgstr "Redigera min recension"
+msgid "Edit reply"
+msgstr "Redigera svar"
 
-#: src/amo/components/AddonReviewCard/index.js:202
-msgid "Delete my reply"
-msgstr "Ta bort mitt svar"
+#: src/amo/components/AddonReviewCard/index.js:198
+msgid "Edit review"
+msgstr "Redigera recension"
 
-#: src/amo/components/AddonReviewCard/index.js:206
-msgid "Delete my rating"
-msgstr "Ta bort mitt betyg"
+#: src/amo/components/AddonReviewCard/index.js:205 src/amo/components/AddonReviewCard/index.js:219
+msgid "Delete reply"
+msgstr "Ta bort svar"
 
-#: src/amo/components/AddonReviewCard/index.js:209
-msgid "Delete my review"
-msgstr "Ta bort min recension"
+#: src/amo/components/AddonReviewCard/index.js:209 src/amo/components/AddonReviewCard/index.js:223
+msgid "Delete rating"
+msgstr "Ta bort betyg"
 
-#: src/amo/components/AddonReviewCard/index.js:216
-msgid "Do you really want to delete this reply?"
-msgstr "Vill du verkligen ta bort detta svar?"
+#: src/amo/components/AddonReviewCard/index.js:212 src/amo/components/AddonReviewCard/index.js:226
+msgid "Delete review"
+msgstr "Ta bort recension"
 
-#: src/amo/components/AddonReviewCard/index.js:220
-msgid "Do you really want to delete this rating?"
-msgstr "Vill du verkligen ta bort detta betyg?"
+#: src/amo/components/AddonReviewCard/index.js:233
+msgid "Keep reply"
+msgstr "Behåll svar"
 
-#: src/amo/components/AddonReviewCard/index.js:223
-msgid "Do you really want to delete this review?"
-msgstr "Vill du verkligen ta bort denna recension?"
+#: src/amo/components/AddonReviewCard/index.js:237
+msgid "Keep rating"
+msgstr "Behåll betyg"
 
-#: src/amo/components/AddonReviewCard/index.js:247
+#: src/amo/components/AddonReviewCard/index.js:240
+msgid "Keep review"
+msgstr "Behåll recension"
+
+#: src/amo/components/AddonReviewCard/index.js:284
 msgid "Write a reply to this review."
 msgstr "Skriv ett svar på den här recensionen."
 
-#: src/amo/components/AddonReviewCard/index.js:250
+#: src/amo/components/AddonReviewCard/index.js:287 src/amo/components/AddonReviewManager/index.js:107
 msgid "Update reply"
 msgstr "Uppdatera svar"
 
-#: src/amo/components/AddonReviewCard/index.js:251
+#: src/amo/components/AddonReviewCard/index.js:288
 msgid "Publish reply"
 msgstr "Publicera svar"
 
-#: src/amo/components/AddonReviewCard/index.js:255
+#: src/amo/components/AddonReviewCard/index.js:292 src/amo/components/AddonReviewManager/index.js:110
 msgid "Updating reply"
 msgstr "Uppdaterar svar"
 
-#: src/amo/components/AddonReviewCard/index.js:256
+#: src/amo/components/AddonReviewCard/index.js:293
 msgid "Publishing reply"
 msgstr "Publicerar svar"
 
-#: src/amo/components/AddonReviewCard/index.js:301
+#: src/amo/components/AddonReviewCard/index.js:340
 msgid "posted %(timestamp)s"
 msgstr "postad %(timestamp)s"
 
-#: src/amo/components/AddonReviewCard/index.js:303
+#: src/amo/components/AddonReviewCard/index.js:342
 msgid "by %(authorName)s, %(timestamp)s"
 msgstr "av %(authorName)s, %(timestamp)s"
 
-#: src/amo/components/AddonReviewCard/index.js:356
+#: src/amo/components/AddonReviewCard/index.js:401
 msgid "Deleting…"
 msgstr "Tar bort…"
 
-#: src/amo/components/AddonReviewCard/index.js:366 src/ui/components/DismissibleTextForm/index.js:186
-msgid "Delete"
-msgstr "Ta bort"
-
-#: src/amo/components/AddonReviewCard/index.js:392
+#: src/amo/components/AddonReviewCard/index.js:436
 msgid "Reply to this review"
 msgstr "Svara på den här recensionen"
 
-#: src/amo/components/AddonReviewCard/index.js:409
-msgid "Nevermind, I don't want to write a review"
-msgstr "Glöm det, jag vill inte skriva en recension"
-
-#: src/amo/components/AddonReviewCard/index.js:410
-msgid "Nevermind, I don't want to edit my review"
-msgstr "Glöm det, jag vill inte redigera min recension"
-
-#: src/amo/components/AddonReviewManager/index.js:106
-msgid "Your star rating:"
-msgstr "Ditt betyg:"
-
-#: src/amo/components/AddonReviewManager/index.js:124
-msgid "Saving"
-msgstr "Sparar"
-
-#: src/amo/components/AddonReviewManager/index.js:125
-msgid "Saved"
-msgstr "Sparad"
-
-#: src/amo/components/AddonReviewManager/index.js:138
-msgid "Update review"
-msgstr "Uppdatera recension"
-
-#: src/amo/components/AddonReviewManager/index.js:143
-msgid "Updating review"
-msgstr "Uppdaterar recension"
-
-#: src/amo/components/AddonReviewManager/index.js:144
+#: src/amo/components/AddonReviewManager/index.js:104
 msgid "Submitting review"
 msgstr "Skickar in recension"
 
-#: src/amo/components/AddonReviewManager/index.js:83
+#: src/amo/components/AddonReviewManager/index.js:108
+msgid "Update review"
+msgstr "Uppdatera recension"
+
+#: src/amo/components/AddonReviewManager/index.js:111
+msgid "Updating review"
+msgstr "Uppdaterar recension"
+
+#: src/amo/components/AddonReviewManager/index.js:119
+msgid "Your star rating:"
+msgstr "Ditt betyg:"
+
+#: src/amo/components/AddonReviewManager/index.js:137
+msgid "Saving"
+msgstr "Sparar"
+
+#: src/amo/components/AddonReviewManager/index.js:138
+msgid "Saved"
+msgstr "Sparad"
+
+#: src/amo/components/AddonReviewManager/index.js:143 src/amo/components/CollectionManager/index.js:302 src/amo/pages/UserProfileEdit/index.js:847 src/ui/components/ConfirmationDialog/index.js:60
+#: src/ui/components/DismissibleTextForm/index.js:172
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/amo/components/AddonReviewManager/index.js:82
 msgid "Please follow our %(linkStart)sreview guidelines%(linkEnd)s."
 msgstr "Vänligen följ våra%(linkStart)sriktlinjer gör granskning%(linkEnd)s."
 
-#: src/amo/components/AddonReviewManager/index.js:98
+#: src/amo/components/AddonReviewManager/index.js:99
 msgid "Write about your experience with this add-on."
 msgstr "Skriv om dina erfarenheter av detta tillägg."
 
@@ -441,21 +462,21 @@ msgstr "Tillägg av %(author)s"
 msgid "Add-ons by these developers"
 msgstr "Tillägg av dessa utvecklare"
 
-#: src/amo/components/App/index.js:213 src/amo/components/SectionLinks/index.js:153
-msgid "Add-ons for Firefox"
-msgstr "Tillägg för Firefox"
+#: src/amo/components/App/index.js:219
+msgid "Add-ons for Firefox (%(locale)s)"
+msgstr "Tillägg för Firefox (%(locale)s)"
 
-#: src/amo/components/App/index.js:214
-msgid "%s – Add-ons for Firefox"
-msgstr "%s – Tillägg för Firefox"
+#: src/amo/components/App/index.js:223
+msgid "%(title)s – Add-ons for Firefox (%(locale)s)"
+msgstr "%(title)s – Tillägg för Firefox (%(locale)s)"
 
-#: src/amo/components/App/index.js:217 src/amo/components/SectionLinks/index.js:140
-msgid "Add-ons for Android"
-msgstr "Tillägg för Android"
+#: src/amo/components/App/index.js:231
+msgid "Add-ons for Android (%(locale)s)"
+msgstr "Tillägg för Android (%(locale)s)"
 
-#: src/amo/components/App/index.js:218
-msgid "%s – Add-ons for Android"
-msgstr "%s – Tillägg för Android"
+#: src/amo/components/App/index.js:235
+msgid "%(title)s – Add-ons for Android (%(locale)s)"
+msgstr "%(title)s – Tillägg för Android (%(locale)s)"
 
 #: src/amo/components/AutoSearchInput/index.js:215
 msgid "Loading"
@@ -525,29 +546,25 @@ msgstr "Tillägg"
 msgid "Creator"
 msgstr "Skapare"
 
-#: src/amo/components/CollectionManager/index.js:225
+#: src/amo/components/CollectionManager/index.js:229
 msgid "Create collection"
 msgstr "Skapa samling"
 
-#: src/amo/components/CollectionManager/index.js:226
+#: src/amo/components/CollectionManager/index.js:230
 msgid "Save changes"
 msgstr "Spara ändringar"
 
-#: src/amo/components/CollectionManager/index.js:235
+#: src/amo/components/CollectionManager/index.js:239
 msgid "Collection name"
 msgstr "Samlingsnamn"
 
-#: src/amo/components/CollectionManager/index.js:249
+#: src/amo/components/CollectionManager/index.js:253
 msgid "Description"
 msgstr "Beskrivning"
 
-#: src/amo/components/CollectionManager/index.js:261
+#: src/amo/components/CollectionManager/index.js:265
 msgid "Custom URL"
 msgstr "Anpassad URL"
-
-#: src/amo/components/CollectionManager/index.js:298 src/amo/pages/UserProfileEdit/index.js:847 src/ui/components/ConfirmButton/index.js:108 src/ui/components/DismissibleTextForm/index.js:172
-msgid "Cancel"
-msgstr "Avbryt"
 
 #: src/amo/components/CollectionSort/index.js:104
 msgid "Sort add-ons by"
@@ -621,7 +638,7 @@ msgstr "Författarna av detta tillägg frågar att du kan hjälpa till att stöd
 msgid "Contribute now"
 msgstr "Bidra nu"
 
-#: src/amo/components/DownloadFirefoxButton/index.js:40 src/amo/components/Footer/index.js:106
+#: src/amo/components/DownloadFirefoxButton/index.js:40 src/amo/components/Footer/index.js:111
 msgid "Download Firefox"
 msgstr "Hämta Firefox"
 
@@ -701,11 +718,15 @@ msgstr "Serverfel"
 msgid "Sorry, but there was an error with our server and we couldn't complete your request. We have logged this error and will investigate it."
 msgstr "Tyvärr, men ett fel uppstod och vi kunde inte slutföra din begäran. Vi har loggat detta fel och kommer att undersöka det."
 
-#: src/amo/components/FeaturedAddonReview/index.js:77
+#: src/amo/components/FeaturedAddonReview/index.js:79
+msgid "Response by %(userName)s"
+msgstr "Svar från %(userName)s"
+
+#: src/amo/components/FeaturedAddonReview/index.js:80
 msgid "Review by %(userName)s"
 msgstr "Recension av %(userName)s"
 
-#: src/amo/components/FeaturedAddonReview/index.js:87
+#: src/amo/components/FeaturedAddonReview/index.js:92
 msgid "The review was not found."
 msgstr "Recensionen hittades inte."
 
@@ -765,43 +786,43 @@ msgstr "Detta innehåller olämpligt språk"
 msgid "Flagged for inappropriate language"
 msgstr "Flaggad för olämpligt språk"
 
-#: src/amo/components/Footer/index.js:111
+#: src/amo/components/Footer/index.js:116
 msgid "Android Browser"
 msgstr "Webbläsare för Android"
 
-#: src/amo/components/Footer/index.js:116
+#: src/amo/components/Footer/index.js:121
 msgid "iOS Browser"
 msgstr "Webbläsare för iOS"
 
-#: src/amo/components/Footer/index.js:121
+#: src/amo/components/Footer/index.js:126
 msgid "Focus Browser"
 msgstr "Webbläsaren Focus"
 
-#: src/amo/components/Footer/index.js:126
+#: src/amo/components/Footer/index.js:131
 msgid "Desktop Browser"
 msgstr "Webbläsare för datorer"
 
-#: src/amo/components/Footer/index.js:131
+#: src/amo/components/Footer/index.js:136
 msgid "Beta, Nightly, Developer Edition"
 msgstr "Beta, Nightly, Developer Edition"
 
-#: src/amo/components/Footer/index.js:160
+#: src/amo/components/Footer/index.js:165
 msgid "Privacy"
 msgstr "Sekretess"
 
-#: src/amo/components/Footer/index.js:168
+#: src/amo/components/Footer/index.js:173
 msgid "Cookies"
 msgstr "Kakor"
 
-#: src/amo/components/Footer/index.js:176
+#: src/amo/components/Footer/index.js:181
 msgid "Legal"
 msgstr "Juridisk information"
 
-#: src/amo/components/Footer/index.js:184
+#: src/amo/components/Footer/index.js:189
 msgid "Report Trademark Abuse"
 msgstr "Rapportera varumärkesintrång"
 
-#: src/amo/components/Footer/index.js:194
+#: src/amo/components/Footer/index.js:199
 msgid ""
 "Except where otherwise %(startNotedLink)snoted%(endNotedLink)s, content on this site is licensed under the %(startLicenseLink)sCreative Commons Attribution Share-Alike License v3.0%(endLicenseLink)s"
 " or any later version."
@@ -826,22 +847,26 @@ msgid "Developer Hub"
 msgstr "Utvecklarcenter"
 
 #: src/amo/components/Footer/index.js:63
+msgid "Developer Policies"
+msgstr "Utvecklarpolicyer"
+
+#: src/amo/components/Footer/index.js:68
 msgid "Forum"
 msgstr "Forum"
 
-#: src/amo/components/Footer/index.js:71
+#: src/amo/components/Footer/index.js:76
 msgid "Report a bug"
 msgstr "Rapportera en bugg"
 
-#: src/amo/components/Footer/index.js:76
+#: src/amo/components/Footer/index.js:81
 msgid "Review Guide"
 msgstr "Recensionsriktlinjer"
 
-#: src/amo/components/Footer/index.js:81
+#: src/amo/components/Footer/index.js:86
 msgid "Site Status"
 msgstr "Webbplatsstatus"
 
-#: src/amo/components/Footer/index.js:93
+#: src/amo/components/Footer/index.js:98
 msgid "View classic desktop site"
 msgstr "Visa datoranpassad sida"
 
@@ -889,301 +914,341 @@ msgstr "Firefox tillägg"
 msgid "My Account"
 msgstr "Mitt konto"
 
-#: src/amo/components/HomeHeroBanner/index.js:102
-msgid "Transparent Standalone Images"
-msgstr "Transparent Standalone Images"
-
-#: src/amo/components/HomeHeroBanner/index.js:103
-msgid "Render images on transparent backgrounds"
-msgstr "Rendera bilder på transparent bakgrund"
-
-#: src/amo/components/HomeHeroBanner/index.js:107
+#: src/amo/components/HomeHeroBanner/index.js:101
 msgid "Universal Bypass"
 msgstr "Universal Bypass"
 
-#: src/amo/components/HomeHeroBanner/index.js:108
+#: src/amo/components/HomeHeroBanner/index.js:102
 msgid "Automatically skip annoying link shorteners"
 msgstr "Hoppa automatiskt över irriterande länkförkortare"
 
-#: src/amo/components/HomeHeroBanner/index.js:114
+#: src/amo/components/HomeHeroBanner/index.js:108
 msgid "Tree Style Tab"
 msgstr "Tree Style Tab"
 
-#: src/amo/components/HomeHeroBanner/index.js:115
+#: src/amo/components/HomeHeroBanner/index.js:109
 msgid "Have a ton of open tabs? Organize them in a tidy sidebar"
 msgstr "Har du massor av öppna flikar? Organisera dem i en snygg sidopanel"
 
-#: src/amo/components/HomeHeroBanner/index.js:121
+#: src/amo/components/HomeHeroBanner/index.js:115
 msgid "Imagus"
 msgstr "Imagus"
 
-#: src/amo/components/HomeHeroBanner/index.js:122
+#: src/amo/components/HomeHeroBanner/index.js:116
 msgid "Enlarge images by hovering your mouse over it"
 msgstr "Förstora bilder genom att hålla musen över den"
 
-#: src/amo/components/HomeHeroBanner/index.js:128
+#: src/amo/components/HomeHeroBanner/index.js:122
 msgid "Privacy Possum"
 msgstr "Privacy Possum"
 
-#: src/amo/components/HomeHeroBanner/index.js:129
+#: src/amo/components/HomeHeroBanner/index.js:123
 msgid "Protect yourself against the sneakiest trackers"
 msgstr "Skydda dig mot lömska trackers"
 
-#: src/amo/components/HomeHeroBanner/index.js:135
+#: src/amo/components/HomeHeroBanner/index.js:129
 msgid "Default Bookmark Folder"
 msgstr "Default Bookmark Folder"
 
-#: src/amo/components/HomeHeroBanner/index.js:136
+#: src/amo/components/HomeHeroBanner/index.js:130
 msgid "Change the default destination for your bookmarks"
 msgstr "Ändra standarddestinationen för dina bokmärken"
 
-#: src/amo/components/HomeHeroBanner/index.js:142
+#: src/amo/components/HomeHeroBanner/index.js:136
 msgid "Textmarker"
 msgstr "Textmarker"
 
-#: src/amo/components/HomeHeroBanner/index.js:143
+#: src/amo/components/HomeHeroBanner/index.js:137
 msgid "Highly customizable text highlighter"
 msgstr "Mycket anpassningsbar textmarkerare"
 
-#: src/amo/components/HomeHeroBanner/index.js:147
+#: src/amo/components/HomeHeroBanner/index.js:141
 msgid "Watch2Gether"
 msgstr "Watch2Gether"
 
-#: src/amo/components/HomeHeroBanner/index.js:148
+#: src/amo/components/HomeHeroBanner/index.js:142
 msgid "Watch videos simultaneously with others"
 msgstr "Titta på videoklipp samtidigt med andra"
 
-#: src/amo/components/HomeHeroBanner/index.js:152
+#: src/amo/components/HomeHeroBanner/index.js:146
 msgid "Context Search"
 msgstr "Context Search"
 
-#: src/amo/components/HomeHeroBanner/index.js:153
+#: src/amo/components/HomeHeroBanner/index.js:147
 msgid "Highlight text on any webpage to easily search the term"
 msgstr "Markera texten på en webbsida för att enkelt söka efter termen"
 
-#: src/amo/components/HomeHeroBanner/index.js:159
+#: src/amo/components/HomeHeroBanner/index.js:153
 msgid "Stylus"
 msgstr "Stylus"
 
-#: src/amo/components/HomeHeroBanner/index.js:160
+#: src/amo/components/HomeHeroBanner/index.js:154
 msgid "Give your favorite websites a new look"
 msgstr "Ge dina favoritwebbplatser ett nytt utseende"
 
-#: src/amo/components/HomeHeroBanner/index.js:164
+#: src/amo/components/HomeHeroBanner/index.js:158
 msgid "Search Encrypt"
 msgstr "Search Encrypt"
 
-#: src/amo/components/HomeHeroBanner/index.js:165
+#: src/amo/components/HomeHeroBanner/index.js:159
 msgid "Privacy protection for your search data"
 msgstr "Sekretessskydd för dina sökdata"
 
-#: src/amo/components/HomeHeroBanner/index.js:169
+#: src/amo/components/HomeHeroBanner/index.js:163
 msgid "Auto Tab Discard"
 msgstr "Auto Tab Discard"
 
-#: src/amo/components/HomeHeroBanner/index.js:170
+#: src/amo/components/HomeHeroBanner/index.js:164
 msgid "Save memory by disabling inactive tabs"
 msgstr "Spara minne genom att inaktivera inaktiva flikar"
 
-#: src/amo/components/HomeHeroBanner/index.js:174
+#: src/amo/components/HomeHeroBanner/index.js:168
 msgid "Update Scanner"
 msgstr "Update Scanner"
 
-#: src/amo/components/HomeHeroBanner/index.js:175
+#: src/amo/components/HomeHeroBanner/index.js:169
 msgid "Get notified when your selected websites update with new content"
 msgstr "Bli informerad när dina valda webbplatser uppdateras med nytt innehåll"
 
-#: src/amo/components/HomeHeroBanner/index.js:181
+#: src/amo/components/HomeHeroBanner/index.js:175
 msgid "Auto Fullscreen"
 msgstr "Auto Fullscreen"
 
-#: src/amo/components/HomeHeroBanner/index.js:182
+#: src/amo/components/HomeHeroBanner/index.js:176
 msgid "Automatically start Firefox in full screen mode"
 msgstr "Starta Firefox automatiskt i helskärmsläge"
 
-#: src/amo/components/HomeHeroBanner/index.js:188
+#: src/amo/components/HomeHeroBanner/index.js:182
 msgid "Video Speed Controller"
 msgstr "Video Speed Controller"
 
-#: src/amo/components/HomeHeroBanner/index.js:189
+#: src/amo/components/HomeHeroBanner/index.js:183
 msgid "Adjust video playback speeds with shortcuts"
 msgstr "Justera videouppspelningshastigheter med genvägar"
 
-#: src/amo/components/HomeHeroBanner/index.js:195
+#: src/amo/components/HomeHeroBanner/index.js:189
 msgid "View Image"
 msgstr "View Image"
 
-#: src/amo/components/HomeHeroBanner/index.js:196
+#: src/amo/components/HomeHeroBanner/index.js:190
 msgid "Revive the ‘View Image’ and ‘Search by Image’ buttons on Google Images"
 msgstr "Återuppliva knapparna \"Visa bild\" och \"Sök efter bild\" på Google bilder"
 
-#: src/amo/components/HomeHeroBanner/index.js:202
+#: src/amo/components/HomeHeroBanner/index.js:196
 msgid "Neat URL"
 msgstr "Neat URL"
 
-#: src/amo/components/HomeHeroBanner/index.js:203
+#: src/amo/components/HomeHeroBanner/index.js:197
 msgid "Clean up links for easy sharing"
 msgstr "Rensa upp länkarna för enkel delning"
 
-#: src/amo/components/HomeHeroBanner/index.js:207
+#: src/amo/components/HomeHeroBanner/index.js:201
 msgid "Glitter Drag"
 msgstr "Glitter Drag"
 
-#: src/amo/components/HomeHeroBanner/index.js:208
+#: src/amo/components/HomeHeroBanner/index.js:202
 msgid "Drag text, images, or links to perform actions like copy, open, search, and more"
 msgstr "Dra text, bilder eller länkar för att utföra handlingar som kopiera, öppna, söka och mer"
 
-#: src/amo/components/HomeHeroBanner/index.js:214
+#: src/amo/components/HomeHeroBanner/index.js:208
 msgid "Behind The Overlay Revival"
 msgstr "Behind The Overlay Revival"
 
-#: src/amo/components/HomeHeroBanner/index.js:215
+#: src/amo/components/HomeHeroBanner/index.js:209
 msgid "Click a button to close annoying pop-ups"
 msgstr "Klicka på en knapp för att stänga irriterande popup-fönster"
 
-#: src/amo/components/HomeHeroBanner/index.js:219
+#: src/amo/components/HomeHeroBanner/index.js:213
 msgid "Auto-Sort Bookmarks"
 msgstr "Auto-Sort Bookmarks"
 
-#: src/amo/components/HomeHeroBanner/index.js:220
+#: src/amo/components/HomeHeroBanner/index.js:214
 msgid "Automatically sorts bookmarks so they’re in your preferred position"
 msgstr "Sorterar automatiskt bokmärken så att de är i din favoritposition"
 
-#: src/amo/components/HomeHeroBanner/index.js:226
+#: src/amo/components/HomeHeroBanner/index.js:220
 msgid "Search Preview"
 msgstr "Search Preview"
 
-#: src/amo/components/HomeHeroBanner/index.js:227
+#: src/amo/components/HomeHeroBanner/index.js:221
 msgid "Enjoy thumbnail images alongside your search returns"
 msgstr "Njut av miniatyrbilder tillsammans med dina sökresultat"
 
-#: src/amo/components/HomeHeroBanner/index.js:233
+#: src/amo/components/HomeHeroBanner/index.js:227
 msgid "Copy PlainText"
 msgstr "Copy PlainText"
 
-#: src/amo/components/HomeHeroBanner/index.js:234
+#: src/amo/components/HomeHeroBanner/index.js:228
 msgid "Remove formatting when saving text to your clipboard"
 msgstr "Ta bort formatering när du sparar text till klippbordet"
 
-#: src/amo/components/HomeHeroBanner/index.js:240
+#: src/amo/components/HomeHeroBanner/index.js:234
 msgid "Official Media Bias Fact Check Icon"
 msgstr "Official Media Bias Fact Check Icon"
 
-#: src/amo/components/HomeHeroBanner/index.js:241
+#: src/amo/components/HomeHeroBanner/index.js:235
 msgid "Indicates the political bias of news sites with a tidy icon"
 msgstr "Anger den politiska partiskheten hos nyhetssajter med en städad ikon"
 
-#: src/amo/components/HomeHeroBanner/index.js:247
+#: src/amo/components/HomeHeroBanner/index.js:241
 msgid "Vertical Tabs Reloaded"
 msgstr "Vertical Tabs Reloaded"
 
-#: src/amo/components/HomeHeroBanner/index.js:248
+#: src/amo/components/HomeHeroBanner/index.js:242
 msgid "Arrange tabs in a vertical fashion"
 msgstr "Ordna flikar vertikalt"
 
-#: src/amo/components/HomeHeroBanner/index.js:252
+#: src/amo/components/HomeHeroBanner/index.js:246
 msgid "Search Site"
 msgstr "Search Site"
 
-#: src/amo/components/HomeHeroBanner/index.js:253
+#: src/amo/components/HomeHeroBanner/index.js:247
 msgid "Search within just the domain you’re visiting"
 msgstr "Sök inom bara domänen du besöker"
 
-#: src/amo/components/HomeHeroBanner/index.js:259
+#: src/amo/components/HomeHeroBanner/index.js:253
 msgid "Push to Kindle"
 msgstr "Push to Kindle"
 
-#: src/amo/components/HomeHeroBanner/index.js:260
+#: src/amo/components/HomeHeroBanner/index.js:254
 msgid "Send any Web page to your Kindle device"
 msgstr "Skicka en webbsida till din Kindle-enhet"
 
-#: src/amo/components/HomeHeroBanner/index.js:264
+#: src/amo/components/HomeHeroBanner/index.js:258
 msgid "New Tab Homepage"
 msgstr "New Tab Homepage"
 
-#: src/amo/components/HomeHeroBanner/index.js:265
+#: src/amo/components/HomeHeroBanner/index.js:259
 msgid "Designate a custom home page for your new tabs"
 msgstr "Utse en egen hemsida för dina nya flikar"
 
-#: src/amo/components/HomeHeroBanner/index.js:271
+#: src/amo/components/HomeHeroBanner/index.js:265
 msgid "OneNote Web Clipper"
 msgstr "OneNote Web Clipper"
 
-#: src/amo/components/HomeHeroBanner/index.js:272
+#: src/amo/components/HomeHeroBanner/index.js:266
 msgid "Save, annotate & organize web content"
 msgstr "Spara, kommentera och organisera webbinnehåll"
 
-#: src/amo/components/HomeHeroBanner/index.js:276
+#: src/amo/components/HomeHeroBanner/index.js:270
 msgid "FoxyGestures"
 msgstr "FoxyGestures"
 
-#: src/amo/components/HomeHeroBanner/index.js:277
+#: src/amo/components/HomeHeroBanner/index.js:271
 msgid "Customized mouse gestures"
 msgstr "Anpassningsbara musgester"
 
-#: src/amo/components/HomeHeroBanner/index.js:50
+#: src/amo/components/HomeHeroBanner/index.js:275
+msgid "Dark Reader"
+msgstr "Dark Reader"
+
+#: src/amo/components/HomeHeroBanner/index.js:276
+msgid "Go dark for a better web viewing experience"
+msgstr "Gör det mörkt för en bättre webbupplevelse"
+
+#: src/amo/components/HomeHeroBanner/index.js:282
+msgid "CookieBro"
+msgstr "CookieBro"
+
+#: src/amo/components/HomeHeroBanner/index.js:283
+msgid "Automatically delete unwanted cookies"
+msgstr "Ta bort oönskade kakor automatiskt"
+
+#: src/amo/components/HomeHeroBanner/index.js:287
+msgid "Text MultiCopy"
+msgstr "Text MultiCopy"
+
+#: src/amo/components/HomeHeroBanner/index.js:288
+msgid "Save snippets of text to paste & organize later"
+msgstr "Spara utdrag av text för att klistra in och organisera senare"
+
+#: src/amo/components/HomeHeroBanner/index.js:294
+msgid "Group Speed Dial"
+msgstr "Group Speed Dial"
+
+#: src/amo/components/HomeHeroBanner/index.js:295
+msgid "Visual bookmarks for your favorite places on the web"
+msgstr "Visuella bokmärken för dina favoritplatser på webben"
+
+#: src/amo/components/HomeHeroBanner/index.js:301
+msgid "Undo Close Tab Button"
+msgstr "Undo Close Tab Button"
+
+#: src/amo/components/HomeHeroBanner/index.js:302
+msgid "Never lose a page again"
+msgstr "Förlora aldrig en sida igen"
+
+#: src/amo/components/HomeHeroBanner/index.js:44
 msgid "Facebook Container"
 msgstr "Facebook Container"
 
-#: src/amo/components/HomeHeroBanner/index.js:51
+#: src/amo/components/HomeHeroBanner/index.js:45
 msgid "Prevent Facebook from tracking you around the web"
 msgstr "Förhindra att Facebook spårar dig på webben"
 
-#: src/amo/components/HomeHeroBanner/index.js:57
+#: src/amo/components/HomeHeroBanner/index.js:51
 msgid "Midnight Lizard"
 msgstr "Midnight Lizard"
 
-#: src/amo/components/HomeHeroBanner/index.js:58
+#: src/amo/components/HomeHeroBanner/index.js:52
 msgid "Give the entire internet a new look"
 msgstr "Ge hela internet ett nytt utseende"
 
-#: src/amo/components/HomeHeroBanner/index.js:62
+#: src/amo/components/HomeHeroBanner/index.js:56
 msgid "Iridium for YouTube"
 msgstr "Iridium för YouTube"
 
-#: src/amo/components/HomeHeroBanner/index.js:63
+#: src/amo/components/HomeHeroBanner/index.js:57
 msgid "Play videos in a pop-out window, take video screenshots & more"
 msgstr "Spela upp videor i ett popup-fönster, ta skärmdumpar av video och mer"
 
-#: src/amo/components/HomeHeroBanner/index.js:69
+#: src/amo/components/HomeHeroBanner/index.js:63
 msgid "Private Bookmarks"
 msgstr "Private Bookmarks"
 
-#: src/amo/components/HomeHeroBanner/index.js:70
+#: src/amo/components/HomeHeroBanner/index.js:64
 msgid "Password-protect your personal bookmarks"
 msgstr "Lösenordsskydda dina personliga bokmärken"
 
-#: src/amo/components/HomeHeroBanner/index.js:74
+#: src/amo/components/HomeHeroBanner/index.js:68
 msgid "IP Address and Domain Information"
 msgstr "IP Address and Domain Information"
 
-#: src/amo/components/HomeHeroBanner/index.js:75
+#: src/amo/components/HomeHeroBanner/index.js:69
 msgid "See detailed info about every website you visit—IP address, location, provider & more"
 msgstr "Se detaljerad information om varje webbplats du besöker—IP-adress, plats, leverantör och mer"
 
-#: src/amo/components/HomeHeroBanner/index.js:81
+#: src/amo/components/HomeHeroBanner/index.js:75
 msgid "New Tab Override"
 msgstr "New Tab Override"
 
-#: src/amo/components/HomeHeroBanner/index.js:82
+#: src/amo/components/HomeHeroBanner/index.js:76
 msgid "Choose the page you see every time you open a new tab"
 msgstr "Välj den sida du ser varje gång du öppnar en ny flik"
 
-#: src/amo/components/HomeHeroBanner/index.js:88
+#: src/amo/components/HomeHeroBanner/index.js:82
 msgid "Forecastfox"
 msgstr "Forecastfox"
 
-#: src/amo/components/HomeHeroBanner/index.js:89
+#: src/amo/components/HomeHeroBanner/index.js:83
 msgid "Get instant global weather information right in Firefox"
 msgstr "Få snabb global väderinformation direkt i Firefox"
 
-#: src/amo/components/HomeHeroBanner/index.js:95
+#: src/amo/components/HomeHeroBanner/index.js:89
 msgid "Multi-Account Containers"
 msgstr "Multi-Account Containers"
 
-#: src/amo/components/HomeHeroBanner/index.js:96
+#: src/amo/components/HomeHeroBanner/index.js:90
 msgid "Keep different parts of your online life—work, personal, etc.—separated by color-coded tabs"
 msgstr "Håll isär olika delar av ditt liv på nätet—arbete, privat, etc.—separerat med färgkodade flikar"
+
+#: src/amo/components/HomeHeroBanner/index.js:96
+msgid "Transparent Standalone Images"
+msgstr "Transparent Standalone Images"
+
+#: src/amo/components/HomeHeroBanner/index.js:97
+msgid "Render images on transparent backgrounds"
+msgstr "Rendera bilder på transparent bakgrund"
 
 #: src/amo/components/LanguagePicker/index.js:51
 msgid "Change language"
@@ -1289,39 +1354,39 @@ msgstr "Lagra obegränsat med data på klientsidan"
 msgid "Access browser activity during navigation"
 msgstr "Åtkomst till webbläsarens aktivitet under navigering"
 
-#: src/amo/components/RatingManager/index.js:190
+#: src/amo/components/RatingManager/index.js:191
 msgid "Log in to rate this dictionary"
 msgstr "Logga in för att betygsätta denna ordbok"
 
-#: src/amo/components/RatingManager/index.js:192
+#: src/amo/components/RatingManager/index.js:193
 msgid "Log in to rate this language pack"
 msgstr "Logga in för att betygsätta detta språkpaket"
 
-#: src/amo/components/RatingManager/index.js:194
+#: src/amo/components/RatingManager/index.js:195
 msgid "Log in to rate this search plugin"
 msgstr "Logga in för att betygsätta denna sök-insticksmodul"
 
-#: src/amo/components/RatingManager/index.js:197
+#: src/amo/components/RatingManager/index.js:198
 msgid "Log in to rate this theme"
 msgstr "Logga in för att betygsätta detta tema"
 
-#: src/amo/components/RatingManager/index.js:199
+#: src/amo/components/RatingManager/index.js:200
 msgid "Log in to rate this extension"
 msgstr "Logga in för att betygsätta detta tillägg"
 
-#: src/amo/components/RatingManager/index.js:207
+#: src/amo/components/RatingManager/index.js:208
 msgid "Log in to rate this add-on"
 msgstr "Logga in för att betygsätta detta tillägg"
 
-#: src/amo/components/RatingManager/index.js:267
-msgid "How are you enjoying your experience with %(addonName)s?"
-msgstr "Vad tycker du om %(addonName)s?"
+#: src/amo/components/RatingManager/index.js:274
+msgid "How are you enjoying %(addonName)s?"
+msgstr "Hur tycker du om %(addonName)s?"
 
-#: src/amo/components/RatingManager/index.js:296
+#: src/amo/components/RatingManager/index.js:300
 msgid "Saving star rating"
 msgstr "Spara stjärnklassificering"
 
-#: src/amo/components/RatingManager/index.js:297
+#: src/amo/components/RatingManager/index.js:301
 msgid "Star rating saved"
 msgstr "Stjärnklassificering sparad"
 
@@ -1395,11 +1460,11 @@ msgstr "Vi har fått din rapport. Tack för att du informerade oss om dina probl
 msgid "Search results"
 msgstr "Sökresultat"
 
-#: src/amo/components/Search/index.js:126 src/amo/pages/Category/index.js:153 src/amo/pages/Home/index.js:250 src/amo/pages/LandingPage/index.js:147
+#: src/amo/components/Search/index.js:126 src/amo/pages/Category/index.js:155 src/amo/pages/Home/index.js:262 src/amo/pages/LandingPage/index.js:149
 msgid "Featured extensions"
 msgstr "Utvalda tillägg"
 
-#: src/amo/components/Search/index.js:129 src/amo/pages/Category/index.js:186 src/amo/pages/Home/index.js:286 src/amo/pages/LandingPage/index.js:176
+#: src/amo/components/Search/index.js:129 src/amo/pages/Category/index.js:188 src/amo/pages/Home/index.js:298 src/amo/pages/LandingPage/index.js:178
 msgid "Featured themes"
 msgstr "Utvalda teman"
 
@@ -1407,11 +1472,11 @@ msgstr "Utvalda teman"
 msgid "Featured add-ons"
 msgstr "Utvalda tillägg"
 
-#: src/amo/components/Search/index.js:139 src/amo/pages/Category/index.js:163 src/amo/pages/Home/index.js:296 src/amo/pages/LandingPage/index.js:156
+#: src/amo/components/Search/index.js:139 src/amo/pages/Category/index.js:165 src/amo/pages/LandingPage/index.js:158
 msgid "Trending extensions"
 msgstr "Trendiga tillägg"
 
-#: src/amo/components/Search/index.js:142 src/amo/pages/Category/index.js:196 src/amo/pages/LandingPage/index.js:185
+#: src/amo/components/Search/index.js:142 src/amo/pages/Category/index.js:198 src/amo/pages/LandingPage/index.js:187
 msgid "Trending themes"
 msgstr "Trendiga teman"
 
@@ -1419,11 +1484,11 @@ msgstr "Trendiga teman"
 msgid "Trending add-ons"
 msgstr "Trendiga tillägg"
 
-#: src/amo/components/Search/index.js:151 src/amo/pages/Category/index.js:173 src/amo/pages/LandingPage/index.js:165
+#: src/amo/components/Search/index.js:151 src/amo/pages/Category/index.js:175 src/amo/pages/LandingPage/index.js:167
 msgid "Top rated extensions"
 msgstr "Högst rankade tillägg"
 
-#: src/amo/components/Search/index.js:154 src/amo/pages/Category/index.js:206 src/amo/pages/LandingPage/index.js:191
+#: src/amo/components/Search/index.js:154 src/amo/pages/Category/index.js:208 src/amo/pages/LandingPage/index.js:193
 msgid "Top rated themes"
 msgstr "Högst rankade teman"
 
@@ -1431,7 +1496,7 @@ msgstr "Högst rankade teman"
 msgid "Top rated add-ons"
 msgstr "Högst rankade tillägg"
 
-#: src/amo/components/Search/index.js:163
+#: src/amo/components/Search/index.js:163 src/amo/pages/Home/index.js:308
 msgid "Popular extensions"
 msgstr "Populära utökningar"
 
@@ -1619,6 +1684,14 @@ msgstr "Sökverktyg"
 msgid "Other Browser Sites"
 msgstr "Andra webbläsarplatser"
 
+#: src/amo/components/SectionLinks/index.js:140
+msgid "Add-ons for Android"
+msgstr "Tillägg för Android"
+
+#: src/amo/components/SectionLinks/index.js:153
+msgid "Add-ons for Firefox"
+msgstr "Tillägg för Firefox"
+
 #: src/amo/components/SectionLinks/index.js:60
 msgid "for Firefox"
 msgstr "för Firefox"
@@ -1631,11 +1704,11 @@ msgstr "för Android"
 msgid "Explore"
 msgstr "Utforska"
 
-#: src/amo/components/SectionLinks/index.js:88 src/amo/pages/Category/index.js:152 src/amo/pages/LandingPage/index.js:231
+#: src/amo/components/SectionLinks/index.js:88 src/amo/pages/Category/index.js:154 src/amo/pages/LandingPage/index.js:235
 msgid "Extensions"
 msgstr "Tillägg"
 
-#: src/amo/components/SectionLinks/index.js:98 src/amo/pages/Category/index.js:185 src/amo/pages/LandingPage/index.js:230
+#: src/amo/components/SectionLinks/index.js:98 src/amo/pages/Category/index.js:187 src/amo/pages/LandingPage/index.js:234
 msgid "Themes"
 msgstr "Teman"
 
@@ -1761,27 +1834,61 @@ msgstr "Om detta tema"
 msgid "About this add-on"
 msgstr "Om detta tillägg"
 
-#: src/amo/pages/Addon/index.js:328
+#: src/amo/pages/Addon/index.js:334
 msgid "Release notes for %(addonVersion)s"
 msgstr "Versionsfakta för %(addonVersion)s"
 
+#: src/amo/pages/Addon/index.js:405
+msgid "Download %(addonName)s for Firefox. %(summary)s"
+msgstr "Hämta %(addonName)s för Firefox. %(summary)s"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:425
+msgid "%(addonName)s – Get this Dictionary for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta denna ordbok för 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:432
+msgid "%(addonName)s – Get this Extension for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta denna utökning för 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:439
+msgid "%(addonName)s – Get this Language Pack for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta detta språkpaket för 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:447
+msgid "%(addonName)s – Get this Theme for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta detta tema för 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:454
+msgid "%(addonName)s – Get this Search Tool for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta detta sökverktyg för 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
 #: src/amo/pages/Addon/index.js:461
+msgid "%(addonName)s – Get this Add-on for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Hämta detta tillägg för 🦊 Firefox (%(locale)s)"
+
+#: src/amo/pages/Addon/index.js:564
 msgid "%(addonName)s %(startSpan)sby %(authorList)s%(endSpan)s"
 msgstr "%(addonName)s %(startSpan)sav %(authorList)s%(endSpan)s"
 
-#: src/amo/pages/Addon/index.js:532
+#: src/amo/pages/Addon/index.js:635
 msgid "This is not a public listing. You are only seeing it because of elevated permissions."
 msgstr "Detta är inte en publik listning. Du ser endast det på grund av förhöjda behörigheter."
 
-#: src/amo/pages/Addon/index.js:587
+#: src/amo/pages/Addon/index.js:690
 msgid "Only with Firefox—Get Firefox Now"
 msgstr "Endast med Firefox—Hämta Firefox nu"
 
-#: src/amo/pages/Addon/index.js:593
+#: src/amo/pages/Addon/index.js:696
 msgid "Extension Metadata"
 msgstr "Metadata för tillägg"
 
-#: src/amo/pages/Addon/index.js:610
+#: src/amo/pages/Addon/index.js:713
 msgid "Screenshots"
 msgstr "Skärmbilder"
 
@@ -1807,51 +1914,51 @@ msgstr "av %(authorList)s"
 msgid "%(averageRating)s star average"
 msgstr "Genomsnitt %(averageRating)s stjärnor"
 
-#: src/amo/pages/Category/index.js:162 src/amo/pages/Home/index.js:251 src/amo/pages/LandingPage/index.js:155
+#: src/amo/pages/Category/index.js:164 src/amo/pages/Home/index.js:263 src/amo/pages/LandingPage/index.js:157
 msgid "See more featured extensions"
 msgstr "Se fler utvalda utökningar"
 
-#: src/amo/pages/Category/index.js:172 src/amo/pages/Home/index.js:297 src/amo/pages/LandingPage/index.js:164
+#: src/amo/pages/Category/index.js:174 src/amo/pages/LandingPage/index.js:166
 msgid "See more trending extensions"
 msgstr "Se fler trendiga utökningar"
 
-#: src/amo/pages/Category/index.js:182 src/amo/pages/LandingPage/index.js:173
+#: src/amo/pages/Category/index.js:184 src/amo/pages/LandingPage/index.js:175
 msgid "See more top rated extensions"
 msgstr "Se fler topprankade utökningar"
 
-#: src/amo/pages/Category/index.js:195 src/amo/pages/Home/index.js:276 src/amo/pages/LandingPage/index.js:184
+#: src/amo/pages/Category/index.js:197 src/amo/pages/Home/index.js:288 src/amo/pages/LandingPage/index.js:186
 msgid "See more featured themes"
 msgstr "Se fler utvalda teman"
 
-#: src/amo/pages/Category/index.js:205 src/amo/pages/LandingPage/index.js:190
+#: src/amo/pages/Category/index.js:207 src/amo/pages/LandingPage/index.js:192
 msgid "See more trending themes"
 msgstr "Se fler trendiga teman"
 
-#: src/amo/pages/Category/index.js:215 src/amo/pages/LandingPage/index.js:196
+#: src/amo/pages/Category/index.js:217 src/amo/pages/LandingPage/index.js:198
 msgid "See more top rated themes"
 msgstr "Se fler topprankade teman"
 
-#: src/amo/pages/Collection/index.js:356
+#: src/amo/pages/Collection/index.js:373
 msgid "Do you really want to delete this collection?"
 msgstr "Vill du verkligen ta bort den här samlingen?"
 
-#: src/amo/pages/Collection/index.js:359
+#: src/amo/pages/Collection/index.js:376
 msgid "Delete this collection"
 msgstr "Ta bort denna samling"
 
-#: src/amo/pages/Collection/index.js:378
+#: src/amo/pages/Collection/index.js:395
 msgid "Log in to create a collection"
 msgstr "Logga in för att skapa en samling"
 
-#: src/amo/pages/Collection/index.js:379
+#: src/amo/pages/Collection/index.js:396
 msgid "Log in to edit this collection"
 msgstr "Logga in för att redigera denna samling"
 
-#: src/amo/pages/Collection/index.js:412
+#: src/amo/pages/Collection/index.js:429
 msgid "First, create your collection. Then you can add extensions and themes."
 msgstr "Skapa först din samling. Då kan du lägga till utökningar och teman."
 
-#: src/amo/pages/Collection/index.js:415
+#: src/amo/pages/Collection/index.js:432
 msgid "Search for extensions and themes to add to your collection."
 msgstr "Sök efter utökningar och teman som ska läggas till i din samling."
 
@@ -1879,202 +1986,127 @@ msgstr "Du har inga samlingar."
 msgid "My collections"
 msgstr "Mina samlingar"
 
-#: src/amo/pages/Home/index.js:109
+#: src/amo/pages/Home/index.js:112
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
-#: src/amo/pages/Home/index.js:113
+#: src/amo/pages/Home/index.js:116
 msgid "Password managers"
 msgstr "Lösenordshanterare"
 
-#: src/amo/pages/Home/index.js:117
+#: src/amo/pages/Home/index.js:120
 msgid "Ad blockers"
 msgstr "Annonsblockerare"
 
-#: src/amo/pages/Home/index.js:121
+#: src/amo/pages/Home/index.js:124
 msgid "Smarter Shopping"
 msgstr "Smartare shopping"
 
-#: src/amo/pages/Home/index.js:125
+#: src/amo/pages/Home/index.js:128
 msgid "Productivity"
 msgstr "Produktivitet"
 
-#: src/amo/pages/Home/index.js:129
+#: src/amo/pages/Home/index.js:132
 msgid "Watching Videos"
 msgstr "Tittar på videos"
 
-#: src/amo/pages/Home/index.js:157
+#: src/amo/pages/Home/index.js:160
 msgid "Abstract"
 msgstr "Abstrakt"
 
-#: src/amo/pages/Home/index.js:162
+#: src/amo/pages/Home/index.js:165
 msgid "Nature"
 msgstr "Natur"
 
-#: src/amo/pages/Home/index.js:167
+#: src/amo/pages/Home/index.js:170
 msgid "Film & TV"
 msgstr "Film & TV"
 
-#: src/amo/pages/Home/index.js:172
+#: src/amo/pages/Home/index.js:175
 msgid "Scenery"
 msgstr "Landskap"
 
-#: src/amo/pages/Home/index.js:177
+#: src/amo/pages/Home/index.js:180
 msgid "Music"
 msgstr "Musik"
 
-#: src/amo/pages/Home/index.js:182
+#: src/amo/pages/Home/index.js:185
 msgid "Seasonal"
 msgstr "Säsongsbetonat"
 
-#: src/amo/pages/Home/index.js:214
+#: src/amo/pages/Home/index.js:219
 msgid "Customize the way Firefox works with extensions. Are you interested in…"
 msgstr "Anpassa hur Firefox fungerar med utökningar. Är du intresserad av…"
 
-#: src/amo/pages/Home/index.js:216
+#: src/amo/pages/Home/index.js:221
 msgid "Change the way Firefox looks with themes."
 msgstr "Ändra hur Firefox ser ut med teman."
 
-#: src/amo/pages/Home/index.js:49
-msgid "See more translation tools"
-msgstr "Se fler översättningsverktyg"
+#: src/amo/pages/Home/index.js:309
+msgid "See more popular extensions"
+msgstr "Se fler populära utökningar"
 
-#: src/amo/pages/Home/index.js:50
-msgid "Translation tools"
-msgstr "Översättningsverktyg"
-
-#: src/amo/pages/Home/index.js:55
+#: src/amo/pages/Home/index.js:51
 msgid "See more privacy & security extensions"
 msgstr "Se fler sekretess- och säkerhetsutökningar"
 
-#: src/amo/pages/Home/index.js:56
+#: src/amo/pages/Home/index.js:52
 msgid "Privacy & security"
 msgstr "Sekretess & säkerhet"
 
-#: src/amo/pages/LandingPage/index.js:234
+#: src/amo/pages/Home/index.js:57
+msgid "See more parental controls"
+msgstr "Se fler föräldrakontrolltillägg"
+
+#: src/amo/pages/Home/index.js:58
+msgid "Parental controls"
+msgstr "Föräldrakontroll"
+
+#: src/amo/pages/LandingPage/index.js:238
 msgid "Change your browser's appearance. Choose from thousands of themes to give Firefox the look you want."
 msgstr "Ändra webbläsarens utseende. Välj från tusentals teman att ge Firefox det utseende du vill."
 
-#: src/amo/pages/LandingPage/index.js:236
+#: src/amo/pages/LandingPage/index.js:240
 msgid "Explore powerful tools and features to customize Firefox and make the browser all your own."
 msgstr "Utforska kraftfulla verktyg och funktioner för att anpassa Firefox och göra webbläsaren till din egen."
 
-#: src/amo/pages/LandingPage/index.js:270
+#: src/amo/pages/LandingPage/index.js:278
 msgid "Explore all categories"
 msgstr "Utforska alla kategorier"
 
-#: src/amo/pages/LanguageTools/index.js:104
+#: src/amo/pages/LanguageTools/index.js:114
 msgid "Available for your locale"
 msgstr "Tillgänglig för ditt språk"
 
-#: src/amo/pages/LanguageTools/index.js:144
+#: src/amo/pages/LanguageTools/index.js:160
 msgid "Dictionaries and Language Packs"
 msgstr "Ordlistor och språkpaket"
 
-#: src/amo/pages/LanguageTools/index.js:155
+#: src/amo/pages/LanguageTools/index.js:175
 msgid "Installing a dictionary add-on will add a new language option to your spell-checker, which checks your spelling as you type in Firefox."
 msgstr "Installera en ordlista lägger till ett nytt språkalternativ till din stavningskontroll, som kontrollerar stavningen när du skriver i Firefox."
 
-#: src/amo/pages/LanguageTools/index.js:160
+#: src/amo/pages/LanguageTools/index.js:180
 msgid "Language packs change your browser's interface language, including menu options and settings."
 msgstr "Språkpaket ändrar webbläsarens gränssnittspråk, inklusive menyalternativ och inställningar."
 
-#: src/amo/pages/LanguageTools/index.js:166
+#: src/amo/pages/LanguageTools/index.js:186
 msgid "All Locales"
 msgstr "Alla språk"
 
-#: src/amo/pages/LanguageTools/index.js:172
+#: src/amo/pages/LanguageTools/index.js:192
 msgid "Locale Name"
 msgstr "Språknamn"
 
-#: src/amo/pages/LanguageTools/index.js:175
+#: src/amo/pages/LanguageTools/index.js:195
 msgid "Language Packs"
 msgstr "Språkpaket"
 
-#: src/amo/pages/LanguageTools/index.js:178
+#: src/amo/pages/LanguageTools/index.js:198
 msgid "Dictionaries"
 msgstr "Ordlistor"
 
-#: src/amo/pages/StaticPages/About/index.js:122
-msgid "If you want to contribute but are not quite as technical, there are still ways to help:"
-msgstr "Om du vill bidra men du är inte så teknisk, finns det fortfarande sätt att hjälpa till:"
-
-#: src/amo/pages/StaticPages/About/index.js:131
-msgid "Participate in our %(startLink)sforum%(endLink)s."
-msgstr "Delta i vårt %(startLink)sforum%(endLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:144
-msgid "Leave feedback for your favorite add-ons. Add-on authors are more likely to improve their add-ons and create new ones when they know people appreciate their work."
-msgstr "Lämna återkoppling för ditt favorittillägg. Upphovsmän av tillägg är mer benägna att förbättra sina tillägg och skapa nya när de vet att människor uppskattar deras arbete."
-
-#: src/amo/pages/StaticPages/About/index.js:149
-msgid "Tell your friends and family that Firefox is a fast, secure browser that protects their privacy, and they can use add-ons to make it their own!"
-msgstr "Berätta för dina vänner och familj att Firefox är en snabb, säker webbläsare som skyddar deras integritet och kan anpassas med tillägg!"
-
-#: src/amo/pages/StaticPages/About/index.js:157
-msgid "To see more ways you can contribute to the add-on community, please visit our %(startLink)swiki%(endLink)s"
-msgstr "För att se fler sätt du kan bidra till tilläggsgemenskapen, besök vår%(startLink)swiki%(endLink)s"
-
-#: src/amo/pages/StaticPages/About/index.js:171
-msgid "Get support"
-msgstr "Få hjälp"
-
-#: src/amo/pages/StaticPages/About/index.js:176
-msgid ""
-"If you would like to learn more about how to manage add-ons in Firefox, or need to find general Firefox support, please visit %(startSUMOLink)sSupport%(endSUMOLink)s Mozilla. If you don't find an "
-"answer there, you can %(startForumLink)sask on our community forum%(endForumLink)s."
-msgstr ""
-"Om du vill lära dig mer om hur man hanterar tillägg i Firefox eller behöver hitta allmän support för Firefox, besök %(startSUMOLink)sSupport%(endSUMOLink)s Mozilla. Om du inte hittar ett svar där "
-"kan du %(startForumLink)s fråga på vårt gemenskapsforum%(endForumLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:197
-msgid "%(startLink)sInformation about how to contact Mozilla's add-ons team can be found here%(endLink)s."
-msgstr "%(startLink)sInformation om hur du kontaktar Mozillas grupp för tillägg finns här%(endLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:23 src/amo/pages/StaticPages/About/index.js:26
-msgid "About Firefox Add-ons"
-msgstr "Om Firefox tillägg"
-
-#: src/amo/pages/StaticPages/About/index.js:32
-msgid ""
-"Addons.mozilla.org (AMO), is Mozilla's official site for discovering and installing add-ons for the Firefox browser. Add-ons help you modify and personalize your browsing experience by adding new "
-"features to Firefox, enhancing your interactions with Web content, and changing the way your browser looks."
-msgstr ""
-"Addons.mozilla.org (AMO), är Mozillas officiella webbplats för att upptäcka och installera tillägg till webbläsaren Firefox. Tillägg hjälper dig att ändra och anpassa din webbläsarupplevelse genom "
-"att lägga till nya funktioner i Firefox, förbättra dina interaktioner med webbinnehåll och ändra hur webbläsaren ser ut."
-
-#: src/amo/pages/StaticPages/About/index.js:42
-msgid "If you are looking for add-ons for Thunderbird or SeaMonkey, please visit %(startTBLink)saddons.thunderbird.net%(endTBLink)s or %(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
-msgstr "Om du letar efter tillägg för Thunderbird eller SeaMonkey, besök %(startTBLink)saddons.thunderbird.net%(endTBLink)s eller %(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:59
-msgid "A community of creators"
-msgstr "En gemenskap av utvecklare"
-
-#: src/amo/pages/StaticPages/About/index.js:61
-msgid ""
-"The add-ons listed here are created by thousands of developers and theme designers from all over the world, ranging from individual hobbyists to large corporations. Some add-ons listed on AMO have "
-"been automatically published and may be subject to review by a team of editors once publically listed."
-msgstr ""
-"Tilläggen som listas här skapas av tusentals utvecklare och temadesigners från hela världen, allt från enskilda hobbyister till stora företag. Vissa tillägg som är listade på AMO har publicerats "
-"automatiskt och kan bli föremål för granskning av en grupp av redigerare när de är publicerade."
-
-#: src/amo/pages/StaticPages/About/index.js:70
-msgid "Get involved"
-msgstr "Engagera dig"
-
-#: src/amo/pages/StaticPages/About/index.js:72
-msgid ""
-"Mozilla is a non-profit champion of the Internet, we build Firefox to help keep it healthy, open and accessible. Add-ons support user choice and customization in Firefox, and you can contribute in "
-"the following ways:"
-msgstr ""
-"Mozilla är en ideell mästare på Internet, vi skapar Firefox för att hålla det friskt, öppet och tillgängligt. Tillägg stöder användarval och anpassning i Firefox, och du kan bidra på följande sätt:"
-
-#: src/amo/pages/StaticPages/About/index.js:82
-msgid "%(startLink)sMake your own add-on%(endLink)s. We provide free hosting and update services and can help you reach a large audience of users."
-msgstr "%(startLink)sGör dina egna tillägg%(endLink)s. Vi tillhandahåller gratis webbhotell och uppdateringstjänster och kan hjälpa dig att nå en stor publik av användare."
-
-#: src/amo/pages/StaticPages/About/index.js:98
+#: src/amo/pages/StaticPages/About/index.js:113
 msgid ""
 "Help improve this website. It's open source, and you can file bugs and submit patches. You can get started with a %(startGoodFirstBugLink)sgood first bug%(endGoodFirstBugLink)s or view all open "
 "issues for AMO’s %(startAddonsServerRepoLink)sserver%(endAddonsServerRepoLink)s and %(startAddonsFrontendRepoLink)sfrontend%(endAddonsFrontendRepoLink)s on Github."
@@ -2082,15 +2114,106 @@ msgstr ""
 "Hjälp till att förbättra denna webbplats. Det har öppen källkod, och du kan skicka in buggar och patchar. Du kan börja med en%(startGoodFirstBugLink)sbra första bugg%(endGoodFirstBugLink)s eller se "
 "alla öppna problem för AMOs %(startAddonsServerRepoLink)sserver%(endAddonsServerRepoLink)s och %(startAddonsFrontendRepoLink)sgränssnitt%(endAddonsFrontendRepoLink)s på Github."
 
+#: src/amo/pages/StaticPages/About/index.js:137
+msgid "If you want to contribute but are not quite as technical, there are still ways to help:"
+msgstr "Om du vill bidra men du är inte så teknisk, finns det fortfarande sätt att hjälpa till:"
+
+#: src/amo/pages/StaticPages/About/index.js:146
+msgid "Participate in our %(startLink)sforum%(endLink)s."
+msgstr "Delta i vårt %(startLink)sforum%(endLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:159
+msgid "Leave feedback for your favorite add-ons. Add-on authors are more likely to improve their add-ons and create new ones when they know people appreciate their work."
+msgstr "Lämna återkoppling för ditt favorittillägg. Upphovsmän av tillägg är mer benägna att förbättra sina tillägg och skapa nya när de vet att människor uppskattar deras arbete."
+
+#: src/amo/pages/StaticPages/About/index.js:164
+msgid "Tell your friends and family that Firefox is a fast, secure browser that protects their privacy, and they can use add-ons to make it their own!"
+msgstr "Berätta för dina vänner och familj att Firefox är en snabb, säker webbläsare som skyddar deras integritet och kan anpassas med tillägg!"
+
+#: src/amo/pages/StaticPages/About/index.js:172
+msgid "To see more ways you can contribute to the add-on community, please visit our %(startLink)swiki%(endLink)s"
+msgstr "För att se fler sätt du kan bidra till tilläggsgemenskapen, besök vår%(startLink)swiki%(endLink)s"
+
+#: src/amo/pages/StaticPages/About/index.js:186
+msgid "Get support"
+msgstr "Få hjälp"
+
+#: src/amo/pages/StaticPages/About/index.js:191
+msgid ""
+"If you would like to learn more about how to manage add-ons in Firefox, or need to find general Firefox support, please visit %(startSUMOLink)sSupport%(endSUMOLink)s Mozilla. If you don't find an "
+"answer there, you can %(startForumLink)sask on our community forum%(endForumLink)s."
+msgstr ""
+"Om du vill lära dig mer om hur man hanterar tillägg i Firefox eller behöver hitta allmän support för Firefox, besök %(startSUMOLink)sSupport%(endSUMOLink)s Mozilla. Om du inte hittar ett svar där "
+"kan du %(startForumLink)s fråga på vårt gemenskapsforum%(endForumLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:212
+msgid "%(startLink)sInformation about how to contact Mozilla's add-ons team can be found here%(endLink)s."
+msgstr "%(startLink)sInformation om hur du kontaktar Mozillas grupp för tillägg finns här%(endLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:34 src/amo/pages/StaticPages/About/index.js:37
+msgid "About Firefox Add-ons"
+msgstr "Om Firefox tillägg"
+
+#: src/amo/pages/StaticPages/About/index.js:47
+msgid ""
+"Addons.mozilla.org (AMO), is Mozilla's official site for discovering and installing add-ons for the Firefox browser. Add-ons help you modify and personalize your browsing experience by adding new "
+"features to Firefox, enhancing your interactions with Web content, and changing the way your browser looks."
+msgstr ""
+"Addons.mozilla.org (AMO), är Mozillas officiella webbplats för att upptäcka och installera tillägg till webbläsaren Firefox. Tillägg hjälper dig att ändra och anpassa din webbläsarupplevelse genom "
+"att lägga till nya funktioner i Firefox, förbättra dina interaktioner med webbinnehåll och ändra hur webbläsaren ser ut."
+
+#: src/amo/pages/StaticPages/About/index.js:57
+msgid "If you are looking for add-ons for Thunderbird or SeaMonkey, please visit %(startTBLink)saddons.thunderbird.net%(endTBLink)s or %(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
+msgstr "Om du letar efter tillägg för Thunderbird eller SeaMonkey, besök %(startTBLink)saddons.thunderbird.net%(endTBLink)s eller %(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:74
+msgid "A community of creators"
+msgstr "En gemenskap av utvecklare"
+
+#: src/amo/pages/StaticPages/About/index.js:76
+msgid ""
+"The add-ons listed here are created by thousands of developers and theme designers from all over the world, ranging from individual hobbyists to large corporations. Some add-ons listed on AMO have "
+"been automatically published and may be subject to review by a team of editors once publically listed."
+msgstr ""
+"Tilläggen som listas här skapas av tusentals utvecklare och temadesigners från hela världen, allt från enskilda hobbyister till stora företag. Vissa tillägg som är listade på AMO har publicerats "
+"automatiskt och kan bli föremål för granskning av en grupp av redigerare när de är publicerade."
+
+#: src/amo/pages/StaticPages/About/index.js:85
+msgid "Get involved"
+msgstr "Engagera dig"
+
+#: src/amo/pages/StaticPages/About/index.js:87
+msgid ""
+"Mozilla is a non-profit champion of the Internet, we build Firefox to help keep it healthy, open and accessible. Add-ons support user choice and customization in Firefox, and you can contribute in "
+"the following ways:"
+msgstr ""
+"Mozilla är en ideell mästare på Internet, vi skapar Firefox för att hålla det friskt, öppet och tillgängligt. Tillägg stöder användarval och anpassning i Firefox, och du kan bidra på följande sätt:"
+
+#: src/amo/pages/StaticPages/About/index.js:97
+msgid "%(startLink)sMake your own add-on%(endLink)s. We provide free hosting and update services and can help you reach a large audience of users."
+msgstr "%(startLink)sGör dina egna tillägg%(endLink)s. Vi tillhandahåller gratis webbhotell och uppdateringstjänster och kan hjälpa dig att nå en stor publik av användare."
+
 #: src/amo/pages/StaticPages/ReviewGuide/index.js:102
+msgid "Use profanity, sexual language or language that can be construed as hateful."
+msgstr "Använd svordomar, sexuellt språk eller språk som kan uppfattas som hatiskt."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:107
+msgid "Include HTML, links, source code or code snippets. Reviews are meant to be text only."
+msgstr "Inkludera HTML, länkar, källkod eller kodavsnitt. Omdömen är avsedda att vara enbart text."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:112
+msgid "Make false statements, disparage add-on authors or personally insult them."
+msgstr "Skriva felaktiga uppgifter, nedvärdera upphovsmän för tillägg eller personligen förolämpa dem."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:117
 msgid "Include your own or anyone else’s email, phone number, or other personal details."
 msgstr "Inkludera din egen eller någon annans e-post, telefonnummer eller andra personliga detaljer."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:107
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:122
 msgid "Post reviews for an add-on you or your organization wrote or represent."
 msgstr "Skriva recensioner för ett tillägg du eller din organisation skrev eller representerar."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:112
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:127
 msgid ""
 "Criticize an add-on for something it’s intended to do. For example, leaving a negative review of an add-on for displaying ads or requiring data gathering, when that is the intended purpose of the "
 "add-on, or the add-on requires gathering data to function."
@@ -2098,15 +2221,15 @@ msgstr ""
 "Kritisera ett tillägg för något det är tänkt att göra. Om du till exempel lämnar en negativ recension av ett tillägg för att den visar annonser eller kräver datainsamling, när det är det avsedda "
 "syftet med tillägget eller tillägget kräver datainsamling för att fungera."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:121
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:136
 msgid "Frequently Asked Questions about Reviews"
 msgstr "Vanliga frågor om recensioner"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:123
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:138
 msgid "How can I report a problematic review?"
 msgstr "Hur kan jag rapportera en problematisk recension?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:125
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:140
 msgid ""
 "Please report or flag any questionable reviews by clicking the \"Report this review\" and it will be submitted to the site for moderation. Our moderation team will use the Review Guidelines to "
 "evaluate whether or not to delete the review or restore it back to the site."
@@ -2114,19 +2237,19 @@ msgstr ""
 "Var god rapportera eller flagga några tveksamma recensioner genom att klicka på \"Rapportera denna recension\" och den kommer att skickas till webbplatsen för moderering. Vårt modereringsgrupp "
 "kommer att använda granskningsriktlinjerna för att utvärdera huruvida recensionen ska raderas eller återställas till webbplatsen."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:132
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:147
 msgid "I'm an add-on author, can I respond to reviews?"
 msgstr "Jag är upphovsman för ett tillägg, kan jag svara på recensioner?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:138
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:153
 msgid "Yes, add-on authors can provide a single response to a review. You can set up a discussion topic in our %(startLink)sforum%(endLink)s to engage in additional discussion or follow-up."
 msgstr "Ja, tilläggsupphovsmän kan ge ett enda svar på en recension. Du kan skapa ett diskussionsämne i vårt %(startLink)sforum%(endLink)s för att delta i ytterligare diskussioner eller uppföljning."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:152
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:167
 msgid "I'm an add-on author, can I delete unfavorable reviews or ratings?"
 msgstr "Jag är upphovsman för tillägg, kan jag ta bort negativa recensioner eller betyg?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:157
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:172
 msgid ""
 "In general, no. But if the review did not meet the review guidelines outlined above, you can click \"Report this review\" and have it moderated. If a review included a complaint that is no longer "
 "valid due to a new release of your add-on, we may consider deleting the review."
@@ -2134,11 +2257,11 @@ msgstr ""
 "I allmänhet nej. Men om recensionen inte uppfyllde de granskningsriktlinjer som beskrivs ovan kan du klicka på \"Rapportera denna recension\" och få det modererat. Om en recension innehöll ett "
 "klagomål som inte längre är giltigt på grund av en ny version av ditt tillägg, kan vi överväga att radera recensionen."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:21 src/amo/pages/StaticPages/ReviewGuide/index.js:23
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:32 src/amo/pages/StaticPages/ReviewGuide/index.js:34
 msgid "Review Guidelines"
 msgstr "Recensionsriktlinjer"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:29
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:44
 msgid ""
 "Add-on reviews are a way for you to share your opinions about the add-ons you’ve installed and used. Our review moderation team reserves the right to refuse or remove any review that does not comply"
 " with these guidelines."
@@ -2146,59 +2269,59 @@ msgstr ""
 "Tilläggsrecensioner är ett sätt för dig att dela dina åsikter om de tillägg du har installerat och använt. Vår moderator förbehåller oss rätten att vägra eller ta bort eventuella recensioner som "
 "inte överensstämmer med dessa riktlinjer."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:34
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:49
 msgid "Tips for writing a great review"
 msgstr "Tips för att skriva en bra recension"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:35
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:50
 msgid "Do:"
 msgstr "Gör:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:38
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:53
 msgid "Write like you are telling a friend about your experience with the add-on."
 msgstr "Skriv som om du berättar för en vän om din erfarenhet av tillägget."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:43
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:58
 msgid "Keep reviews concise and easy to understand."
 msgstr "Håll recensioner koncisa och lätt att förstå."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:46
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:61
 msgid "Give specific and helpful details. For example:"
 msgstr "Ge konkreta och användbara detaljer. Till exempel:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:51
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:66
 msgid "Did the add-on work as you expected it to?"
 msgstr "Fungerade tillägget som du förväntade dig?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:54
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:69
 msgid "What features did you like or dislike?"
 msgstr "Vilka funktioner gillar eller ogillar du?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:56
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:71
 msgid "Was it useful?"
 msgstr "Var det användbart?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:57
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:72
 msgid "Was it easy to use?"
 msgstr "Var det enkelt att använda?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:59
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:74
 msgid "Will you continue to use this add-on?"
 msgstr "Kommer du fortsätta att använda detta tillägg?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:64
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:79
 msgid "Take a moment to read your review before submitting it to minimize typos."
 msgstr "Ta en stund och läs igenom din recension innan du skickar in den för att minimera stavfel."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:69
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:84
 msgid "Don't:"
 msgstr "Gör inte:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:72
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:87
 msgid "Submit one-word reviews such as \"Great!\", \"wonderful,\" or \"bad\"."
 msgstr "Skicka inte in recensioner med ett ord, som \"Bra!\", \"underbar\" eller \"dålig\"."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:77
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:92
 msgid ""
 "Post technical issues, support requests, or feature suggestions. Use the available support options for each add-on, if available. You can find them in the \"More information\" section in the sidebar"
 " on the add-on's detail page."
@@ -2206,21 +2329,9 @@ msgstr ""
 "Skicka in tekniska problem, supportförfrågningar eller funktionsförslag. Använd de tillgängliga supportalternativen för varje tillägg, om det finns tillgängligt. Du hittar dem i avsnittet \"Mer "
 "information\" i sidofältet på sidan för tillägget."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:82
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:97
 msgid "Write reviews for add-ons which you have not personally used."
 msgstr "Skriv omdömen om tillägg som du inte personligen har använt."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:87
-msgid "Use profanity, sexual language or language that can be construed as hateful."
-msgstr "Använd svordomar, sexuellt språk eller språk som kan uppfattas som hatiskt."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:92
-msgid "Include HTML, links, source code or code snippets. Reviews are meant to be text only."
-msgstr "Inkludera HTML, länkar, källkod eller kodavsnitt. Omdömen är avsedda att vara enbart text."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:97
-msgid "Make false statements, disparage add-on authors or personally insult them."
-msgstr "Skriva felaktiga uppgifter, nedvärdera upphovsmän för tillägg eller personligen förolämpa dem."
 
 #: src/amo/pages/UserProfile/index.js:215
 msgid "My reviews"
@@ -2442,11 +2553,11 @@ msgstr "Installerar"
 msgid "Uninstalling"
 msgstr "Avinstallerar"
 
-#: src/core/components/AMInstallButton/index.js:221 src/core/components/InstallButton/index.js:265 src/core/components/InstallButton/index.js:311
+#: src/core/components/AMInstallButton/index.js:221 src/core/components/InstallButton/index.js:236 src/core/components/InstallButton/index.js:282
 msgid "Install Theme"
 msgstr "Installera tema"
 
-#: src/core/components/AMInstallButton/index.js:222 src/core/components/InstallButton/index.js:296 src/core/components/InstallButton/index.js:312
+#: src/core/components/AMInstallButton/index.js:222 src/core/components/InstallButton/index.js:267 src/core/components/InstallButton/index.js:283
 msgid "Add to Firefox"
 msgstr "Lägg till i Firefox"
 
@@ -2526,27 +2637,27 @@ msgstr "Gör en kort undersökning"
 msgid "Thanks for visiting this site! Please take a minute or two to tell Firefox about your experience."
 msgstr "Tack för att du besökt denna webbplats! Vänligen ta en minut eller två för att berätta för Firefox om din upplevelse."
 
-#: src/core/utils/addons.js:24
+#: src/core/utils/addons.js:27
 msgid "Installation failed. Please try again."
 msgstr "Installationen misslyckades. Försök igen."
 
-#: src/core/utils/addons.js:26
+#: src/core/utils/addons.js:29
 msgid "Download failed. Please check your connection."
 msgstr "Hämtningen misslyckades. Kontrollera din anslutning."
 
-#: src/core/utils/addons.js:28
+#: src/core/utils/addons.js:31
 msgid "An unexpected error occurred during installation."
 msgstr "Ett oväntat fel uppstod under installationen."
 
-#: src/core/utils/addons.js:30
+#: src/core/utils/addons.js:33
 msgid "An unexpected error occurred during uninstallation."
 msgstr "Ett oväntat fel uppstod under avinstallationen."
 
-#: src/core/utils/addons.js:35
+#: src/core/utils/addons.js:38
 msgid "An unexpected error occurred."
 msgstr "Ett oväntat fel har uppstått."
 
-#: src/ui/components/ConfirmButton/index.js:101
+#: src/ui/components/ConfirmationDialog/index.js:52
 msgid "Confirm"
 msgstr "Bekräfta"
 
@@ -2561,6 +2672,10 @@ msgstr "Skicka in"
 #: src/ui/components/DismissibleTextForm/index.js:133
 msgid "Submitting"
 msgstr "Skickar in"
+
+#: src/ui/components/DismissibleTextForm/index.js:186
+msgid "Delete"
+msgstr "Ta bort"
 
 #: src/ui/components/ErrorList/index.js:44
 msgid "Your session has expired"
@@ -2602,7 +2717,7 @@ msgstr[1] "Åtkomst till din data på %(param)s andra webbplatser"
 msgid "Access your data for %(param)s"
 msgstr "Åtkomst till dina data för %(param)s"
 
-#: src/ui/components/Notice/index.js:130
+#: src/ui/components/Notice/index.js:133
 msgid "Dismiss this notice"
 msgstr "Avvisa detta meddelande"
 
@@ -2622,7 +2737,7 @@ msgstr "Det finns inga betyg än"
 msgid "Update your rating to %(starRating)s out of 5"
 msgstr "Uppdatera ditt betyg till %(starRating)s av 5"
 
-#: src/ui/components/ShowMoreCard/index.js:60
+#: src/ui/components/ShowMoreCard/index.js:130
 msgid "<span class=\"visually-hidden\">Expand to</span> Read more"
 msgstr "<span class=\"visually-hidden\">Fäll ut för att</span> läsa mer"
 
@@ -2635,6 +2750,24 @@ msgstr[1] "%(total)s tillägg"
 #: src/ui/components/UserReview/index.js:97
 msgid "Developer response"
 msgstr "Utvecklarens svar"
+
+#~ msgid "Translation tools"
+#~ msgstr "Översättningsverktyg"
+
+#~ msgid "Do you really want to delete this reply?"
+#~ msgstr "Vill du verkligen ta bort detta svar?"
+
+#~ msgid "Do you really want to delete this rating?"
+#~ msgstr "Vill du verkligen ta bort detta betyg?"
+
+#~ msgid "Do you really want to delete this review?"
+#~ msgstr "Vill du verkligen ta bort denna recension?"
+
+#~ msgid "Nevermind, I don't want to write a review"
+#~ msgstr "Glöm det, jag vill inte skriva en recension"
+
+#~ msgid "Nevermind, I don't want to edit my review"
+#~ msgstr "Glöm det, jag vill inte redigera min recension"
 
 #~ msgid "See more fall themes"
 #~ msgstr "Se fler höstteman"
@@ -2745,12 +2878,6 @@ msgstr "Utvecklarens svar"
 
 #~ msgid "Make Firefox forget website data like cookies & local storage"
 #~ msgstr "Gör att Firefox glömmer webbplatsdata som kakor och lokal lagring"
-
-#~ msgid "Group Speed Dial"
-#~ msgstr "Group Speed Dial"
-
-#~ msgid "Visual bookmarks for your favorite places on the web"
-#~ msgstr "Visuella bokmärken för dina favoritplatser på webben"
 
 #~ msgid "Your add-on is ready"
 #~ msgstr "Ditt tillägg är redo"
@@ -2904,9 +3031,6 @@ msgstr "Utvecklarens svar"
 
 #~ msgid "See more “Extensions Challenge” honorees"
 #~ msgstr "Se fler vinnare av \"Extensions Challenge\""
-
-#~ msgid "See more popular extensions"
-#~ msgstr "Se fler populära utökningar"
 
 #~ msgid "SHINE for Reddit"
 #~ msgstr "SHINE för Reddit"
@@ -3081,12 +3205,6 @@ msgstr "Utvecklarens svar"
 
 #~ msgid "Highlight any text and search Wikipedia."
 #~ msgstr "Markera vilken text som helst och sök på Wikipedia."
-
-#~ msgid "Undo Close Tab Button"
-#~ msgstr "Undo Close Tab Button"
-
-#~ msgid "Never lose a page again."
-#~ msgstr "Förlora aldrig en sida igen."
 
 #~ msgid "Grammarly"
 #~ msgstr "Grammarly"

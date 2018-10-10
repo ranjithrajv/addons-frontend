@@ -1,8 +1,10 @@
-import { amoStageCDN } from './lib/shared';
+import { amoStageCDN, baseUrlStage } from './lib/shared';
 
 const staticHost = 'https://addons-amo-cdn.allizom.org';
 
 module.exports = {
+  baseURL: baseUrlStage,
+
   staticHost,
 
   CSP: {
@@ -24,6 +26,4 @@ module.exports = {
       ],
     },
   },
-
-  enableFeatureInlineAddonReview: true,
 };

@@ -49,6 +49,7 @@ type Props = {|
   smallerWriteReviewButton?: boolean,
   review?: UserReviewType | null,
   shortByLine?: boolean,
+  showControls?: boolean,
   showRating?: boolean,
   verticalButtons?: boolean,
 |};
@@ -56,6 +57,7 @@ type Props = {|
 type InternalProps = {|
   ...Props,
   _config: typeof config,
+  _siteUserCanManageReplies?: () => boolean,
   deletingReview: boolean,
   dispatch: DispatchFunc,
   editingReview: boolean,
@@ -73,6 +75,7 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
     flaggable: true,
     smallerWriteReviewButton: true,
     shortByLine: false,
+    showControls: true,
     showRating: true,
     verticalButtons: false,
   };
@@ -209,22 +212,56 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
     return i18n.gettext('Delete review');
   }
 
-  confirmDeletePrompt() {
+  confirmButtonText() {
     const { i18n } = this.props;
 
     if (this.isReply()) {
-      return i18n.gettext('Do you really want to delete this reply?');
+      return i18n.gettext('Delete reply');
     }
 
     if (this.isRatingOnly()) {
-      return i18n.gettext('Do you really want to delete this rating?');
+      return i18n.gettext('Delete rating');
     }
 
-    return i18n.gettext('Do you really want to delete this review?');
+    return i18n.gettext('Delete review');
+  }
+
+  cancelButtonText() {
+    const { i18n } = this.props;
+
+    if (this.isReply()) {
+      return i18n.gettext('Keep reply');
+    }
+
+    if (this.isRatingOnly()) {
+      return i18n.gettext('Keep rating');
+    }
+
+    return i18n.gettext('Keep review');
+  }
+
+  siteUserCanManageReplies() {
+    const {
+      addon,
+      siteUser,
+      siteUserHasReplyPerm,
+      _siteUserCanManageReplies,
+    } = this.props;
+    if (_siteUserCanManageReplies) {
+      // Return a stub implementation for testing.
+      return _siteUserCanManageReplies();
+    }
+    if (!siteUser) {
+      return false;
+    }
+    return (
+      isAddonAuthor({ addon, userId: siteUser.id }) || siteUserHasReplyPerm
+    );
   }
 
   renderReply() {
     const {
+      addon,
       errorHandler,
       i18n,
       replyingToReview,
@@ -259,6 +296,7 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
           />
         ) : (
           <AddonReviewCard
+            addon={addon}
             isReplyToReviewId={review.id}
             review={review.reply}
           />
@@ -270,7 +308,6 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
   render() {
     const {
       _config,
-      addon,
       className,
       deletingReview,
       editingReview,
@@ -281,9 +318,9 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
       replyingToReview,
       review,
       shortByLine,
+      showControls,
       showRating,
       siteUser,
-      siteUserHasReplyPerm,
       verticalButtons,
     } = this.props;
 
@@ -293,7 +330,9 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
     if (review) {
       const url = `/addon/${review.reviewAddon.slug}/reviews/${review.id}/`;
       const timestamp = (
-        <Link to={url}>{i18n.moment(review.created).fromNow()}</Link>
+        <Link key={review.id} to={url}>
+          {i18n.moment(review.created).fromNow()}
+        </Link>
       );
 
       const byLineString = noAuthor
@@ -329,9 +368,15 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
 
     const confirmButtonClassName = 'AddonReviewCard-delete';
 
-    const controls = (
+    const showEditControls =
+      review &&
+      siteUser &&
+      (review.userId === siteUser.id ||
+        (this.isReply() && this.siteUserCanManageReplies()));
+
+    const controls = showControls ? (
       <div className="AddonReviewCard-allControls">
-        {siteUser && review && review.userId === siteUser.id ? (
+        {review && showEditControls ? (
           <React.Fragment>
             {editingReview &&
               !_config.get('enableFeatureInlineAddonReview') && (
@@ -358,15 +403,16 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
             ) : (
               <ConfirmButton
                 buttonType="cancel"
+                cancelButtonText={this.cancelButtonText()}
                 cancelButtonType="neutral"
                 className={makeClassName(
                   'AddonReviewCard-control',
                   confirmButtonClassName,
                 )}
-                confirmButtonText={i18n.gettext('Delete')}
+                confirmButtonText={this.confirmButtonText()}
                 id={`${confirmButtonClassName}-${review.id}`}
-                message={this.confirmDeletePrompt()}
                 onConfirm={this.onClickToDeleteReview}
+                puffyButtons={verticalButtons}
               >
                 {this.deletePrompt()}
               </ConfirmButton>
@@ -375,13 +421,11 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
         ) : null}
 
         {review &&
-        addon &&
-        siteUser &&
         !replyingToReview &&
         !review.reply &&
         !this.isReply() &&
-        (isAddonAuthor({ addon, userId: siteUser.id }) ||
-          siteUserHasReplyPerm) &&
+        this.siteUserCanManageReplies() &&
+        siteUser &&
         review.userId !== siteUser.id ? (
           <a
             href="#reply"
@@ -401,7 +445,7 @@ export class AddonReviewCardBase extends React.Component<InternalProps> {
           />
         ) : null}
       </div>
-    );
+    ) : null;
 
     return (
       <div

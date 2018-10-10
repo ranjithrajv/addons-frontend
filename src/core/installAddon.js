@@ -9,7 +9,7 @@ import config from 'config';
 import { getAddonIconUrl } from 'core/imageUtils';
 import { setInstallError, setInstallState } from 'core/actions/installations';
 import log from 'core/logger';
-import themeInstall, { getThemeData } from 'core/themeInstall';
+import themeInstall from 'core/themeInstall';
 import tracking, {
   getAddonTypeForTracking,
   getAddonEventCategory,
@@ -75,6 +75,7 @@ import {
 } from 'core/reducers/api';
 import { showInfoDialog } from 'core/reducers/infoDialog';
 import { getDisplayName } from 'core/utils';
+import { getFileHash } from 'core/utils/addons';
 import type { UserAgentInfoType } from 'core/reducers/api';
 import type { AddonType } from 'core/types/addons';
 import type { DispatchFunc } from 'core/types/redux';
@@ -493,6 +494,8 @@ export class WithInstallHelpers extends React.Component<
       resolve(installURL);
     })
       .then((installURL) => {
+        const hash = installURL && getFileHash({ addon, installURL });
+
         return _addonManager.install(
           installURL,
           makeProgressHandler({
@@ -502,7 +505,7 @@ export class WithInstallHelpers extends React.Component<
             name,
             type,
           }),
-          { src: defaultInstallSource },
+          { src: defaultInstallSource, hash },
         );
       })
       .then(() => {
@@ -559,7 +562,6 @@ export class WithInstallHelpers extends React.Component<
       WrappedComponent,
       _addonManager,
       _installTheme,
-      _tracking,
       ...passThroughProps
     } = this.props;
 
@@ -577,19 +579,6 @@ export class WithInstallHelpers extends React.Component<
 
     return <WrappedComponent {...injectedProps} {...passThroughProps} />;
   }
-}
-
-// We cannot use `AppState` because it depends on the app (amo or disco).
-// eslint-disable-next-line amo/redux-app-state
-export function mapStateToProps(
-  state: Object,
-  ownProps: WithInstallHelpersProps,
-) {
-  return {
-    getBrowserThemeData() {
-      return JSON.stringify(getThemeData(ownProps.addon));
-    },
-  };
 }
 
 export function makeMapDispatchToProps({
@@ -653,7 +642,7 @@ export function withInstallHelpers({
     )})`;
 
     return connect(
-      mapStateToProps,
+      undefined,
       _makeMapDispatchToProps({ WrappedComponent, defaultInstallSource }),
     )(WithInstallHelpers);
   };

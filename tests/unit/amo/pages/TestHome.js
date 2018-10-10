@@ -15,9 +15,8 @@ import { createInternalCollection } from 'amo/reducers/collections';
 import { createApiError } from 'core/api/index';
 import {
   ADDON_TYPE_EXTENSION,
-  ADDON_TYPE_THEME,
   ADDON_TYPE_THEMES_FILTER,
-  SEARCH_SORT_TRENDING,
+  SEARCH_SORT_POPULAR,
   VIEW_CONTEXT_HOME,
 } from 'core/constants';
 import { ErrorHandler } from 'core/errorHandler';
@@ -127,8 +126,7 @@ describe(__filename, () => {
   });
 
   it('renders a featured themes shelf if includeFeaturedThemes is true', () => {
-    const fakeConfig = getFakeConfig({ enableFeatureStaticThemes: false });
-    const root = render({ _config: fakeConfig, includeFeaturedThemes: true });
+    const root = render({ includeFeaturedThemes: true });
 
     const shelves = root.find(LandingAddonsCard);
     const shelf = shelves.find('.Home-FeaturedThemes');
@@ -137,7 +135,7 @@ describe(__filename, () => {
     expect(shelf).toHaveProp('footerLink', {
       pathname: '/search/',
       query: {
-        addonType: ADDON_TYPE_THEME,
+        addonType: ADDON_TYPE_THEMES_FILTER,
         featured: true,
       },
     });
@@ -152,44 +150,18 @@ describe(__filename, () => {
     expect(shelves.find('.Home-FeaturedThemes')).toHaveLength(0);
   });
 
-  it('renders a featured themes shelf with the ADDON_TYPE_THEMES_FILTER filter if static theme is enabled', () => {
-    const fakeConfig = getFakeConfig({ enableFeatureStaticThemes: true });
-    const root = render({ _config: fakeConfig, includeFeaturedThemes: true });
-
-    const shelves = root.find(LandingAddonsCard);
-    const shelf = shelves.find('.Home-FeaturedThemes');
-
-    expect(shelf.at(0)).toHaveProp('footerLink');
-    expect(shelf.at(0).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEMES_FILTER,
-    );
-  });
-
-  it('renders a featured themes shelf with the ADDON_TYPE_THEME filter if static theme is disabled', () => {
-    const fakeConfig = getFakeConfig({ enableFeatureStaticThemes: false });
-    const root = render({ _config: fakeConfig, includeFeaturedThemes: true });
-
-    const shelves = root.find(LandingAddonsCard);
-    const shelf = shelves.find('.Home-FeaturedThemes');
-
-    expect(shelf.at(0)).toHaveProp('footerLink');
-    expect(shelf.at(0).props().footerLink.query.addonType).toEqual(
-      ADDON_TYPE_THEME,
-    );
-  });
-
-  it('renders a trending extensions shelf', () => {
+  it('renders a popular extensions shelf', () => {
     const root = render();
 
     const shelves = root.find(LandingAddonsCard);
-    const shelf = shelves.find('.Home-TrendingExtensions');
-    expect(shelf).toHaveProp('header', 'Trending extensions');
-    expect(shelf).toHaveProp('footerText', 'See more trending extensions');
+    const shelf = shelves.find('.Home-PopularExtensions');
+    expect(shelf).toHaveProp('header', 'Popular extensions');
+    expect(shelf).toHaveProp('footerText', 'See more popular extensions');
     expect(shelf).toHaveProp('footerLink', {
       pathname: '/search/',
       query: {
         addonType: ADDON_TYPE_EXTENSION,
-        sort: SEARCH_SORT_TRENDING,
+        sort: SEARCH_SORT_POPULAR,
       },
     });
     expect(shelf).toHaveProp('loading', true);
@@ -273,14 +245,14 @@ describe(__filename, () => {
       createFakeCollectionAddonsListResponse({ addons: collectionAddons }),
     ];
     const featuredExtensions = createAddonsApiResult(addons);
-    const trendingExtensions = createAddonsApiResult(addons);
+    const popularExtensions = createAddonsApiResult(addons);
 
     store.dispatch(
       loadHomeAddons({
         collections,
         featuredExtensions,
         featuredThemes: null,
-        trendingExtensions,
+        popularExtensions,
       }),
     );
 
@@ -313,14 +285,14 @@ describe(__filename, () => {
     const collections = [null, null, null];
     const featuredExtensions = createAddonsApiResult(addons);
     const featuredThemes = createAddonsApiResult([]);
-    const trendingExtensions = createAddonsApiResult(addons);
+    const popularExtensions = createAddonsApiResult(addons);
 
     store.dispatch(
       loadHomeAddons({
         collections,
         featuredExtensions,
         featuredThemes,
-        trendingExtensions,
+        popularExtensions,
       }),
     );
 
@@ -429,5 +401,21 @@ describe(__filename, () => {
         false,
       );
     });
+  });
+
+  it('renders a canonical link tag', () => {
+    const baseURL = 'https://example.org';
+    const _config = getFakeConfig({ baseURL });
+
+    const pathname = '/some-landing-pathname/';
+    const { store } = dispatchClientMetadata({ pathname });
+
+    const root = render({ _config, store });
+
+    expect(root.find('link[rel="canonical"]')).toHaveLength(1);
+    expect(root.find('link[rel="canonical"]')).toHaveProp(
+      'href',
+      `${baseURL}${pathname}`,
+    );
   });
 });

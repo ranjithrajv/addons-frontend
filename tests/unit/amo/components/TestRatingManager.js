@@ -22,6 +22,7 @@ import {
   hideEditReviewForm,
   hideFlashedReviewMessage,
   setLatestReview,
+  setReview,
   showEditReviewForm,
   updateAddonReview,
 } from 'amo/actions/reviews';
@@ -52,6 +53,9 @@ import {
 
 describe(__filename, () => {
   function render(customProps = {}) {
+    const _config = getFakeConfig({
+      enableFeatureInlineAddonReview: false,
+    });
     const props = {
       addon: createInternalAddon(fakeAddon),
       errorHandler: createStubErrorHandler(),
@@ -61,6 +65,7 @@ describe(__filename, () => {
       submitReview: () => Promise.resolve(),
       userId: 91234,
       version: fakeAddon.current_version,
+      _config,
       ...customProps,
     };
 
@@ -75,6 +80,9 @@ describe(__filename, () => {
   } = {}) => {
     const { store } = dispatchSignInActions({ userId });
 
+    if (review) {
+      store.dispatch(setReview(review));
+    }
     store.dispatch(
       setLatestReview({
         addonId: addon.id,
@@ -617,6 +625,42 @@ describe(__filename, () => {
       );
     });
 
+    it('shows controls by default', () => {
+      const root = renderInline({
+        store: createStoreWithLatestReview(),
+      });
+
+      expect(root.find(AddonReviewCard)).toHaveProp('showControls', true);
+    });
+
+    it('hides controls while showing a saving notification', () => {
+      const store = createStoreWithLatestReview();
+
+      store.dispatch(flashReviewMessage(STARTED_SAVE_RATING));
+      const root = renderInline({ store });
+
+      expect(root.find(AddonReviewCard)).toHaveProp('showControls', false);
+    });
+
+    it('hides controls while showing a saved notification', () => {
+      const store = createStoreWithLatestReview();
+
+      store.dispatch(flashReviewMessage(SAVED_RATING));
+      const root = renderInline({ store });
+
+      expect(root.find(AddonReviewCard)).toHaveProp('showControls', false);
+    });
+
+    it('shows controls when a notification is hidden', () => {
+      const store = createStoreWithLatestReview();
+      // Set a message then hide it.
+      store.dispatch(flashReviewMessage(SAVED_RATING));
+      store.dispatch(hideFlashedReviewMessage());
+      const root = renderInline({ store });
+
+      expect(root.find(AddonReviewCard)).toHaveProp('showControls', true);
+    });
+
     it('hides UserRating and prompt when editing', () => {
       const review = { ...fakeReview, id: 8877 };
       const store = createStoreWithLatestReview({ review });
@@ -700,7 +744,7 @@ describe(__filename, () => {
     });
 
     describe('submitReview', () => {
-      it('posts the review and dispatches the created review', () => {
+      it('posts the review and dispatches review actions', () => {
         const apiState = store.getState().api;
 
         const params = {
@@ -789,6 +833,7 @@ describe(__filename, () => {
           })
           .then(() => {
             mockApi.verify();
+            sinon.assert.calledWith(dispatch, setReview(fakeReview));
             sinon.assert.calledWith(
               dispatch,
               setLatestReview({

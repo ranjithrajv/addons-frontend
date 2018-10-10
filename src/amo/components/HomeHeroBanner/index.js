@@ -3,11 +3,11 @@ import * as React from 'react';
 import { compose } from 'redux';
 import makeClassName from 'classnames';
 
+import log from 'core/logger';
 import translate from 'core/i18n/translate';
 import Hero from 'ui/components/Hero';
 import HeroSection from 'ui/components/HeroSection';
 import type { I18nType } from 'core/types/i18n';
-import tracking from 'core/tracking';
 import { withExperiment } from 'core/withExperiment';
 import type { WithExperimentInjectedProps } from 'core/withExperiment';
 
@@ -15,7 +15,6 @@ import './styles.scss';
 
 type InternalProps = {|
   ...WithExperimentInjectedProps,
-  _tracking: typeof tracking,
   i18n: I18nType,
 |};
 
@@ -25,21 +24,16 @@ export const AB_HOME_HERO_VARIANT_B = 'large';
 export const AB_HOME_HERO_EXPERIMENT_CATEGORY = 'AMO Home Hero Experiment';
 
 export class HomeHeroBannerBase extends React.Component<InternalProps> {
-  static defaultProps = {
-    _tracking: tracking,
-  };
-
   componentDidMount() {
-    const { _tracking, experimentEnabled, variant } = this.props;
+    const { experimentEnabled, variant } = this.props;
 
     if (!experimentEnabled) {
+      log.info('[HomeHeroBanner.componentDidMount] experiment not enabled');
+
       return;
     }
 
-    _tracking.sendEvent({
-      action: variant,
-      category: `${AB_HOME_HERO_EXPERIMENT_CATEGORY} / Page View`,
-    });
+    log.info('[HomeHeroBanner.componentDidMount] variant is:', variant);
   }
 
   getHeroes() {
@@ -277,6 +271,37 @@ export class HomeHeroBannerBase extends React.Component<InternalProps> {
         description: i18n.gettext('Customized mouse gestures'),
         url: '/addon/foxy-gestures/',
       },
+      {
+        title: i18n.gettext('Dark Reader'),
+        description: i18n.gettext(
+          'Go dark for a better web viewing experience',
+        ),
+        url: '/addon/darkreader/',
+      },
+      {
+        title: i18n.gettext('CookieBro'),
+        description: i18n.gettext('Automatically delete unwanted cookies'),
+        url: '/addon/cookiebro/',
+      },
+      {
+        title: i18n.gettext('Text MultiCopy'),
+        description: i18n.gettext(
+          'Save snippets of text to paste & organize later',
+        ),
+        url: '/addon/text-multicopy/',
+      },
+      {
+        title: i18n.gettext('Group Speed Dial'),
+        description: i18n.gettext(
+          'Visual bookmarks for your favorite places on the web',
+        ),
+        url: '/addon/groupspeeddial/',
+      },
+      {
+        title: i18n.gettext('Undo Close Tab Button'),
+        description: i18n.gettext('Never lose a page again'),
+        url: '/addon/undo-close-tab-button/',
+      },
     ];
   }
 
@@ -285,11 +310,7 @@ export class HomeHeroBannerBase extends React.Component<InternalProps> {
       const { description, title, url } = hero;
 
       return (
-        <HeroSection
-          key={url}
-          linkTo={url}
-          onClick={(e) => this.trackExperimentClick(e, title)}
-        >
+        <HeroSection key={url} linkTo={url}>
           <h3>{title}</h3>
           <p>{description}</p>
         </HeroSection>
@@ -297,21 +318,9 @@ export class HomeHeroBannerBase extends React.Component<InternalProps> {
     });
   }
 
-  trackExperimentClick = (e: SyntheticEvent<HTMLElement>, title: string) => {
-    const { _tracking, experimentEnabled, variant } = this.props;
-
-    if (!experimentEnabled) {
-      return;
-    }
-
-    _tracking.sendEvent({
-      action: variant,
-      category: `${AB_HOME_HERO_EXPERIMENT_CATEGORY} / Click`,
-      label: title,
-    });
-  };
-
   render() {
+    log.info('[HomeHeroBanner.render] variant is:', this.props.variant);
+
     const homeBannerClass = makeClassName('HomeHeroBanner', {
       'HomeHeroBanner--small': this.props.variant === AB_HOME_HERO_VARIANT_A,
     });

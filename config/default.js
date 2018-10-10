@@ -4,7 +4,7 @@
 
 import path from 'path';
 
-import { amoProdCDN, apiProdHost, sentryHost } from './lib/shared';
+import { amoProdCDN, apiProdHost, baseUrlProd, sentryHost } from './lib/shared';
 
 const appName = process.env.NODE_APP_INSTANCE || null;
 const validAppNames = [
@@ -22,6 +22,9 @@ if (appName && !validAppNames.includes(appName)) {
 module.exports = {
   appName,
   basePath: path.resolve(__dirname, '../'),
+
+  // The base URL of the site (for SEO purpose).
+  baseURL: baseUrlProd,
 
   // These are reversed in src/core/client/config.js.
   client: false,
@@ -95,6 +98,7 @@ module.exports = {
     'apiVersion',
     'appName',
     'authTokenValidFor',
+    'baseURL',
     'cookieMaxAge',
     'cookieName',
     'cookieSecure',
@@ -102,10 +106,8 @@ module.exports = {
     'dismissedExperienceSurveyCookieName',
     'enableDevTools',
     'enableFeatureAMInstallButton',
-    'enableFeatureAddonRecommendations',
     'enableFeatureExperienceSurvey',
     'enableFeatureInlineAddonReview',
-    'enableFeatureStaticThemes',
     'experiments',
     'fxaConfig',
     'hctEnabled',
@@ -312,19 +314,13 @@ module.exports = {
   // Please use the `enableFeature` prefix, see:
   // https://github.com/mozilla/addons-frontend/issues/6362.
 
-  // Enable the TAAR Lite A/B test.
-  enableFeatureAddonRecommendations: false,
-
-  // Enable static themes.
-  enableFeatureStaticThemes: true,
-
   enableFeatureExperienceSurvey: false,
   dismissedExperienceSurveyCookieName: 'dismissedExperienceSurvey',
 
   // Enable new InstallButton with mozAddonManager.
   enableFeatureAMInstallButton: false,
 
-  enableFeatureInlineAddonReview: false,
+  enableFeatureInlineAddonReview: true,
 
   // The withExperiment HOC relies on this config to enable/disable A/B
   // experiments.

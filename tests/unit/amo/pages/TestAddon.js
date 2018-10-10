@@ -1190,37 +1190,19 @@ describe(__filename, () => {
   });
 
   it('renders recommendations for an extension', () => {
-    const fakeConfig = getFakeConfig({
-      enableFeatureAddonRecommendations: true,
-    });
     const addon = createInternalAddon(fakeAddon);
-    const root = shallowRender({ addon, config: fakeConfig });
+    const root = shallowRender({ addon });
     expect(root.find(AddonRecommendations)).toHaveLength(1);
     expect(root.find(AddonRecommendations)).toHaveProp('addon', addon);
   });
 
   it('renders recommendations for an extension with no loaded add-on', () => {
-    const fakeConfig = getFakeConfig({
-      enableFeatureAddonRecommendations: true,
-    });
-    const root = shallowRender({ addon: null, config: fakeConfig });
+    const root = shallowRender({ addon: null });
     expect(root.find(AddonRecommendations)).toHaveLength(1);
     expect(root.find(AddonRecommendations)).toHaveProp('addon', null);
   });
 
-  it('does not render recommendations if the config flag is false', () => {
-    const fakeConfig = getFakeConfig({
-      enableFeatureAddonRecommendations: false,
-    });
-    const addon = createInternalAddon(fakeAddon);
-    const root = shallowRender({ addon, config: fakeConfig });
-    expect(root.find(AddonRecommendations)).toHaveLength(0);
-  });
-
   it('does not render recommendations if the add-on is not an extension', () => {
-    const fakeConfig = getFakeConfig({
-      enableFeatureAddonRecommendations: true,
-    });
     for (const addonType of [
       ADDON_TYPE_COMPLETE_THEME,
       ADDON_TYPE_DICT,
@@ -1232,7 +1214,7 @@ describe(__filename, () => {
         ...fakeAddon,
         type: addonType,
       });
-      const root = shallowRender({ addon, config: fakeConfig });
+      const root = shallowRender({ addon });
       expect(root.find(AddonRecommendations)).toHaveLength(0);
     }
   });
@@ -1335,7 +1317,7 @@ describe(__filename, () => {
     }
 
     it('is hidden when an add-on has not loaded yet', () => {
-      const root = shallowRender({ addon: undefined });
+      const root = shallowRender({ addon: null });
       expect(root.find('.AddonDescription-version-notes div')).toHaveLength(0);
     });
 
@@ -1545,11 +1527,27 @@ describe(__filename, () => {
     expect(root.find('.Addon')).toHaveProp('data-site-identifier', 9001);
   });
 
-  it('renders an HTML title', () => {
-    const addon = createInternalAddon(fakeAddon);
-    const root = shallowRender({ addon });
+  it.each([
+    [ADDON_TYPE_DICT, 'Dictionary'],
+    [ADDON_TYPE_EXTENSION, 'Extension'],
+    [ADDON_TYPE_LANG, 'Language Pack'],
+    [ADDON_TYPE_OPENSEARCH, 'Search Tool'],
+    [ADDON_TYPE_STATIC_THEME, 'Theme'],
+    [ADDON_TYPE_THEME, 'Theme'],
+    [ADDON_TYPE_COMPLETE_THEME, 'Add-on'],
+  ])('renders an HTML title', (type, name) => {
+    const lang = 'fr';
 
-    expect(root.find('title')).toHaveText(addon.name);
+    const addon = createInternalAddon({ ...fakeAddon, type });
+    const { store } = dispatchClientMetadata({ lang });
+
+    store.dispatch(_loadAddons({ addon }));
+
+    const root = renderComponent({ params: { slug: addon.slug }, store });
+
+    expect(root.find('title')).toHaveText(
+      `${addon.name} – Get this ${name} for 🦊 Firefox (${lang})`,
+    );
   });
 
   it('does not render an HTML title when there is no add-on', () => {
@@ -1801,5 +1799,66 @@ describe(__filename, () => {
       'children',
       getErrorMessage({ i18n: fakeI18n(), error }),
     );
+  });
+
+  it('renders a description meta tag containing the add-on summary', () => {
+    const addon = createInternalAddon(fakeAddon);
+
+    const root = shallowRender({ addon });
+
+    expect(root.find('meta[name="description"]')).toHaveLength(1);
+    expect(root.find('meta[name="description"]')).toHaveProp(
+      'content',
+      `Download ${addon.name} for Firefox. ${addon.summary}`,
+    );
+  });
+
+  it('renders Open Graph meta tags', () => {
+    const lang = 'fr';
+
+    const addon = createInternalAddon(fakeAddon);
+    const { store } = dispatchClientMetadata({ lang });
+
+    store.dispatch(_loadAddons({ addon }));
+
+    const root = renderComponent({ params: { slug: addon.slug }, store });
+
+    [
+      ['og:type', 'website'],
+      ['og:url', addon.url],
+      ['og:locale', lang],
+      ['og:image', addon.previews[0].image_url],
+    ].forEach(([property, expectedValue]) => {
+      expect(root.find(`meta[property="${property}"]`)).toHaveProp(
+        'content',
+        expectedValue,
+      );
+    });
+
+    expect(root.find(`meta[property="og:title"]`).prop('content')).toContain(
+      addon.name,
+    );
+    expect(
+      root.find(`meta[property="og:description"]`).prop('content'),
+    ).toContain(addon.summary);
+  });
+
+  it('does not render a "og:image" meta tag if add-on has no previews', () => {
+    const addon = createInternalAddon({
+      ...fakeAddon,
+      previews: [],
+    });
+
+    const root = shallowRender({ addon });
+
+    expect(root.find(`meta[property="og:image"]`)).toHaveLength(0);
+  });
+
+  it('renders a canonical link tag', () => {
+    const addon = createInternalAddon(fakeAddon);
+    const root = shallowRender({ addon });
+
+    expect(root.find('link[rel="canonical"]')).toHaveLength(1);
+    expect(root.find('link[rel="canonical"]')).toHaveProp('href', addon.url);
   });
 });

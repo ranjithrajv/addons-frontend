@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amo\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-25 19:00+0000\n"
-"PO-Revision-Date: 2018-09-02 15:19+0000\n"
+"POT-Creation-Date: 2018-10-09 21:07+0000\n"
+"PO-Revision-Date: 2018-10-06 16:14+0000\n"
 "Last-Translator: Alexander Slovesnik <unghost@mozilla-russia.org>\n"
 "Language-Team: none\n"
 "Language: ru\n"
@@ -44,6 +44,41 @@ msgstr "Добавить в…"
 #: src/amo/components/CollectionAddAddon/index.js:173
 msgid "Add to collection"
 msgstr "Добавить в подборку"
+
+#: src/amo/components/AddonAdminLinks/index.js:104
+#, fuzzy
+msgid "Content review add-on"
+msgstr "кто-то написал отзыв на моё дополнение"
+
+#: src/amo/components/AddonAdminLinks/index.js:110
+#, fuzzy
+msgid "Review theme"
+msgstr "Текст отзыва"
+
+#: src/amo/components/AddonAdminLinks/index.js:111
+#, fuzzy
+msgid "Review add-on code"
+msgstr "Отзывы на %(addonName)s"
+
+#: src/amo/components/AddonAdminLinks/index.js:128
+#, fuzzy
+msgid "Admin Links"
+msgstr "Ссылки дополнения"
+
+#: src/amo/components/AddonAdminLinks/index.js:70
+#, fuzzy
+msgid "Edit add-on"
+msgstr "Поиск дополнений"
+
+#: src/amo/components/AddonAdminLinks/index.js:81
+#, fuzzy
+msgid "Admin add-on status"
+msgstr "Загрузка дополнений"
+
+#: src/amo/components/AddonAdminLinks/index.js:93
+#, fuzzy
+msgid "Admin add-on"
+msgstr "Поиск дополнений"
 
 #: src/amo/components/AddonBadges/index.js:33
 msgid "Featured Extension"
@@ -90,11 +125,12 @@ msgid "Your version of Firefox does not support search plugins."
 msgstr "Ваша версия Firefox не поддерживает поисковые плагины."
 
 #: src/amo/components/AddonCompatibilityError/index.js:70
-#, fuzzy
 msgid ""
 "Your version of Firefox does not support this add-on because it requires a "
 "restart."
-msgstr "Ваша версия Firefox не поддерживает поисковые плагины."
+msgstr ""
+"Ваша версия Firefox не поддерживает это дополнение, поскольку оно требует "
+"перезапуска."
 
 #: src/amo/components/AddonCompatibilityError/index.js:73
 msgid "Firefox for iOS does not currently support add-ons."
@@ -166,74 +202,74 @@ msgstr "Нет отзывов"
 msgid "Used by"
 msgstr "Используется"
 
-#: src/amo/components/AddonMoreInfo/index.js:127
+#: src/amo/components/AddonMoreInfo/index.js:132
 msgid "%(timeFromNow)s (%(date)s)"
 msgstr "%(timeFromNow)s (%(date)s)"
 
-#: src/amo/components/AddonMoreInfo/index.js:140
+#: src/amo/components/AddonMoreInfo/index.js:145
 msgid "Read the privacy policy for this add-on"
 msgstr "Прочитать политику приватности для этого дополнения"
 
-#: src/amo/components/AddonMoreInfo/index.js:148
+#: src/amo/components/AddonMoreInfo/index.js:153
 msgid "Read the license agreement for this add-on"
 msgstr "Прочитать лицензионное соглашение для этого дополнения"
 
-#: src/amo/components/AddonMoreInfo/index.js:157
+#: src/amo/components/AddonMoreInfo/index.js:162
 msgid "See all versions"
 msgstr "Просмотреть все версии"
 
-#: src/amo/components/AddonMoreInfo/index.js:182
+#: src/amo/components/AddonMoreInfo/index.js:188
 msgid "Add-on Links"
 msgstr "Ссылки дополнения"
 
-#: src/amo/components/AddonMoreInfo/index.js:194
+#: src/amo/components/AddonMoreInfo/index.js:200
 msgid "Version"
 msgstr "Версия"
 
-#: src/amo/components/AddonMoreInfo/index.js:202
+#: src/amo/components/AddonMoreInfo/index.js:208
 #: src/amo/components/CollectionDetails/index.js:89
 msgid "Last updated"
 msgstr "Последнее обновление"
 
-#: src/amo/components/AddonMoreInfo/index.js:210
+#: src/amo/components/AddonMoreInfo/index.js:216
 msgid "License"
 msgstr "Лицензия"
 
-#: src/amo/components/AddonMoreInfo/index.js:218
+#: src/amo/components/AddonMoreInfo/index.js:224
 msgid "Privacy Policy"
 msgstr "Политика приватности"
 
-#: src/amo/components/AddonMoreInfo/index.js:226
+#: src/amo/components/AddonMoreInfo/index.js:232
 msgid "End-User License Agreement"
 msgstr "Лицензионное соглашение с конечным пользователем"
 
-#: src/amo/components/AddonMoreInfo/index.js:234
+#: src/amo/components/AddonMoreInfo/index.js:240
 msgid "Version History"
 msgstr "История версий"
 
-#: src/amo/components/AddonMoreInfo/index.js:244
+#: src/amo/components/AddonMoreInfo/index.js:250
 msgid "Usage Statistics"
 msgstr "Статистика использования"
 
-#: src/amo/components/AddonMoreInfo/index.js:257
+#: src/amo/components/AddonMoreInfo/index.js:265
 msgid "More information"
 msgstr "Больше информации"
 
-#: src/amo/components/AddonMoreInfo/index.js:45
+#: src/amo/components/AddonMoreInfo/index.js:50
 #: src/amo/pages/UserProfile/index.js:300
 #: src/amo/pages/UserProfileEdit/index.js:596
 msgid "Homepage"
 msgstr "Домашняя страница"
 
-#: src/amo/components/AddonMoreInfo/index.js:56
+#: src/amo/components/AddonMoreInfo/index.js:61
 msgid "Support Site"
 msgstr "Сайт поддержки"
 
-#: src/amo/components/AddonMoreInfo/index.js:70
+#: src/amo/components/AddonMoreInfo/index.js:75
 msgid "Support Email"
 msgstr "Эл. почта поддержки"
 
-#: src/amo/components/AddonMoreInfo/index.js:89
+#: src/amo/components/AddonMoreInfo/index.js:94
 msgid "Visit stats dashboard"
 msgstr "Посетить панель статистики"
 
@@ -276,7 +312,7 @@ msgstr ""
 "лаконичны."
 
 #: src/amo/components/AddonReview/index.js:232
-#: src/amo/components/AddonReviewCard/index.js:448
+#: src/amo/components/AddonReviewCard/index.js:486
 msgid "Write a review"
 msgstr "Написать отзыв"
 
@@ -285,125 +321,121 @@ msgid "Review text"
 msgstr "Текст отзыва"
 
 #: src/amo/components/AddonReview/index.js:265
-#: src/amo/components/AddonReviewManager/index.js:139
+#: src/amo/components/AddonReviewManager/index.js:103
 msgid "Submit review"
 msgstr "Отправить отзыв"
 
-#: src/amo/components/AddonReviewCard/index.js:192
-msgid "Edit my reply"
-msgstr "Редактировать мой ответ"
-
 #: src/amo/components/AddonReviewCard/index.js:195
-msgid "Edit my review"
-msgstr "Редактировать мой отзыв"
+msgid "Edit reply"
+msgstr "Изменить ответ"
 
-#: src/amo/components/AddonReviewCard/index.js:202
-msgid "Delete my reply"
-msgstr "Удалить мой ответ"
+#: src/amo/components/AddonReviewCard/index.js:198
+msgid "Edit review"
+msgstr "Редактировать отзыв"
 
-#: src/amo/components/AddonReviewCard/index.js:206
-#, fuzzy
-msgid "Delete my rating"
-msgstr "Удалить мой отзыв"
+#: src/amo/components/AddonReviewCard/index.js:205
+#: src/amo/components/AddonReviewCard/index.js:219
+msgid "Delete reply"
+msgstr "Удалить ответ"
 
 #: src/amo/components/AddonReviewCard/index.js:209
-msgid "Delete my review"
-msgstr "Удалить мой отзыв"
-
-#: src/amo/components/AddonReviewCard/index.js:216
-msgid "Do you really want to delete this reply?"
-msgstr "Вы действительно хотите удалить этот ответ?"
-
-#: src/amo/components/AddonReviewCard/index.js:220
-#, fuzzy
-msgid "Do you really want to delete this rating?"
-msgstr "Вы действительно хотите удалить этот отзыв?"
-
 #: src/amo/components/AddonReviewCard/index.js:223
-msgid "Do you really want to delete this review?"
-msgstr "Вы действительно хотите удалить этот отзыв?"
+msgid "Delete rating"
+msgstr "Удалить оценку"
 
-#: src/amo/components/AddonReviewCard/index.js:247
+#: src/amo/components/AddonReviewCard/index.js:212
+#: src/amo/components/AddonReviewCard/index.js:226
+msgid "Delete review"
+msgstr "Удалить отзыв"
+
+#: src/amo/components/AddonReviewCard/index.js:233
+msgid "Keep reply"
+msgstr "Сохранить ответ"
+
+#: src/amo/components/AddonReviewCard/index.js:237
+msgid "Keep rating"
+msgstr "Сохранить оценку"
+
+#: src/amo/components/AddonReviewCard/index.js:240
+msgid "Keep review"
+msgstr "Сохранить отзыв"
+
+#: src/amo/components/AddonReviewCard/index.js:284
 msgid "Write a reply to this review."
 msgstr "Напишите ответ на этот отзыв."
 
-#: src/amo/components/AddonReviewCard/index.js:250
+#: src/amo/components/AddonReviewCard/index.js:287
+#: src/amo/components/AddonReviewManager/index.js:107
 msgid "Update reply"
 msgstr "Обновить ответ"
 
-#: src/amo/components/AddonReviewCard/index.js:251
+#: src/amo/components/AddonReviewCard/index.js:288
 msgid "Publish reply"
 msgstr "Опубликовать ответ"
 
-#: src/amo/components/AddonReviewCard/index.js:255
+#: src/amo/components/AddonReviewCard/index.js:292
+#: src/amo/components/AddonReviewManager/index.js:110
 msgid "Updating reply"
 msgstr "Обновление ответа"
 
-#: src/amo/components/AddonReviewCard/index.js:256
+#: src/amo/components/AddonReviewCard/index.js:293
 msgid "Publishing reply"
 msgstr "Публикация ответа"
 
-#: src/amo/components/AddonReviewCard/index.js:301
+#: src/amo/components/AddonReviewCard/index.js:340
 msgid "posted %(timestamp)s"
 msgstr "опубликовано %(timestamp)s"
 
-#: src/amo/components/AddonReviewCard/index.js:303
+#: src/amo/components/AddonReviewCard/index.js:342
 msgid "by %(authorName)s, %(timestamp)s"
 msgstr "от %(authorName)s, %(timestamp)s"
 
-#: src/amo/components/AddonReviewCard/index.js:356
+#: src/amo/components/AddonReviewCard/index.js:401
 msgid "Deleting…"
 msgstr "Удаление…"
 
-#: src/amo/components/AddonReviewCard/index.js:366
-#: src/ui/components/DismissibleTextForm/index.js:186
-msgid "Delete"
-msgstr "Удалить"
-
-#: src/amo/components/AddonReviewCard/index.js:392
+#: src/amo/components/AddonReviewCard/index.js:436
 msgid "Reply to this review"
 msgstr "Ответить на отзыв"
 
-#: src/amo/components/AddonReviewCard/index.js:409
-msgid "Nevermind, I don't want to write a review"
-msgstr "Неважно, я не хочу оставлять отзыв"
-
-#: src/amo/components/AddonReviewCard/index.js:410
-msgid "Nevermind, I don't want to edit my review"
-msgstr "Неважно, я не хочу редактировать свой отзыв"
-
-#: src/amo/components/AddonReviewManager/index.js:106
-msgid "Your star rating:"
-msgstr "Ваш рейтинг в звёдочках:"
-
-#: src/amo/components/AddonReviewManager/index.js:124
-msgid "Saving"
-msgstr "Сохранение"
-
-#: src/amo/components/AddonReviewManager/index.js:125
-msgid "Saved"
-msgstr "Сохранено"
-
-#: src/amo/components/AddonReviewManager/index.js:138
-#, fuzzy
-msgid "Update review"
-msgstr "Обновить профиль"
-
-#: src/amo/components/AddonReviewManager/index.js:143
-#, fuzzy
-msgid "Updating review"
-msgstr "Обновление ответа"
-
-#: src/amo/components/AddonReviewManager/index.js:144
+#: src/amo/components/AddonReviewManager/index.js:104
 msgid "Submitting review"
 msgstr "Отправка отзыва"
 
-#: src/amo/components/AddonReviewManager/index.js:83
+#: src/amo/components/AddonReviewManager/index.js:108
+msgid "Update review"
+msgstr "Обновить отзыв"
+
+#: src/amo/components/AddonReviewManager/index.js:111
+msgid "Updating review"
+msgstr "Обновление отзыва"
+
+#: src/amo/components/AddonReviewManager/index.js:119
+msgid "Your star rating:"
+msgstr "Ваш рейтинг в звёдочках:"
+
+#: src/amo/components/AddonReviewManager/index.js:137
+msgid "Saving"
+msgstr "Сохранение"
+
+#: src/amo/components/AddonReviewManager/index.js:138
+msgid "Saved"
+msgstr "Сохранено"
+
+#: src/amo/components/AddonReviewManager/index.js:143
+#: src/amo/components/CollectionManager/index.js:302
+#: src/amo/pages/UserProfileEdit/index.js:847
+#: src/ui/components/ConfirmationDialog/index.js:60
+#: src/ui/components/DismissibleTextForm/index.js:172
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/amo/components/AddonReviewManager/index.js:82
 msgid "Please follow our %(linkStart)sreview guidelines%(linkEnd)s."
 msgstr ""
 "Пожалуйста, следуйте нашим %(linkStart)sтребованиям к отзывам%(linkEnd)s."
 
-#: src/amo/components/AddonReviewManager/index.js:98
+#: src/amo/components/AddonReviewManager/index.js:99
 msgid "Write about your experience with this add-on."
 msgstr "Напишите о своём опыте работы с этим дополнением."
 
@@ -487,23 +519,21 @@ msgstr "Дополнения от %(author)s"
 msgid "Add-ons by these developers"
 msgstr "Дополнения от этих разработчиков"
 
-#: src/amo/components/App/index.js:213
-#: src/amo/components/SectionLinks/index.js:153
-msgid "Add-ons for Firefox"
-msgstr "Дополнения для Firefox"
+#: src/amo/components/App/index.js:219
+msgid "Add-ons for Firefox (%(locale)s)"
+msgstr "Дополнения для Firefox (%(locale)s)"
 
-#: src/amo/components/App/index.js:214
-msgid "%s – Add-ons for Firefox"
-msgstr "%s – Дополнения для Firefox"
+#: src/amo/components/App/index.js:223
+msgid "%(title)s – Add-ons for Firefox (%(locale)s)"
+msgstr "%(title)s – Дополнения для Firefox (%(locale)s)"
 
-#: src/amo/components/App/index.js:217
-#: src/amo/components/SectionLinks/index.js:140
-msgid "Add-ons for Android"
-msgstr "Дополнения для Android"
+#: src/amo/components/App/index.js:231
+msgid "Add-ons for Android (%(locale)s)"
+msgstr "Дополнения для Android (%(locale)s)"
 
-#: src/amo/components/App/index.js:218
-msgid "%s – Add-ons for Android"
-msgstr "%s – Дополнения для Android"
+#: src/amo/components/App/index.js:235
+msgid "%(title)s – Add-ons for Android (%(locale)s)"
+msgstr "%(title)s – Дополнения для Android (%(locale)s)"
 
 #: src/amo/components/AutoSearchInput/index.js:215
 msgid "Loading"
@@ -575,32 +605,25 @@ msgstr "Дополнения"
 msgid "Creator"
 msgstr "Создатель"
 
-#: src/amo/components/CollectionManager/index.js:225
+#: src/amo/components/CollectionManager/index.js:229
 msgid "Create collection"
 msgstr "Создать подборку"
 
-#: src/amo/components/CollectionManager/index.js:226
+#: src/amo/components/CollectionManager/index.js:230
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: src/amo/components/CollectionManager/index.js:235
+#: src/amo/components/CollectionManager/index.js:239
 msgid "Collection name"
 msgstr "Имя подборки"
 
-#: src/amo/components/CollectionManager/index.js:249
+#: src/amo/components/CollectionManager/index.js:253
 msgid "Description"
 msgstr "Описание"
 
-#: src/amo/components/CollectionManager/index.js:261
+#: src/amo/components/CollectionManager/index.js:265
 msgid "Custom URL"
 msgstr "Пользовательский URL"
-
-#: src/amo/components/CollectionManager/index.js:298
-#: src/amo/pages/UserProfileEdit/index.js:847
-#: src/ui/components/ConfirmButton/index.js:108
-#: src/ui/components/DismissibleTextForm/index.js:172
-msgid "Cancel"
-msgstr "Отмена"
 
 #: src/amo/components/CollectionSort/index.js:104
 msgid "Sort add-ons by"
@@ -699,7 +722,7 @@ msgid "Contribute now"
 msgstr "Пожертвовать сейчас"
 
 #: src/amo/components/DownloadFirefoxButton/index.js:40
-#: src/amo/components/Footer/index.js:106
+#: src/amo/components/Footer/index.js:111
 msgid "Download Firefox"
 msgstr "Загрузить Firefox"
 
@@ -803,14 +826,17 @@ msgstr ""
 "Извините, произошла ошибка на нашем сервере и мы не смогли завершить ваш "
 "запрос. Мы записали эту ошибку и будем с ней разбираться."
 
-#: src/amo/components/FeaturedAddonReview/index.js:77
-#, fuzzy
-msgid "Review by %(userName)s"
-msgstr "Отзывы на %(addonName)s"
+#: src/amo/components/FeaturedAddonReview/index.js:79
+msgid "Response by %(userName)s"
+msgstr "Ответ %(userName)s"
 
-#: src/amo/components/FeaturedAddonReview/index.js:87
+#: src/amo/components/FeaturedAddonReview/index.js:80
+msgid "Review by %(userName)s"
+msgstr "Отзывы %(userName)s"
+
+#: src/amo/components/FeaturedAddonReview/index.js:92
 msgid "The review was not found."
-msgstr ""
+msgstr "Отзыв не найден."
 
 #: src/amo/components/FlagReviewMenu/index.js:103
 msgid "This is a bug report or support request"
@@ -868,43 +894,43 @@ msgstr "Содержит ненормативную лексику"
 msgid "Flagged for inappropriate language"
 msgstr "Помечено как содержащее ненормативную лексику"
 
-#: src/amo/components/Footer/index.js:111
+#: src/amo/components/Footer/index.js:116
 msgid "Android Browser"
 msgstr "Браузер для Android"
 
-#: src/amo/components/Footer/index.js:116
+#: src/amo/components/Footer/index.js:121
 msgid "iOS Browser"
 msgstr "Браузер для iOS"
 
-#: src/amo/components/Footer/index.js:121
+#: src/amo/components/Footer/index.js:126
 msgid "Focus Browser"
 msgstr "Браузер Focus"
 
-#: src/amo/components/Footer/index.js:126
+#: src/amo/components/Footer/index.js:131
 msgid "Desktop Browser"
 msgstr "Браузер для компьютера"
 
-#: src/amo/components/Footer/index.js:131
+#: src/amo/components/Footer/index.js:136
 msgid "Beta, Nightly, Developer Edition"
 msgstr "Бета, Nightly, Developer Edition"
 
-#: src/amo/components/Footer/index.js:160
+#: src/amo/components/Footer/index.js:165
 msgid "Privacy"
 msgstr "Приватность"
 
-#: src/amo/components/Footer/index.js:168
+#: src/amo/components/Footer/index.js:173
 msgid "Cookies"
 msgstr "Куки"
 
-#: src/amo/components/Footer/index.js:176
+#: src/amo/components/Footer/index.js:181
 msgid "Legal"
 msgstr "Юридическая информация"
 
-#: src/amo/components/Footer/index.js:184
+#: src/amo/components/Footer/index.js:189
 msgid "Report Trademark Abuse"
 msgstr "Сообщить о злоупотреблении торговой маркой"
 
-#: src/amo/components/Footer/index.js:194
+#: src/amo/components/Footer/index.js:199
 msgid ""
 "Except where otherwise %(startNotedLink)snoted%(endNotedLink)s, content on "
 "this site is licensed under the %(startLicenseLink)sCreative Commons "
@@ -932,22 +958,27 @@ msgid "Developer Hub"
 msgstr "Центр разработчика"
 
 #: src/amo/components/Footer/index.js:63
+#, fuzzy
+msgid "Developer Policies"
+msgstr "Ответ разработчика"
+
+#: src/amo/components/Footer/index.js:68
 msgid "Forum"
 msgstr "Форум"
 
-#: src/amo/components/Footer/index.js:71
+#: src/amo/components/Footer/index.js:76
 msgid "Report a bug"
 msgstr "Сообщить об ошибке"
 
-#: src/amo/components/Footer/index.js:76
+#: src/amo/components/Footer/index.js:81
 msgid "Review Guide"
 msgstr "Руководство по написанию отзывов"
 
-#: src/amo/components/Footer/index.js:81
+#: src/amo/components/Footer/index.js:86
 msgid "Site Status"
 msgstr "Статус сайта"
 
-#: src/amo/components/Footer/index.js:93
+#: src/amo/components/Footer/index.js:98
 msgid "View classic desktop site"
 msgstr "Показать сайт для обычных компьютеров"
 
@@ -998,152 +1029,143 @@ msgstr "Дополнения Firefox"
 msgid "My Account"
 msgstr "Моя учётная запись"
 
-#: src/amo/components/HomeHeroBanner/index.js:102
-msgid "Transparent Standalone Images"
-msgstr "Transparent Standalone Images"
-
-#: src/amo/components/HomeHeroBanner/index.js:103
-msgid "Render images on transparent backgrounds"
-msgstr "Отображение изображений на прозрачном фоне"
-
-#: src/amo/components/HomeHeroBanner/index.js:107
+#: src/amo/components/HomeHeroBanner/index.js:101
 msgid "Universal Bypass"
-msgstr ""
+msgstr "Universal Bypass"
+
+#: src/amo/components/HomeHeroBanner/index.js:102
+msgid "Automatically skip annoying link shorteners"
+msgstr "Автоматически пропускайте раздражающие сокращатели ссылок"
 
 #: src/amo/components/HomeHeroBanner/index.js:108
-#, fuzzy
-msgid "Automatically skip annoying link shorteners"
-msgstr "Автоматически запускает Firefox в полноэкранном режиме"
-
-#: src/amo/components/HomeHeroBanner/index.js:114
 msgid "Tree Style Tab"
 msgstr "Tree Style Tab"
 
-#: src/amo/components/HomeHeroBanner/index.js:115
+#: src/amo/components/HomeHeroBanner/index.js:109
 msgid "Have a ton of open tabs? Organize them in a tidy sidebar"
 msgstr "Тонны открытых вкладок? Организуйте их в удобной боковой панели"
 
-#: src/amo/components/HomeHeroBanner/index.js:121
+#: src/amo/components/HomeHeroBanner/index.js:115
 msgid "Imagus"
 msgstr "Imagus"
 
-#: src/amo/components/HomeHeroBanner/index.js:122
+#: src/amo/components/HomeHeroBanner/index.js:116
 msgid "Enlarge images by hovering your mouse over it"
 msgstr "Увеличивайте изображения, наводя на них мышь"
 
-#: src/amo/components/HomeHeroBanner/index.js:128
+#: src/amo/components/HomeHeroBanner/index.js:122
 msgid "Privacy Possum"
 msgstr "Privacy Possum"
 
-#: src/amo/components/HomeHeroBanner/index.js:129
+#: src/amo/components/HomeHeroBanner/index.js:123
 msgid "Protect yourself against the sneakiest trackers"
 msgstr "Защитите себя от самых пронырливых трекеров"
 
-#: src/amo/components/HomeHeroBanner/index.js:135
+#: src/amo/components/HomeHeroBanner/index.js:129
 msgid "Default Bookmark Folder"
 msgstr "Default Bookmark Folder"
 
-#: src/amo/components/HomeHeroBanner/index.js:136
+#: src/amo/components/HomeHeroBanner/index.js:130
 msgid "Change the default destination for your bookmarks"
 msgstr "Измените папку по умолчанию для ваших закладок"
 
-#: src/amo/components/HomeHeroBanner/index.js:142
+#: src/amo/components/HomeHeroBanner/index.js:136
 msgid "Textmarker"
 msgstr "Textmarker"
 
-#: src/amo/components/HomeHeroBanner/index.js:143
+#: src/amo/components/HomeHeroBanner/index.js:137
 msgid "Highly customizable text highlighter"
 msgstr "Гибко настраиваемое выделение текста"
 
-#: src/amo/components/HomeHeroBanner/index.js:147
+#: src/amo/components/HomeHeroBanner/index.js:141
 msgid "Watch2Gether"
 msgstr "Watch2Gether"
 
-#: src/amo/components/HomeHeroBanner/index.js:148
+#: src/amo/components/HomeHeroBanner/index.js:142
 msgid "Watch videos simultaneously with others"
 msgstr "Смотрите видео одновременно с другими"
 
-#: src/amo/components/HomeHeroBanner/index.js:152
+#: src/amo/components/HomeHeroBanner/index.js:146
 msgid "Context Search"
 msgstr "Context Search"
 
-#: src/amo/components/HomeHeroBanner/index.js:153
+#: src/amo/components/HomeHeroBanner/index.js:147
 msgid "Highlight text on any webpage to easily search the term"
 msgstr "Выделите текст на любой веб-странице для удобного поиска этого термина"
 
-#: src/amo/components/HomeHeroBanner/index.js:159
+#: src/amo/components/HomeHeroBanner/index.js:153
 msgid "Stylus"
 msgstr "Stylus"
 
-#: src/amo/components/HomeHeroBanner/index.js:160
+#: src/amo/components/HomeHeroBanner/index.js:154
 msgid "Give your favorite websites a new look"
 msgstr "Придайте новый вид вашим любимым веб-сайтам"
 
-#: src/amo/components/HomeHeroBanner/index.js:164
+#: src/amo/components/HomeHeroBanner/index.js:158
 msgid "Search Encrypt"
 msgstr "Search Encrypt"
 
-#: src/amo/components/HomeHeroBanner/index.js:165
+#: src/amo/components/HomeHeroBanner/index.js:159
 msgid "Privacy protection for your search data"
 msgstr "Защита приватности ваших данных поиска"
 
-#: src/amo/components/HomeHeroBanner/index.js:169
+#: src/amo/components/HomeHeroBanner/index.js:163
 msgid "Auto Tab Discard"
 msgstr "Auto Tab Discard"
 
-#: src/amo/components/HomeHeroBanner/index.js:170
+#: src/amo/components/HomeHeroBanner/index.js:164
 msgid "Save memory by disabling inactive tabs"
 msgstr "Экономьте память отключая неактивные вкладки"
 
-#: src/amo/components/HomeHeroBanner/index.js:174
+#: src/amo/components/HomeHeroBanner/index.js:168
 msgid "Update Scanner"
 msgstr "Update Scanner"
 
-#: src/amo/components/HomeHeroBanner/index.js:175
+#: src/amo/components/HomeHeroBanner/index.js:169
 msgid "Get notified when your selected websites update with new content"
 msgstr ""
 "Получайте уведомления, когда на избранных вами веб-сайтах появится новое "
 "содержимое"
 
-#: src/amo/components/HomeHeroBanner/index.js:181
+#: src/amo/components/HomeHeroBanner/index.js:175
 msgid "Auto Fullscreen"
 msgstr "Auto Fullscreen"
 
-#: src/amo/components/HomeHeroBanner/index.js:182
+#: src/amo/components/HomeHeroBanner/index.js:176
 msgid "Automatically start Firefox in full screen mode"
 msgstr "Автоматически запускает Firefox в полноэкранном режиме"
 
-#: src/amo/components/HomeHeroBanner/index.js:188
+#: src/amo/components/HomeHeroBanner/index.js:182
 msgid "Video Speed Controller"
 msgstr "Video Speed Controller"
 
-#: src/amo/components/HomeHeroBanner/index.js:189
+#: src/amo/components/HomeHeroBanner/index.js:183
 msgid "Adjust video playback speeds with shortcuts"
 msgstr "Установите горячими клавишами скорость воспроизведения видео"
 
-#: src/amo/components/HomeHeroBanner/index.js:195
+#: src/amo/components/HomeHeroBanner/index.js:189
 msgid "View Image"
 msgstr "View Image"
 
-#: src/amo/components/HomeHeroBanner/index.js:196
+#: src/amo/components/HomeHeroBanner/index.js:190
 msgid "Revive the ‘View Image’ and ‘Search by Image’ buttons on Google Images"
 msgstr ""
 "Верните кнопки «Просмотр изображений» и «Поиск по изображениям» на Google "
 "Images"
 
-#: src/amo/components/HomeHeroBanner/index.js:202
+#: src/amo/components/HomeHeroBanner/index.js:196
 msgid "Neat URL"
 msgstr "Neat URL"
 
-#: src/amo/components/HomeHeroBanner/index.js:203
+#: src/amo/components/HomeHeroBanner/index.js:197
 msgid "Clean up links for easy sharing"
 msgstr "Очищайте ссылки перед их отправкой"
 
-#: src/amo/components/HomeHeroBanner/index.js:207
+#: src/amo/components/HomeHeroBanner/index.js:201
 msgid "Glitter Drag"
 msgstr "Glitter Drag"
 
-#: src/amo/components/HomeHeroBanner/index.js:208
+#: src/amo/components/HomeHeroBanner/index.js:202
 msgid ""
 "Drag text, images, or links to perform actions like copy, open, search, and "
 "more"
@@ -1151,137 +1173,179 @@ msgstr ""
 "Перетаскивайте текст, изображения и ссылки для копирования, открытия, поиска "
 "и других операций"
 
-#: src/amo/components/HomeHeroBanner/index.js:214
+#: src/amo/components/HomeHeroBanner/index.js:208
 msgid "Behind The Overlay Revival"
 msgstr "Behind The Overlay Revival"
 
-#: src/amo/components/HomeHeroBanner/index.js:215
+#: src/amo/components/HomeHeroBanner/index.js:209
 msgid "Click a button to close annoying pop-ups"
 msgstr "Щёлкните по кнопке, чтобы закрыть надоедливые всплывающие окна"
 
-#: src/amo/components/HomeHeroBanner/index.js:219
+#: src/amo/components/HomeHeroBanner/index.js:213
 msgid "Auto-Sort Bookmarks"
 msgstr "Auto-Sort Bookmarks"
 
-#: src/amo/components/HomeHeroBanner/index.js:220
+#: src/amo/components/HomeHeroBanner/index.js:214
 msgid "Automatically sorts bookmarks so they’re in your preferred position"
 msgstr ""
 "Автоматически сортируйте закладки, чтобы они были в предпочтитаемой вами "
 "позиции"
 
-#: src/amo/components/HomeHeroBanner/index.js:226
-#, fuzzy
+#: src/amo/components/HomeHeroBanner/index.js:220
 msgid "Search Preview"
-msgstr "SearchPreview"
+msgstr "Предпросмотр поиска"
+
+#: src/amo/components/HomeHeroBanner/index.js:221
+msgid "Enjoy thumbnail images alongside your search returns"
+msgstr "Отображение изображений рядом с результатами поиска"
 
 #: src/amo/components/HomeHeroBanner/index.js:227
-msgid "Enjoy thumbnail images alongside your search returns"
-msgstr ""
-
-#: src/amo/components/HomeHeroBanner/index.js:233
 msgid "Copy PlainText"
-msgstr ""
+msgstr "Copy PlainText"
+
+#: src/amo/components/HomeHeroBanner/index.js:228
+msgid "Remove formatting when saving text to your clipboard"
+msgstr "Удалите форматирование при сохрании текста в буфер обмена"
 
 #: src/amo/components/HomeHeroBanner/index.js:234
-msgid "Remove formatting when saving text to your clipboard"
-msgstr ""
-
-#: src/amo/components/HomeHeroBanner/index.js:240
 msgid "Official Media Bias Fact Check Icon"
-msgstr ""
+msgstr "Official Media Bias Fact Check Icon"
 
-#: src/amo/components/HomeHeroBanner/index.js:241
+#: src/amo/components/HomeHeroBanner/index.js:235
 msgid "Indicates the political bias of news sites with a tidy icon"
 msgstr ""
+"Отображает степень политической предвзятости новостных сайтов небольшим "
+"значком"
 
-#: src/amo/components/HomeHeroBanner/index.js:247
+#: src/amo/components/HomeHeroBanner/index.js:241
 msgid "Vertical Tabs Reloaded"
-msgstr ""
+msgstr "Vertical Tabs Reloaded"
 
-#: src/amo/components/HomeHeroBanner/index.js:248
+#: src/amo/components/HomeHeroBanner/index.js:242
 msgid "Arrange tabs in a vertical fashion"
-msgstr ""
+msgstr "Расположите вкладки сбоку"
 
-#: src/amo/components/HomeHeroBanner/index.js:252
+#: src/amo/components/HomeHeroBanner/index.js:246
 msgid "Search Site"
 msgstr "Поиск по сайту"
 
-#: src/amo/components/HomeHeroBanner/index.js:253
+#: src/amo/components/HomeHeroBanner/index.js:247
 msgid "Search within just the domain you’re visiting"
 msgstr "Ищите в пределах сайта, на котором вы находитесь"
 
-#: src/amo/components/HomeHeroBanner/index.js:259
+#: src/amo/components/HomeHeroBanner/index.js:253
 msgid "Push to Kindle"
 msgstr "Отправить на Kindle"
 
-#: src/amo/components/HomeHeroBanner/index.js:260
+#: src/amo/components/HomeHeroBanner/index.js:254
 msgid "Send any Web page to your Kindle device"
 msgstr "Отправьте любую веб-страницу на ваше Kindle-устройство"
 
-#: src/amo/components/HomeHeroBanner/index.js:264
-#, fuzzy
+#: src/amo/components/HomeHeroBanner/index.js:258
 msgid "New Tab Homepage"
-msgstr "Домашняя страница"
+msgstr "Домашняя страница для новой вкладки"
+
+#: src/amo/components/HomeHeroBanner/index.js:259
+msgid "Designate a custom home page for your new tabs"
+msgstr "Установите пользовательскую страницу для ваших новых вкладок"
 
 #: src/amo/components/HomeHeroBanner/index.js:265
-msgid "Designate a custom home page for your new tabs"
-msgstr ""
-
-#: src/amo/components/HomeHeroBanner/index.js:271
-#, fuzzy
 msgid "OneNote Web Clipper"
-msgstr "Notebook Web Clipper"
+msgstr "OneNote Web Clipper"
 
-#: src/amo/components/HomeHeroBanner/index.js:272
+#: src/amo/components/HomeHeroBanner/index.js:266
 msgid "Save, annotate & organize web content"
-msgstr ""
+msgstr "Сохраняйте, комментируйте и организуйте веб-содержимое"
 
-#: src/amo/components/HomeHeroBanner/index.js:276
+#: src/amo/components/HomeHeroBanner/index.js:270
 msgid "FoxyGestures"
 msgstr "FoxyGestures"
 
-#: src/amo/components/HomeHeroBanner/index.js:277
+#: src/amo/components/HomeHeroBanner/index.js:271
 msgid "Customized mouse gestures"
 msgstr "Настраиваемые жесты мыши"
 
-#: src/amo/components/HomeHeroBanner/index.js:50
+#: src/amo/components/HomeHeroBanner/index.js:275
+msgid "Dark Reader"
+msgstr ""
+
+#: src/amo/components/HomeHeroBanner/index.js:276
+msgid "Go dark for a better web viewing experience"
+msgstr ""
+
+#: src/amo/components/HomeHeroBanner/index.js:282
+#, fuzzy
+msgid "CookieBro"
+msgstr "Куки"
+
+#: src/amo/components/HomeHeroBanner/index.js:283
+msgid "Automatically delete unwanted cookies"
+msgstr ""
+
+#: src/amo/components/HomeHeroBanner/index.js:287
+msgid "Text MultiCopy"
+msgstr ""
+
+#: src/amo/components/HomeHeroBanner/index.js:288
+msgid "Save snippets of text to paste & organize later"
+msgstr ""
+
+#: src/amo/components/HomeHeroBanner/index.js:294
+msgid "Group Speed Dial"
+msgstr "Group Speed Dial"
+
+#: src/amo/components/HomeHeroBanner/index.js:295
+msgid "Visual bookmarks for your favorite places on the web"
+msgstr "Визуальные закладки для ваших любимых сайтов со всего Интернета"
+
+#: src/amo/components/HomeHeroBanner/index.js:301
+msgid "Undo Close Tab Button"
+msgstr "Undo Close Tab Button"
+
+#: src/amo/components/HomeHeroBanner/index.js:302
+#, fuzzy
+msgid "Never lose a page again"
+msgstr "Никогда больше не потеряйте ни одной страницы."
+
+#: src/amo/components/HomeHeroBanner/index.js:44
 msgid "Facebook Container"
 msgstr "Фейсбук-контейнер"
 
-#: src/amo/components/HomeHeroBanner/index.js:51
+#: src/amo/components/HomeHeroBanner/index.js:45
 msgid "Prevent Facebook from tracking you around the web"
 msgstr "Запретите Фейсбуку отслеживать вас по всему Интернету"
 
-#: src/amo/components/HomeHeroBanner/index.js:57
+#: src/amo/components/HomeHeroBanner/index.js:51
 msgid "Midnight Lizard"
 msgstr "Midnight Lizard"
 
-#: src/amo/components/HomeHeroBanner/index.js:58
+#: src/amo/components/HomeHeroBanner/index.js:52
 msgid "Give the entire internet a new look"
 msgstr "Придайте новый вид всему Интернету"
 
-#: src/amo/components/HomeHeroBanner/index.js:62
+#: src/amo/components/HomeHeroBanner/index.js:56
 msgid "Iridium for YouTube"
-msgstr ""
+msgstr "Iridium для YouTube"
 
-#: src/amo/components/HomeHeroBanner/index.js:63
+#: src/amo/components/HomeHeroBanner/index.js:57
 msgid "Play videos in a pop-out window, take video screenshots & more"
 msgstr ""
+"Проигрывание видео во всплывающем окне, создание скриншотов видео и многое "
+"другое"
 
-#: src/amo/components/HomeHeroBanner/index.js:69
-#, fuzzy
+#: src/amo/components/HomeHeroBanner/index.js:63
 msgid "Private Bookmarks"
-msgstr "Закладки"
+msgstr "Приватные закладки"
 
-#: src/amo/components/HomeHeroBanner/index.js:70
+#: src/amo/components/HomeHeroBanner/index.js:64
 msgid "Password-protect your personal bookmarks"
-msgstr ""
+msgstr "Защитите свои личные закладки паролем"
 
-#: src/amo/components/HomeHeroBanner/index.js:74
+#: src/amo/components/HomeHeroBanner/index.js:68
 msgid "IP Address and Domain Information"
 msgstr "IP Address and Domain Information"
 
-#: src/amo/components/HomeHeroBanner/index.js:75
+#: src/amo/components/HomeHeroBanner/index.js:69
 msgid ""
 "See detailed info about every website you visit—IP address, location, "
 "provider & more"
@@ -1289,35 +1353,43 @@ msgstr ""
 "Узнайте подробную информацию о каждом посещаемом вами веб-сайте — IP-адрес, "
 "местоположение, хостинг и другое"
 
-#: src/amo/components/HomeHeroBanner/index.js:81
+#: src/amo/components/HomeHeroBanner/index.js:75
 msgid "New Tab Override"
 msgstr "New Tab Override"
 
-#: src/amo/components/HomeHeroBanner/index.js:82
+#: src/amo/components/HomeHeroBanner/index.js:76
 msgid "Choose the page you see every time you open a new tab"
 msgstr ""
 "Выберите страницу, которую вы будете видеть каждый раз, когда вы будете "
 "открывать новую вкладку"
 
-#: src/amo/components/HomeHeroBanner/index.js:88
+#: src/amo/components/HomeHeroBanner/index.js:82
 msgid "Forecastfox"
 msgstr "Forecastfox"
 
-#: src/amo/components/HomeHeroBanner/index.js:89
+#: src/amo/components/HomeHeroBanner/index.js:83
 msgid "Get instant global weather information right in Firefox"
 msgstr "Мгновенно получите информацию о погоде по всему миру прямо в Firefox"
 
-#: src/amo/components/HomeHeroBanner/index.js:95
+#: src/amo/components/HomeHeroBanner/index.js:89
 msgid "Multi-Account Containers"
 msgstr "Мультиаккаунтовые контейнеры"
 
-#: src/amo/components/HomeHeroBanner/index.js:96
+#: src/amo/components/HomeHeroBanner/index.js:90
 msgid ""
 "Keep different parts of your online life—work, personal, etc.—separated by "
 "color-coded tabs"
 msgstr ""
 "Разделите разные части вашей онлайн-жизни — работу, личное, и т.д. — во "
 "вкладки с разным цветом"
+
+#: src/amo/components/HomeHeroBanner/index.js:96
+msgid "Transparent Standalone Images"
+msgstr "Transparent Standalone Images"
+
+#: src/amo/components/HomeHeroBanner/index.js:97
+msgid "Render images on transparent backgrounds"
+msgstr "Отображение изображений на прозрачном фоне"
 
 #: src/amo/components/LanguagePicker/index.js:51
 msgid "Change language"
@@ -1426,42 +1498,41 @@ msgstr "Хранить неограниченное количество дан�
 msgid "Access browser activity during navigation"
 msgstr "Получать доступ к активности браузера при навигации"
 
-#: src/amo/components/RatingManager/index.js:190
+#: src/amo/components/RatingManager/index.js:191
 msgid "Log in to rate this dictionary"
 msgstr "Войдите, чтобы оценить этот словарь"
 
-#: src/amo/components/RatingManager/index.js:192
+#: src/amo/components/RatingManager/index.js:193
 msgid "Log in to rate this language pack"
 msgstr "Войдите, чтобы оценить этот языковой пакет"
 
-#: src/amo/components/RatingManager/index.js:194
+#: src/amo/components/RatingManager/index.js:195
 msgid "Log in to rate this search plugin"
 msgstr "Войдите, чтобы оценить этот поисковый плагин"
 
-#: src/amo/components/RatingManager/index.js:197
+#: src/amo/components/RatingManager/index.js:198
 msgid "Log in to rate this theme"
 msgstr "Войдите, чтобы оценить эту тему"
 
-#: src/amo/components/RatingManager/index.js:199
+#: src/amo/components/RatingManager/index.js:200
 msgid "Log in to rate this extension"
 msgstr "Войдите, чтобы оценить это расширение"
 
-#: src/amo/components/RatingManager/index.js:207
+#: src/amo/components/RatingManager/index.js:208
 msgid "Log in to rate this add-on"
 msgstr "Войдите, чтобы оценить это дополнение"
 
-#: src/amo/components/RatingManager/index.js:267
-msgid "How are you enjoying your experience with %(addonName)s?"
-msgstr "Как вы оцениваете ваш опыт работы с %(addonName)s?"
+#: src/amo/components/RatingManager/index.js:274
+msgid "How are you enjoying %(addonName)s?"
+msgstr "Как вы оцениваете %(addonName)s?"
 
-#: src/amo/components/RatingManager/index.js:296
-#, fuzzy
+#: src/amo/components/RatingManager/index.js:300
 msgid "Saving star rating"
-msgstr "Ваш рейтинг в звёдочках:"
+msgstr "Сохранение рейтинга"
 
-#: src/amo/components/RatingManager/index.js:297
+#: src/amo/components/RatingManager/index.js:301
 msgid "Star rating saved"
-msgstr ""
+msgstr "Рейтинг сохранён"
 
 #: src/amo/components/ReportAbuseButton/index.js:116
 msgid "You reported this add-on for abuse"
@@ -1568,13 +1639,13 @@ msgstr ""
 msgid "Search results"
 msgstr "Результаты поиска"
 
-#: src/amo/components/Search/index.js:126 src/amo/pages/Category/index.js:153
-#: src/amo/pages/Home/index.js:250 src/amo/pages/LandingPage/index.js:147
+#: src/amo/components/Search/index.js:126 src/amo/pages/Category/index.js:155
+#: src/amo/pages/Home/index.js:262 src/amo/pages/LandingPage/index.js:149
 msgid "Featured extensions"
 msgstr "Избранные расширения"
 
-#: src/amo/components/Search/index.js:129 src/amo/pages/Category/index.js:186
-#: src/amo/pages/Home/index.js:286 src/amo/pages/LandingPage/index.js:176
+#: src/amo/components/Search/index.js:129 src/amo/pages/Category/index.js:188
+#: src/amo/pages/Home/index.js:298 src/amo/pages/LandingPage/index.js:178
 msgid "Featured themes"
 msgstr "Избранные темы"
 
@@ -1582,13 +1653,13 @@ msgstr "Избранные темы"
 msgid "Featured add-ons"
 msgstr "Избранные дополнения"
 
-#: src/amo/components/Search/index.js:139 src/amo/pages/Category/index.js:163
-#: src/amo/pages/Home/index.js:296 src/amo/pages/LandingPage/index.js:156
+#: src/amo/components/Search/index.js:139 src/amo/pages/Category/index.js:165
+#: src/amo/pages/LandingPage/index.js:158
 msgid "Trending extensions"
 msgstr "Популярные расширения"
 
-#: src/amo/components/Search/index.js:142 src/amo/pages/Category/index.js:196
-#: src/amo/pages/LandingPage/index.js:185
+#: src/amo/components/Search/index.js:142 src/amo/pages/Category/index.js:198
+#: src/amo/pages/LandingPage/index.js:187
 msgid "Trending themes"
 msgstr "Популярные темы"
 
@@ -1596,13 +1667,13 @@ msgstr "Популярные темы"
 msgid "Trending add-ons"
 msgstr "Популярные дополнения"
 
-#: src/amo/components/Search/index.js:151 src/amo/pages/Category/index.js:173
-#: src/amo/pages/LandingPage/index.js:165
+#: src/amo/components/Search/index.js:151 src/amo/pages/Category/index.js:175
+#: src/amo/pages/LandingPage/index.js:167
 msgid "Top rated extensions"
 msgstr "Самые высоко оцененные расширения"
 
-#: src/amo/components/Search/index.js:154 src/amo/pages/Category/index.js:206
-#: src/amo/pages/LandingPage/index.js:191
+#: src/amo/components/Search/index.js:154 src/amo/pages/Category/index.js:208
+#: src/amo/pages/LandingPage/index.js:193
 msgid "Top rated themes"
 msgstr "Самые высоко оцененные темы"
 
@@ -1610,7 +1681,7 @@ msgstr "Самые высоко оцененные темы"
 msgid "Top rated add-ons"
 msgstr "Самые высоко оцененные дополнения"
 
-#: src/amo/components/Search/index.js:163
+#: src/amo/components/Search/index.js:163 src/amo/pages/Home/index.js:308
 msgid "Popular extensions"
 msgstr "Популярные расширения"
 
@@ -1809,6 +1880,14 @@ msgstr "Инструменты поиска"
 msgid "Other Browser Sites"
 msgstr "Другие сайты браузера"
 
+#: src/amo/components/SectionLinks/index.js:140
+msgid "Add-ons for Android"
+msgstr "Дополнения для Android"
+
+#: src/amo/components/SectionLinks/index.js:153
+msgid "Add-ons for Firefox"
+msgstr "Дополнения для Firefox"
+
 #: src/amo/components/SectionLinks/index.js:60
 msgid "for Firefox"
 msgstr "для Firefox"
@@ -1822,12 +1901,12 @@ msgid "Explore"
 msgstr "Исследовать"
 
 #: src/amo/components/SectionLinks/index.js:88
-#: src/amo/pages/Category/index.js:152 src/amo/pages/LandingPage/index.js:231
+#: src/amo/pages/Category/index.js:154 src/amo/pages/LandingPage/index.js:235
 msgid "Extensions"
 msgstr "Расширения"
 
 #: src/amo/components/SectionLinks/index.js:98
-#: src/amo/pages/Category/index.js:185 src/amo/pages/LandingPage/index.js:230
+#: src/amo/pages/Category/index.js:187 src/amo/pages/LandingPage/index.js:234
 msgid "Themes"
 msgstr "Темы"
 
@@ -1960,30 +2039,66 @@ msgstr "Об этой теме"
 msgid "About this add-on"
 msgstr "Об этом дополнении"
 
-#: src/amo/pages/Addon/index.js:328
+#: src/amo/pages/Addon/index.js:334
 msgid "Release notes for %(addonVersion)s"
 msgstr "Примечания к выпуску %(addonVersion)s"
 
+#: src/amo/pages/Addon/index.js:405
+msgid "Download %(addonName)s for Firefox. %(summary)s"
+msgstr "Загрузить %(addonName)s для Firefox. %(summary)s"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:425
+msgid "%(addonName)s – Get this Dictionary for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Загрузите этот словарь для 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:432
+msgid "%(addonName)s – Get this Extension for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Загрузите это расширение для 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:439
+msgid "%(addonName)s – Get this Language Pack for 🦊 Firefox (%(locale)s)"
+msgstr ""
+"%(addonName)s – Загрузите этот языковой пакет для 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:447
+msgid "%(addonName)s – Get this Theme for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Загрузите эту тему для 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
+#: src/amo/pages/Addon/index.js:454
+#, fuzzy
+msgid "%(addonName)s – Get this Search Tool for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Загрузите эту тему для 🦊 Firefox (%(locale)s)"
+
+# please keep the fox emoji next to "Firefox".
 #: src/amo/pages/Addon/index.js:461
+msgid "%(addonName)s – Get this Add-on for 🦊 Firefox (%(locale)s)"
+msgstr "%(addonName)s – Загрузите это дополнение для 🦊 Firefox (%(locale)s)"
+
+#: src/amo/pages/Addon/index.js:564
 msgid "%(addonName)s %(startSpan)sby %(authorList)s%(endSpan)s"
 msgstr "%(addonName)s %(startSpan)s от %(authorList)s %(endSpan)s"
 
-#: src/amo/pages/Addon/index.js:532
+#: src/amo/pages/Addon/index.js:635
 msgid ""
 "This is not a public listing. You are only seeing it because of elevated "
 "permissions."
 msgstr ""
 "Это не публичное описание. Вы видите его только из-за повышенных привилегий."
 
-#: src/amo/pages/Addon/index.js:587
+#: src/amo/pages/Addon/index.js:690
 msgid "Only with Firefox—Get Firefox Now"
 msgstr "Только в Firefox — Загрузить Firefox сейчас"
 
-#: src/amo/pages/Addon/index.js:593
+#: src/amo/pages/Addon/index.js:696
 msgid "Extension Metadata"
 msgstr "Метаданные расширения"
 
-#: src/amo/pages/Addon/index.js:610
+#: src/amo/pages/Addon/index.js:713
 msgid "Screenshots"
 msgstr "Скриншоты"
 
@@ -2010,55 +2125,54 @@ msgstr "от %(authorList)s"
 msgid "%(averageRating)s star average"
 msgstr "средняя оценка - %(averageRating)s звёзд"
 
-#: src/amo/pages/Category/index.js:162 src/amo/pages/Home/index.js:251
-#: src/amo/pages/LandingPage/index.js:155
+#: src/amo/pages/Category/index.js:164 src/amo/pages/Home/index.js:263
+#: src/amo/pages/LandingPage/index.js:157
 msgid "See more featured extensions"
 msgstr "Больше избранных расширений"
 
-#: src/amo/pages/Category/index.js:172 src/amo/pages/Home/index.js:297
-#: src/amo/pages/LandingPage/index.js:164
+#: src/amo/pages/Category/index.js:174 src/amo/pages/LandingPage/index.js:166
 msgid "See more trending extensions"
 msgstr "Больше набирающих популярность расширений"
 
-#: src/amo/pages/Category/index.js:182 src/amo/pages/LandingPage/index.js:173
+#: src/amo/pages/Category/index.js:184 src/amo/pages/LandingPage/index.js:175
 msgid "See more top rated extensions"
 msgstr "Больше самых высоко оцененных расширений"
 
-#: src/amo/pages/Category/index.js:195 src/amo/pages/Home/index.js:276
-#: src/amo/pages/LandingPage/index.js:184
+#: src/amo/pages/Category/index.js:197 src/amo/pages/Home/index.js:288
+#: src/amo/pages/LandingPage/index.js:186
 msgid "See more featured themes"
 msgstr "Больше избранных тем"
 
-#: src/amo/pages/Category/index.js:205 src/amo/pages/LandingPage/index.js:190
+#: src/amo/pages/Category/index.js:207 src/amo/pages/LandingPage/index.js:192
 msgid "See more trending themes"
 msgstr "Больше набирающих популярность тем"
 
-#: src/amo/pages/Category/index.js:215 src/amo/pages/LandingPage/index.js:196
+#: src/amo/pages/Category/index.js:217 src/amo/pages/LandingPage/index.js:198
 msgid "See more top rated themes"
 msgstr "Больше самых высоко оцененных тем"
 
-#: src/amo/pages/Collection/index.js:356
+#: src/amo/pages/Collection/index.js:373
 msgid "Do you really want to delete this collection?"
 msgstr "Вы действительно хотите удалить эту подборку?"
 
-#: src/amo/pages/Collection/index.js:359
+#: src/amo/pages/Collection/index.js:376
 msgid "Delete this collection"
 msgstr "Удалить эту подборку"
 
-#: src/amo/pages/Collection/index.js:378
+#: src/amo/pages/Collection/index.js:395
 msgid "Log in to create a collection"
 msgstr "Войдите, чтобы создать подборку"
 
-#: src/amo/pages/Collection/index.js:379
+#: src/amo/pages/Collection/index.js:396
 msgid "Log in to edit this collection"
 msgstr "Войдите, чтобы изменить эту подборку"
 
-#: src/amo/pages/Collection/index.js:412
+#: src/amo/pages/Collection/index.js:429
 msgid "First, create your collection. Then you can add extensions and themes."
 msgstr ""
 "Сначала создайте свою подборку, а затем добавляйте в неё расширения и темы."
 
-#: src/amo/pages/Collection/index.js:415
+#: src/amo/pages/Collection/index.js:432
 msgid "Search for extensions and themes to add to your collection."
 msgstr "Найдите расширения и темы для добавления в вашу подборку."
 
@@ -2090,81 +2204,84 @@ msgstr "У вас нет подборок."
 msgid "My collections"
 msgstr "Мои подборки"
 
-#: src/amo/pages/Home/index.js:109
+#: src/amo/pages/Home/index.js:112
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: src/amo/pages/Home/index.js:113
+#: src/amo/pages/Home/index.js:116
 msgid "Password managers"
 msgstr "Менеджеры паролей"
 
-#: src/amo/pages/Home/index.js:117
+#: src/amo/pages/Home/index.js:120
 msgid "Ad blockers"
 msgstr "Блокировщики рекламы"
 
-#: src/amo/pages/Home/index.js:121
+#: src/amo/pages/Home/index.js:124
 msgid "Smarter Shopping"
 msgstr "Умный шоппинг"
 
-#: src/amo/pages/Home/index.js:125
+#: src/amo/pages/Home/index.js:128
 msgid "Productivity"
 msgstr "Продуктивность"
 
-#: src/amo/pages/Home/index.js:129
+#: src/amo/pages/Home/index.js:132
 msgid "Watching Videos"
 msgstr "Просмотр видео"
 
-#: src/amo/pages/Home/index.js:157
+#: src/amo/pages/Home/index.js:160
 msgid "Abstract"
 msgstr "Абстрактные"
 
-#: src/amo/pages/Home/index.js:162
+#: src/amo/pages/Home/index.js:165
 msgid "Nature"
 msgstr "Природа"
 
-#: src/amo/pages/Home/index.js:167
+#: src/amo/pages/Home/index.js:170
 msgid "Film & TV"
 msgstr "Фильмы и ТВ"
 
-#: src/amo/pages/Home/index.js:172
+#: src/amo/pages/Home/index.js:175
 msgid "Scenery"
 msgstr "Украшающие"
 
-#: src/amo/pages/Home/index.js:177
+#: src/amo/pages/Home/index.js:180
 msgid "Music"
 msgstr "Музыка"
 
-#: src/amo/pages/Home/index.js:182
+#: src/amo/pages/Home/index.js:185
 msgid "Seasonal"
 msgstr "Времена года"
 
-#: src/amo/pages/Home/index.js:214
+#: src/amo/pages/Home/index.js:219
 msgid "Customize the way Firefox works with extensions. Are you interested in…"
 msgstr "Настройте, как Firefox работает с дополнениями. Вы заинтересованы в…"
 
-#: src/amo/pages/Home/index.js:216
+#: src/amo/pages/Home/index.js:221
 msgid "Change the way Firefox looks with themes."
 msgstr "Измените, как Firefox будет выглядеть с темами."
 
-#: src/amo/pages/Home/index.js:49
-msgid "See more translation tools"
+#: src/amo/pages/Home/index.js:309
+msgid "See more popular extensions"
+msgstr "Больше популярных расширений"
+
+#: src/amo/pages/Home/index.js:51
+msgid "See more privacy & security extensions"
+msgstr "Больше расширений для приватности и безопасности"
+
+#: src/amo/pages/Home/index.js:52
+msgid "Privacy & security"
+msgstr "Приватность и безопасность"
+
+#: src/amo/pages/Home/index.js:57
+#, fuzzy
+msgid "See more parental controls"
 msgstr "Больше инструментов перевода"
 
-#: src/amo/pages/Home/index.js:50
-msgid "Translation tools"
-msgstr "Инструменты перевода"
+#: src/amo/pages/Home/index.js:58
+msgid "Parental controls"
+msgstr ""
 
-#: src/amo/pages/Home/index.js:55
-#, fuzzy
-msgid "See more privacy & security extensions"
-msgstr "Больше расширений для обеспечения приватности"
-
-#: src/amo/pages/Home/index.js:56
-#, fuzzy
-msgid "Privacy & security"
-msgstr "Политика приватности"
-
-#: src/amo/pages/LandingPage/index.js:234
+#: src/amo/pages/LandingPage/index.js:238
 msgid ""
 "Change your browser's appearance. Choose from thousands of themes to give "
 "Firefox the look you want."
@@ -2172,7 +2289,7 @@ msgstr ""
 "Измените внешний вид вашего браузера. Выбирайте из тысяч тем, чтобы придать "
 "вашему Firefox образ, который вы хотите."
 
-#: src/amo/pages/LandingPage/index.js:236
+#: src/amo/pages/LandingPage/index.js:240
 msgid ""
 "Explore powerful tools and features to customize Firefox and make the "
 "browser all your own."
@@ -2180,19 +2297,19 @@ msgstr ""
 "Изучите мощные инструменты и возможности, чтобы настроить Firefox и сделать "
 "его своим."
 
-#: src/amo/pages/LandingPage/index.js:270
+#: src/amo/pages/LandingPage/index.js:278
 msgid "Explore all categories"
 msgstr "Посмотреть все категории"
 
-#: src/amo/pages/LanguageTools/index.js:104
+#: src/amo/pages/LanguageTools/index.js:114
 msgid "Available for your locale"
 msgstr "Доступно на вашем языке"
 
-#: src/amo/pages/LanguageTools/index.js:144
+#: src/amo/pages/LanguageTools/index.js:160
 msgid "Dictionaries and Language Packs"
 msgstr "Словари и языковые пакеты"
 
-#: src/amo/pages/LanguageTools/index.js:155
+#: src/amo/pages/LanguageTools/index.js:175
 msgid ""
 "Installing a dictionary add-on will add a new language option to your spell-"
 "checker, which checks your spelling as you type in Firefox."
@@ -2201,7 +2318,7 @@ msgstr ""
 "орфографии, которое проверяет ваше правописание, когда вы что-то печатаете в "
 "Firefox."
 
-#: src/amo/pages/LanguageTools/index.js:160
+#: src/amo/pages/LanguageTools/index.js:180
 msgid ""
 "Language packs change your browser's interface language, including menu "
 "options and settings."
@@ -2209,158 +2326,23 @@ msgstr ""
 "Языковые пакеты изменяют язык интерфейса вашего браузера, включая его меню и "
 "настройки."
 
-#: src/amo/pages/LanguageTools/index.js:166
+#: src/amo/pages/LanguageTools/index.js:186
 msgid "All Locales"
 msgstr "Все локали"
 
-#: src/amo/pages/LanguageTools/index.js:172
+#: src/amo/pages/LanguageTools/index.js:192
 msgid "Locale Name"
 msgstr "Имя локали"
 
-#: src/amo/pages/LanguageTools/index.js:175
+#: src/amo/pages/LanguageTools/index.js:195
 msgid "Language Packs"
 msgstr "Языковые пакеты"
 
-#: src/amo/pages/LanguageTools/index.js:178
+#: src/amo/pages/LanguageTools/index.js:198
 msgid "Dictionaries"
 msgstr "Словари"
 
-#: src/amo/pages/StaticPages/About/index.js:122
-msgid ""
-"If you want to contribute but are not quite as technical, there are still "
-"ways to help:"
-msgstr ""
-"Если вы хотите помочь, но не совсем дружите с технологиями, у вас всё же "
-"есть способы помочь:"
-
-#: src/amo/pages/StaticPages/About/index.js:131
-msgid "Participate in our %(startLink)sforum%(endLink)s."
-msgstr "Примите участие в работе нашего %(startLink)sфорума%(endLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:144
-msgid ""
-"Leave feedback for your favorite add-ons. Add-on authors are more likely to "
-"improve their add-ons and create new ones when they know people appreciate "
-"their work."
-msgstr ""
-"Оставляйте отзывы на ваши любимые дополнения. Авторы дополнений более "
-"склонны улучшать свои дополнения и создавать новые, если они знают, что люди "
-"ценят их работу."
-
-#: src/amo/pages/StaticPages/About/index.js:149
-msgid ""
-"Tell your friends and family that Firefox is a fast, secure browser that "
-"protects their privacy, and they can use add-ons to make it their own!"
-msgstr ""
-"Расскажите вашим друзьям и семье, что Firefox — быстрый и безопасный "
-"браузер, который защищает вашу приватность, и они могут использовать "
-"дополнения, чтобы сделать его своим!"
-
-#: src/amo/pages/StaticPages/About/index.js:157
-msgid ""
-"To see more ways you can contribute to the add-on community, please visit "
-"our %(startLink)swiki%(endLink)s"
-msgstr ""
-"Чтобы узнать о множестве способов, которыми вы можете помочь сообществу "
-"дополнений, пожалуйста, посетите нашу %(startLink)sвики-страницу%(endLink)s"
-
-#: src/amo/pages/StaticPages/About/index.js:171
-msgid "Get support"
-msgstr "Получить поддержку"
-
-#: src/amo/pages/StaticPages/About/index.js:176
-msgid ""
-"If you would like to learn more about how to manage add-ons in Firefox, or "
-"need to find general Firefox support, please visit %(startSUMOLink)sSupport"
-"%(endSUMOLink)s Mozilla. If you don't find an answer there, you can "
-"%(startForumLink)sask on our community forum%(endForumLink)s."
-msgstr ""
-"Если вы хотите узнать больше об управлении дополнениями в Firefox, или вам "
-"нужно найти поддержку по Firefox, пожалуйста, посетите "
-"%(startSUMOLink)sПоддержку%(endSUMOLink)s Mozilla. Если вы не найдёте ответ "
-"там, то вы можете %(startForumLink)sзадать свой вопрос на форуме поддержки"
-"%(endForumLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:197
-msgid ""
-"%(startLink)sInformation about how to contact Mozilla's add-ons team can be "
-"found here%(endLink)s."
-msgstr ""
-"%(startLink)sИнформация о том, как связаться с командой сайта дополнений "
-"Mozilla может быть найдена здесь%(endLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:23
-#: src/amo/pages/StaticPages/About/index.js:26
-msgid "About Firefox Add-ons"
-msgstr "О дополнениях Firefox"
-
-#: src/amo/pages/StaticPages/About/index.js:32
-msgid ""
-"Addons.mozilla.org (AMO), is Mozilla's official site for discovering and "
-"installing add-ons for the Firefox browser. Add-ons help you modify and "
-"personalize your browsing experience by adding new features to Firefox, "
-"enhancing your interactions with Web content, and changing the way your "
-"browser looks."
-msgstr ""
-"Addons.mozilla.org (AMO) — официальный сайт дополнений Mozilla для поиска и "
-"установки дополнений для браузера Firefox. Дополнения помогают изменять и "
-"персонализировать вашу работу в Интернете, добавляя новые функции в Firefox, "
-"повышая ваше взаимодействие с веб-содержимым и изменяя внешний вид вашего "
-"браузера."
-
-#: src/amo/pages/StaticPages/About/index.js:42
-msgid ""
-"If you are looking for add-ons for Thunderbird or SeaMonkey, please visit "
-"%(startTBLink)saddons.thunderbird.net%(endTBLink)s or %(startSMLink)saddons."
-"thunderbird.net/seamonkey%(endSMLink)s."
-msgstr ""
-"Если вы ищете дополнения для Thunderbird или SeaMonkey, пожалуйста посетите "
-"сайты %(startTBLink)saddons.thunderbird.net%(endTBLink)s или "
-"%(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
-
-#: src/amo/pages/StaticPages/About/index.js:59
-msgid "A community of creators"
-msgstr "Сообщество создателей"
-
-#: src/amo/pages/StaticPages/About/index.js:61
-msgid ""
-"The add-ons listed here are created by thousands of developers and theme "
-"designers from all over the world, ranging from individual hobbyists to "
-"large corporations. Some add-ons listed on AMO have been automatically "
-"published and may be subject to review by a team of editors once publically "
-"listed."
-msgstr ""
-"Расположенные здесь дополнения были созданы тысячами разработчиков и "
-"дизайнеров со всего мира, начиная от отдельных любителей и заканчивая "
-"крупными корпорациями. Некоторые опубликованные на AMO дополнения "
-"утверждаются автоматически и могут требовать проверки команды редакторов."
-
-#: src/amo/pages/StaticPages/About/index.js:70
-msgid "Get involved"
-msgstr "Принять участие"
-
-#: src/amo/pages/StaticPages/About/index.js:72
-msgid ""
-"Mozilla is a non-profit champion of the Internet, we build Firefox to help "
-"keep it healthy, open and accessible. Add-ons support user choice and "
-"customization in Firefox, and you can contribute in the following ways:"
-msgstr ""
-"Mozilla — некоммерческая организация, чьей целью является развитие "
-"Интернета, мы создали Firefox, чтобы помочь Интернету быть здоровым, "
-"открытым и доступным для всех и каждого. Дополнения поддерживают выбор "
-"пользователя и позволяют настраивать Firefox, и вы можете помочь следующими "
-"способами:"
-
-#: src/amo/pages/StaticPages/About/index.js:82
-msgid ""
-"%(startLink)sMake your own add-on%(endLink)s. We provide free hosting and "
-"update services and can help you reach a large audience of users."
-msgstr ""
-"%(startLink)sСоздайте своё собственное дополнение%(endLink)s. Мы "
-"предоставляем бесплатный хостинг и службу обновлений и можем помочь вам "
-"охватить большое число пользователей."
-
-#: src/amo/pages/StaticPages/About/index.js:98
+#: src/amo/pages/StaticPages/About/index.js:113
 msgid ""
 "Help improve this website. It's open source, and you can file bugs and "
 "submit patches. You can get started with a %(startGoodFirstBugLink)sgood "
@@ -2376,7 +2358,163 @@ msgstr ""
 "%(endAddonsServerRepoLink)s и %(startAddonsFrontendRepoLink)sфронтэнда"
 "%(endAddonsFrontendRepoLink)s AMO на GitHub."
 
+#: src/amo/pages/StaticPages/About/index.js:137
+msgid ""
+"If you want to contribute but are not quite as technical, there are still "
+"ways to help:"
+msgstr ""
+"Если вы хотите помочь, но не совсем дружите с технологиями, у вас всё же "
+"есть способы помочь:"
+
+#: src/amo/pages/StaticPages/About/index.js:146
+msgid "Participate in our %(startLink)sforum%(endLink)s."
+msgstr "Примите участие в работе нашего %(startLink)sфорума%(endLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:159
+msgid ""
+"Leave feedback for your favorite add-ons. Add-on authors are more likely to "
+"improve their add-ons and create new ones when they know people appreciate "
+"their work."
+msgstr ""
+"Оставляйте отзывы на ваши любимые дополнения. Авторы дополнений более "
+"склонны улучшать свои дополнения и создавать новые, если они знают, что люди "
+"ценят их работу."
+
+#: src/amo/pages/StaticPages/About/index.js:164
+msgid ""
+"Tell your friends and family that Firefox is a fast, secure browser that "
+"protects their privacy, and they can use add-ons to make it their own!"
+msgstr ""
+"Расскажите вашим друзьям и семье, что Firefox — быстрый и безопасный "
+"браузер, который защищает вашу приватность, и они могут использовать "
+"дополнения, чтобы сделать его своим!"
+
+#: src/amo/pages/StaticPages/About/index.js:172
+msgid ""
+"To see more ways you can contribute to the add-on community, please visit "
+"our %(startLink)swiki%(endLink)s"
+msgstr ""
+"Чтобы узнать о множестве способов, которыми вы можете помочь сообществу "
+"дополнений, пожалуйста, посетите нашу %(startLink)sвики-страницу%(endLink)s"
+
+#: src/amo/pages/StaticPages/About/index.js:186
+msgid "Get support"
+msgstr "Получить поддержку"
+
+#: src/amo/pages/StaticPages/About/index.js:191
+msgid ""
+"If you would like to learn more about how to manage add-ons in Firefox, or "
+"need to find general Firefox support, please visit %(startSUMOLink)sSupport"
+"%(endSUMOLink)s Mozilla. If you don't find an answer there, you can "
+"%(startForumLink)sask on our community forum%(endForumLink)s."
+msgstr ""
+"Если вы хотите узнать больше об управлении дополнениями в Firefox, или вам "
+"нужно найти поддержку по Firefox, пожалуйста, посетите "
+"%(startSUMOLink)sПоддержку%(endSUMOLink)s Mozilla. Если вы не найдёте ответ "
+"там, то вы можете %(startForumLink)sзадать свой вопрос на форуме поддержки"
+"%(endForumLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:212
+msgid ""
+"%(startLink)sInformation about how to contact Mozilla's add-ons team can be "
+"found here%(endLink)s."
+msgstr ""
+"%(startLink)sИнформация о том, как связаться с командой сайта дополнений "
+"Mozilla может быть найдена здесь%(endLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:34
+#: src/amo/pages/StaticPages/About/index.js:37
+msgid "About Firefox Add-ons"
+msgstr "О дополнениях Firefox"
+
+#: src/amo/pages/StaticPages/About/index.js:47
+msgid ""
+"Addons.mozilla.org (AMO), is Mozilla's official site for discovering and "
+"installing add-ons for the Firefox browser. Add-ons help you modify and "
+"personalize your browsing experience by adding new features to Firefox, "
+"enhancing your interactions with Web content, and changing the way your "
+"browser looks."
+msgstr ""
+"Addons.mozilla.org (AMO) — официальный сайт дополнений Mozilla для поиска и "
+"установки дополнений для браузера Firefox. Дополнения помогают изменять и "
+"персонализировать вашу работу в Интернете, добавляя новые функции в Firefox, "
+"повышая ваше взаимодействие с веб-содержимым и изменяя внешний вид вашего "
+"браузера."
+
+#: src/amo/pages/StaticPages/About/index.js:57
+msgid ""
+"If you are looking for add-ons for Thunderbird or SeaMonkey, please visit "
+"%(startTBLink)saddons.thunderbird.net%(endTBLink)s or %(startSMLink)saddons."
+"thunderbird.net/seamonkey%(endSMLink)s."
+msgstr ""
+"Если вы ищете дополнения для Thunderbird или SeaMonkey, пожалуйста посетите "
+"сайты %(startTBLink)saddons.thunderbird.net%(endTBLink)s или "
+"%(startSMLink)saddons.thunderbird.net/seamonkey%(endSMLink)s."
+
+#: src/amo/pages/StaticPages/About/index.js:74
+msgid "A community of creators"
+msgstr "Сообщество создателей"
+
+#: src/amo/pages/StaticPages/About/index.js:76
+msgid ""
+"The add-ons listed here are created by thousands of developers and theme "
+"designers from all over the world, ranging from individual hobbyists to "
+"large corporations. Some add-ons listed on AMO have been automatically "
+"published and may be subject to review by a team of editors once publically "
+"listed."
+msgstr ""
+"Расположенные здесь дополнения были созданы тысячами разработчиков и "
+"дизайнеров со всего мира, начиная от отдельных любителей и заканчивая "
+"крупными корпорациями. Некоторые опубликованные на AMO дополнения "
+"утверждаются автоматически и могут требовать проверки команды редакторов."
+
+#: src/amo/pages/StaticPages/About/index.js:85
+msgid "Get involved"
+msgstr "Принять участие"
+
+#: src/amo/pages/StaticPages/About/index.js:87
+msgid ""
+"Mozilla is a non-profit champion of the Internet, we build Firefox to help "
+"keep it healthy, open and accessible. Add-ons support user choice and "
+"customization in Firefox, and you can contribute in the following ways:"
+msgstr ""
+"Mozilla — некоммерческая организация, чьей целью является развитие "
+"Интернета, мы создали Firefox, чтобы помочь Интернету быть здоровым, "
+"открытым и доступным для всех и каждого. Дополнения поддерживают выбор "
+"пользователя и позволяют настраивать Firefox, и вы можете помочь следующими "
+"способами:"
+
+#: src/amo/pages/StaticPages/About/index.js:97
+msgid ""
+"%(startLink)sMake your own add-on%(endLink)s. We provide free hosting and "
+"update services and can help you reach a large audience of users."
+msgstr ""
+"%(startLink)sСоздайте своё собственное дополнение%(endLink)s. Мы "
+"предоставляем бесплатный хостинг и службу обновлений и можем помочь вам "
+"охватить большое число пользователей."
+
 #: src/amo/pages/StaticPages/ReviewGuide/index.js:102
+msgid ""
+"Use profanity, sexual language or language that can be construed as hateful."
+msgstr ""
+"Использовать ненормативную лексику, непристойные выражения или слова, "
+"которые могут быть истолкованы как ненависть."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:107
+msgid ""
+"Include HTML, links, source code or code snippets. Reviews are meant to be "
+"text only."
+msgstr ""
+"Включать HTML, ссылки, исходный код или фрагменты кода. Отзывы должны "
+"содержать только текст."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:112
+msgid ""
+"Make false statements, disparage add-on authors or personally insult them."
+msgstr ""
+"Делать ложные заявления, унижать или лично оскорблять авторов дополнений."
+
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:117
 msgid ""
 "Include your own or anyone else’s email, phone number, or other personal "
 "details."
@@ -2384,13 +2522,13 @@ msgstr ""
 "Включать ваши собственные или чьи-либо ещё адреса эл. почты, номера "
 "телефонов или другие персональные данные."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:107
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:122
 msgid "Post reviews for an add-on you or your organization wrote or represent."
 msgstr ""
 "Размещать отзывы на дополнение, написанное или представленное вами или вашей "
 "организацией."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:112
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:127
 msgid ""
 "Criticize an add-on for something it’s intended to do. For example, leaving "
 "a negative review of an add-on for displaying ads or requiring data "
@@ -2402,15 +2540,15 @@ msgstr ""
 "сбора данных, когда это является целью этого дополнения, или дополнению "
 "необходим сбор данных для его работы."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:121
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:136
 msgid "Frequently Asked Questions about Reviews"
 msgstr "Часто задаваемые вопросы об отзывах"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:123
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:138
 msgid "How can I report a problematic review?"
 msgstr "Как мне сообщить о некорректном отзыве?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:125
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:140
 msgid ""
 "Please report or flag any questionable reviews by clicking the \"Report this "
 "review\" and it will be submitted to the site for moderation. Our moderation "
@@ -2422,11 +2560,11 @@ msgstr ""
 "модерации. Наша команда модераторов будет использовать Руководство по "
 "отзывам, чтобы решить, удалить ли отзыв или восстановить его на сайте."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:132
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:147
 msgid "I'm an add-on author, can I respond to reviews?"
 msgstr "Я автор дополнения, могу ли я отвечать на отзывы?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:138
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:153
 msgid ""
 "Yes, add-on authors can provide a single response to a review. You can set "
 "up a discussion topic in our %(startLink)sforum%(endLink)s to engage in "
@@ -2436,12 +2574,12 @@ msgstr ""
 "тему для обсуждения на нашем %(startLink)sфоруме%(endLink)s, чтобы принять "
 "участие в дополнительной или последующей дискуссии."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:152
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:167
 msgid "I'm an add-on author, can I delete unfavorable reviews or ratings?"
 msgstr ""
 "Я автор дополнения, могу ли я удалять нелицеприятные отзывы или рейтинги?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:157
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:172
 msgid ""
 "In general, no. But if the review did not meet the review guidelines "
 "outlined above, you can click \"Report this review\" and have it moderated. "
@@ -2454,12 +2592,12 @@ msgstr ""
 "является актуальной в связи с выходом новой версии вашего дополнения, мы "
 "можем рассмотреть возможность удаления отзыва."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:21
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:23
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:32
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:34
 msgid "Review Guidelines"
 msgstr "Чем следует руководствоваться при написании отзывов"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:29
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:44
 msgid ""
 "Add-on reviews are a way for you to share your opinions about the add-ons "
 "you’ve installed and used. Our review moderation team reserves the right to "
@@ -2470,67 +2608,67 @@ msgstr ""
 "отзывов оставляет за собой право отказать или удалить любой отзыв, который "
 "не соответствует этим принципам."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:34
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:49
 msgid "Tips for writing a great review"
 msgstr "Советы по написанию хороших отзывов"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:35
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:50
 msgid "Do:"
 msgstr "Вам следует:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:38
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:53
 msgid ""
 "Write like you are telling a friend about your experience with the add-on."
 msgstr ""
 "Писать так, как будто вы рассказываете другу о своём опыте работы с "
 "дополнением."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:43
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:58
 msgid "Keep reviews concise and easy to understand."
 msgstr "Оставлять сжатые и легкие для понимания отзывы."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:46
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:61
 msgid "Give specific and helpful details. For example:"
 msgstr "Приводить конкретные и полезные детали. Например:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:51
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:66
 msgid "Did the add-on work as you expected it to?"
 msgstr "Дополнение работало так как вы ожидали?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:54
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:69
 msgid "What features did you like or dislike?"
 msgstr "Какие функции вам понравились или не понравились?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:56
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:71
 msgid "Was it useful?"
 msgstr "Было ли оно полезным?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:57
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:72
 msgid "Was it easy to use?"
 msgstr "Легко ли было его использовать?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:59
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:74
 msgid "Will you continue to use this add-on?"
 msgstr "Будете ли вы продолжать использовать это дополнение?"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:64
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:79
 msgid ""
 "Take a moment to read your review before submitting it to minimize typos."
 msgstr ""
 "Уделите немного времени, чтобы прочитать свой отзыв перед отправкой, чтобы "
 "минимизировать опечатки."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:69
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:84
 msgid "Don't:"
 msgstr "Вам не следует:"
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:72
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:87
 msgid "Submit one-word reviews such as \"Great!\", \"wonderful,\" or \"bad\"."
 msgstr ""
 "Отправлять односложные отзывы, например, «Отлично!», «замечательно» или "
 "«плохо»."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:77
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:92
 msgid ""
 "Post technical issues, support requests, or feature suggestions. Use the "
 "available support options for each add-on, if available. You can find them "
@@ -2542,30 +2680,9 @@ msgstr ""
 "если они есть. Вы можете найти их в боковом столбце рядом с разделом «Об "
 "этом дополнении» на странице дополнения."
 
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:82
+#: src/amo/pages/StaticPages/ReviewGuide/index.js:97
 msgid "Write reviews for add-ons which you have not personally used."
 msgstr "Писать отзывы на дополнения, которые вы лично не использовали."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:87
-msgid ""
-"Use profanity, sexual language or language that can be construed as hateful."
-msgstr ""
-"Использовать ненормативную лексику, непристойные выражения или слова, "
-"которые могут быть истолкованы как ненависть."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:92
-msgid ""
-"Include HTML, links, source code or code snippets. Reviews are meant to be "
-"text only."
-msgstr ""
-"Включать HTML, ссылки, исходный код или фрагменты кода. Отзывы должны "
-"содержать только текст."
-
-#: src/amo/pages/StaticPages/ReviewGuide/index.js:97
-msgid ""
-"Make false statements, disparage add-on authors or personally insult them."
-msgstr ""
-"Делать ложные заявления, унижать или лично оскорблять авторов дополнений."
 
 #: src/amo/pages/UserProfile/index.js:215
 msgid "My reviews"
@@ -2849,14 +2966,14 @@ msgid "Uninstalling"
 msgstr "Удаление"
 
 #: src/core/components/AMInstallButton/index.js:221
-#: src/core/components/InstallButton/index.js:265
-#: src/core/components/InstallButton/index.js:311
+#: src/core/components/InstallButton/index.js:236
+#: src/core/components/InstallButton/index.js:282
 msgid "Install Theme"
 msgstr "Установить тему"
 
 #: src/core/components/AMInstallButton/index.js:222
-#: src/core/components/InstallButton/index.js:296
-#: src/core/components/InstallButton/index.js:312
+#: src/core/components/InstallButton/index.js:267
+#: src/core/components/InstallButton/index.js:283
 msgid "Add to Firefox"
 msgstr "Добавить в Firefox"
 
@@ -2945,30 +3062,27 @@ msgstr ""
 "Спасибо, что посетили этот сайт! Пожалуйста, уделите нам минутку или две, "
 "чтобы рассказать о своих впечатлениях при работе с Firefox."
 
-#: src/core/utils/addons.js:24
+#: src/core/utils/addons.js:27
 msgid "Installation failed. Please try again."
-msgstr ""
+msgstr "Установка не удалась. Пожалуйста, попробуйте позже."
 
-#: src/core/utils/addons.js:26
+#: src/core/utils/addons.js:29
 msgid "Download failed. Please check your connection."
-msgstr ""
+msgstr "Загрузка не удалась. Пожалуйста, проверьте ваше соединение."
 
-#: src/core/utils/addons.js:28
-#, fuzzy
+#: src/core/utils/addons.js:31
 msgid "An unexpected error occurred during installation."
-msgstr "Обнаружена непредвиденная ошибка"
+msgstr "Произошла непредвиденная ошибка во время установки."
 
-#: src/core/utils/addons.js:30
-#, fuzzy
+#: src/core/utils/addons.js:33
 msgid "An unexpected error occurred during uninstallation."
-msgstr "Обнаружена непредвиденная ошибка"
+msgstr "Произошла непредвиденная ошибка во время удаления."
 
-#: src/core/utils/addons.js:35
-#, fuzzy
+#: src/core/utils/addons.js:38
 msgid "An unexpected error occurred."
-msgstr "Обнаружена непредвиденная ошибка"
+msgstr "Произошла непредвиденная ошибка."
 
-#: src/ui/components/ConfirmButton/index.js:101
+#: src/ui/components/ConfirmationDialog/index.js:52
 msgid "Confirm"
 msgstr "Подтвердить"
 
@@ -2983,6 +3097,10 @@ msgstr "Отправить"
 #: src/ui/components/DismissibleTextForm/index.js:133
 msgid "Submitting"
 msgstr "Отправка"
+
+#: src/ui/components/DismissibleTextForm/index.js:186
+msgid "Delete"
+msgstr "Удалить"
 
 #: src/ui/components/ErrorList/index.js:44
 msgid "Your session has expired"
@@ -3026,7 +3144,7 @@ msgstr[2] "Получать доступ к вашим данных на %(param
 msgid "Access your data for %(param)s"
 msgstr "Получать доступ к вашим данных на %(param)s"
 
-#: src/ui/components/Notice/index.js:130
+#: src/ui/components/Notice/index.js:133
 msgid "Dismiss this notice"
 msgstr "Скрыть это уведомление"
 
@@ -3046,7 +3164,7 @@ msgstr "Оценок пока нет"
 msgid "Update your rating to %(starRating)s out of 5"
 msgstr "Обновить вашу оценку на %(starRating)s из 5"
 
-#: src/ui/components/ShowMoreCard/index.js:60
+#: src/ui/components/ShowMoreCard/index.js:130
 msgid "<span class=\"visually-hidden\">Expand to</span> Read more"
 msgstr ""
 "<span class=\"visually-hidden\">Разверните, чтобы</span> прочитать больше"
@@ -3062,6 +3180,24 @@ msgstr[2] "%(total)s дополнений"
 msgid "Developer response"
 msgstr "Ответ разработчика"
 
+#~ msgid "Translation tools"
+#~ msgstr "Инструменты перевода"
+
+#~ msgid "Do you really want to delete this reply?"
+#~ msgstr "Вы действительно хотите удалить этот ответ?"
+
+#~ msgid "Do you really want to delete this rating?"
+#~ msgstr "Вы действительно хотите удалить эту оценку?"
+
+#~ msgid "Do you really want to delete this review?"
+#~ msgstr "Вы действительно хотите удалить этот отзыв?"
+
+#~ msgid "Nevermind, I don't want to write a review"
+#~ msgstr "Неважно, я не хочу оставлять отзыв"
+
+#~ msgid "Nevermind, I don't want to edit my review"
+#~ msgstr "Неважно, я не хочу редактировать свой отзыв"
+
 #~ msgid "See more fall themes"
 #~ msgstr "Больше осенних тем"
 
@@ -3074,7 +3210,6 @@ msgstr "Ответ разработчика"
 #~ msgid "YouTube boosters"
 #~ msgstr "Ускорители YouTube"
 
-#, fuzzy
 #~ msgid "Go to this review"
 #~ msgstr "Ответить на отзыв"
 
@@ -3180,12 +3315,6 @@ msgstr "Ответ разработчика"
 #~ msgstr ""
 #~ "Заставьте Firefox забыть данные веб-сайтов, такие как куки и локальное "
 #~ "хранилище"
-
-#~ msgid "Group Speed Dial"
-#~ msgstr "Group Speed Dial"
-
-#~ msgid "Visual bookmarks for your favorite places on the web"
-#~ msgstr "Визуальные закладки для ваших любимых сайтов со всего Интернета"
 
 #~ msgid "Your add-on is ready"
 #~ msgstr "Ваше дополнение готово"
@@ -3306,9 +3435,6 @@ msgstr "Ответ разработчика"
 
 #~ msgid "“Extensions Challenge” honorees"
 #~ msgstr "Расширения, изменяющие работу Firefox"
-
-#~ msgid "See more popular extensions"
-#~ msgstr "Больше популярных расширений"
 
 #~ msgid "SHINE for Reddit"
 #~ msgstr "SHINE для Reddit"
@@ -3493,12 +3619,6 @@ msgstr "Ответ разработчика"
 
 #~ msgid "Highlight any text and search Wikipedia."
 #~ msgstr "Выделяйте любой текст и ищите в Википедии."
-
-#~ msgid "Undo Close Tab Button"
-#~ msgstr "Undo Close Tab Button"
-
-#~ msgid "Never lose a page again."
-#~ msgstr "Никогда больше не потеряйте ни одной страницы."
 
 #~ msgid "Grammarly"
 #~ msgstr "Grammarly"
